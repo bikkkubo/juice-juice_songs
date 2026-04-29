@@ -1,8 +1,10 @@
 import releasesData from "@/data/releases.json";
 import creditsData from "@/data/credits.json";
+import aliasesData from "@/data/aliases.json";
 import type { Release, SongCredits } from "./types";
 
 const credits = creditsData as Record<string, SongCredits>;
+const aliases = aliasesData as Record<string, string>;
 
 export const getCredits = (canonical: string): SongCredits | null => {
   const c = credits[canonical];
@@ -35,7 +37,9 @@ export const canonicalizeTitle = (title: string): string => {
   s = s.replace(/\s+-[^-]+-$/u, "");
   // Strip year suffix like " 2018"
   s = s.replace(/\s+\d{4}$/u, "");
-  return s.replace(/\s+/g, " ").trim();
+  s = s.replace(/\s+/g, " ").trim();
+  // Resolve alias (different titles for the same song)
+  return aliases[s] ?? s;
 };
 
 export type SongAppearance = {
