@@ -20,8 +20,16 @@ export type Release = {
 
 export type Member = {
   name: string;
+  reading?: string;
+  nickname?: string;
+  birthday?: string;
+  bloodType?: string;
+  height?: string;
+  birthplace?: string;
   color: string;
   joined: string;
   left: string | null;
+  isTrainee?: boolean;
+  graduationVenue?: string;
   note?: string;
 };
