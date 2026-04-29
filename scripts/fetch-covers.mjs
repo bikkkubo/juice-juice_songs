@@ -53,9 +53,12 @@ async function main() {
       .map((c) => {
         const cTitle = norm(c.collectionName);
         let score = 0;
+        // タイトル類似度: 完全一致以外は最低限
+        // (短いキーワードだけで偶然マッチするのを防ぐためサブストリングは
+        //  ある程度の長さ要求)
         if (cTitle === target) score += 100;
-        else if (cTitle.includes(target)) score += 60;
-        else if (target.includes(cTitle)) score += 40;
+        else if (target.length >= 4 && cTitle.includes(target)) score += 60;
+        else if (cTitle.length >= 4 && target.includes(cTitle)) score += 40;
         const dt =
           Math.abs(
             new Date(c.releaseDate).getTime() -
@@ -67,7 +70,7 @@ async function main() {
         else if (dt < 365) score += 10;
         return { c, score, dt };
       })
-      .filter((m) => m.score > 0)
+      .filter((m) => m.score >= 50)
       .sort((a, b) => b.score - a.score);
 
     return matches[0] ?? null;
