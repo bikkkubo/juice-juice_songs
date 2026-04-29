@@ -1,3 +1,5 @@
+"use client";
+
 import type { Member } from "@/app/types";
 import { memberColor } from "@/app/colors";
 
@@ -6,7 +8,13 @@ const formatDate = (iso: string) => {
   return `${y}.${m}`;
 };
 
-export default function MemberStrip({ members }: { members: Member[] }) {
+type Props = {
+  members: Member[];
+  activeMember: string | null;
+  onSelect: (name: string | null) => void;
+};
+
+export default function MemberStrip({ members, activeMember, onSelect }: Props) {
   const current = members.filter((m) => m.left === null);
   const past = members.filter((m) => m.left !== null);
 
@@ -14,13 +22,25 @@ export default function MemberStrip({ members }: { members: Member[] }) {
     <div className="space-y-5">
       <Group title="現メンバー" count={current.length}>
         {current.map((m) => (
-          <MemberPill key={m.name} member={m} variant="current" />
+          <MemberPill
+            key={m.name}
+            member={m}
+            variant="current"
+            isActive={activeMember === m.name}
+            onSelect={onSelect}
+          />
         ))}
       </Group>
 
       <Group title="歴代メンバー" count={past.length}>
         {past.map((m) => (
-          <MemberPill key={m.name} member={m} variant="past" />
+          <MemberPill
+            key={m.name}
+            member={m}
+            variant="past"
+            isActive={activeMember === m.name}
+            onSelect={onSelect}
+          />
         ))}
       </Group>
     </div>
@@ -30,19 +50,31 @@ export default function MemberStrip({ members }: { members: Member[] }) {
 function MemberPill({
   member,
   variant,
+  isActive,
+  onSelect,
 }: {
   member: Member;
   variant: "current" | "past";
+  isActive: boolean;
+  onSelect: (name: string | null) => void;
 }) {
   const color = memberColor(member.color);
   const isCurrent = variant === "current";
+
+  const base = isCurrent
+    ? "bg-white border-border text-ink"
+    : "bg-surface border-border text-ink-weak";
+
   return (
-    <span
-      className={
-        isCurrent
-          ? "inline-flex items-center gap-1.5 rounded-full border border-border bg-white px-2.5 py-1 text-sm text-ink"
-          : "inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-2.5 py-1 text-sm text-ink-weak"
-      }
+    <button
+      type="button"
+      onClick={() => onSelect(isActive ? null : member.name)}
+      aria-pressed={isActive}
+      className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-sm transition ${base} ${
+        isActive
+          ? "ring-2 ring-accent ring-offset-1 ring-offset-bg"
+          : "hover:border-ink/30"
+      }`}
       title={`${member.color}${member.note ? " / " + member.note : ""} / ${member.joined}${member.left ? " 〜 " + member.left : "〜現在"}`}
     >
       <span
@@ -56,7 +88,7 @@ function MemberPill({
           {formatDate(member.joined)}–{member.left ? formatDate(member.left) : ""}
         </span>
       )}
-    </span>
+    </button>
   );
 }
 

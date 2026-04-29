@@ -4,16 +4,16 @@ import { useMemo, useState } from "react";
 import releasesData from "@/data/releases.json";
 import membersData from "@/data/members.json";
 import type { Release, Member, ReleaseType } from "./types";
+import { memberColor } from "./colors";
 import Header from "@/components/Header";
 import YearJump from "@/components/YearJump";
 import Timeline from "@/components/Timeline";
 import MemberStrip from "@/components/MemberStrip";
 import TypeFilter from "@/components/TypeFilter";
 
-const TYPE_KEYS: ReleaseType[] = ["indie", "single", "album", "digital"];
-
 export default function HomePage() {
   const [activeTypes, setActiveTypes] = useState<ReleaseType[]>([]);
+  const [activeMember, setActiveMember] = useState<string | null>(null);
 
   const allReleases = useMemo(
     () =>
@@ -47,6 +47,11 @@ export default function HomePage() {
 
   const members = membersData as Member[];
 
+  const memberMatchCount = useMemo(() => {
+    if (!activeMember) return 0;
+    return filtered.filter((r) => r.lineup.includes(activeMember)).length;
+  }, [filtered, activeMember]);
+
   const toggleType = (t: ReleaseType) =>
     setActiveTypes((prev) =>
       prev.includes(t) ? prev.filter((x) => x !== t) : [...prev, t]
@@ -61,7 +66,7 @@ export default function HomePage() {
         <section className="mb-10">
           <p className="text-xs leading-relaxed text-ink-weak">
             2013 年のインディーズデビューから現在まで。Juice=Juice の発売楽曲を
-            年表でまとめました。
+            年表でまとめました。メンバー名をタップで在籍リリースをハイライトします。
           </p>
         </section>
 
@@ -69,7 +74,11 @@ export default function HomePage() {
           <h2 className="mb-3 text-[11px] font-semibold tracking-[0.25em] text-ink-weak">
             MEMBERS
           </h2>
-          <MemberStrip members={members} />
+          <MemberStrip
+            members={members}
+            activeMember={activeMember}
+            onSelect={setActiveMember}
+          />
         </section>
 
         <section>
@@ -82,7 +91,7 @@ export default function HomePage() {
             </span>
           </div>
 
-          <div className="mb-6">
+          <div className="mb-4">
             <TypeFilter
               active={activeTypes}
               counts={counts}
@@ -91,12 +100,27 @@ export default function HomePage() {
             />
           </div>
 
+          {activeMember && (
+            <ActiveMemberBanner
+              name={activeMember}
+              colorName={
+                members.find((m) => m.name === activeMember)?.color ?? ""
+              }
+              matchCount={memberMatchCount}
+              total={filtered.length}
+              onClear={() => setActiveMember(null)}
+            />
+          )}
+
           {filtered.length === 0 ? (
             <p className="rounded-lg border border-dashed border-border bg-surface px-4 py-8 text-center text-sm text-ink-weak">
               該当するリリースはありません
             </p>
           ) : (
-            <Timeline releases={[...filtered].reverse()} />
+            <Timeline
+              releases={[...filtered].reverse()}
+              activeMember={activeMember}
+            />
           )}
         </section>
 
@@ -118,5 +142,43 @@ export default function HomePage() {
         </footer>
       </main>
     </>
+  );
+}
+
+function ActiveMemberBanner({
+  name,
+  colorName,
+  matchCount,
+  total,
+  onClear,
+}: {
+  name: string;
+  colorName: string;
+  matchCount: number;
+  total: number;
+  onClear: () => void;
+}) {
+  const color = memberColor(colorName);
+  return (
+    <div className="mb-6 flex items-center justify-between gap-2 rounded-lg border border-accent/40 bg-accent/5 px-3 py-2">
+      <div className="flex items-center gap-2 text-xs">
+        <span
+          aria-hidden
+          className="inline-block h-2.5 w-2.5 rounded-full ring-1 ring-border"
+          style={{ backgroundColor: color }}
+        />
+        <span className="font-semibold text-ink">{name}</span>
+        <span className="font-mono text-ink-weak">
+          {matchCount} / {total} リリースに参加
+        </span>
+      </div>
+      <button
+        type="button"
+        onClick={onClear}
+        className="rounded-full border border-border bg-white px-2.5 py-0.5 text-[11px] text-ink-weak transition hover:border-ink/30 hover:text-ink"
+      >
+        × 解除
+      </button>
+    </div>
   );
 }

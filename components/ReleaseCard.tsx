@@ -12,9 +12,25 @@ const typeBg: Record<Release["type"], string> = {
   digital: "bg-type-digital/15 text-type-digital",
 };
 
-export default function ReleaseCard({ release }: { release: Release }) {
+type Props = {
+  release: Release;
+  activeMember?: string | null;
+};
+
+export default function ReleaseCard({ release, activeMember = null }: Props) {
+  const matches = !activeMember || release.lineup.includes(activeMember);
+  const dim = activeMember && !matches;
+
   return (
-    <article className="rounded-2xl border border-border bg-white/80 p-4 shadow-[0_1px_0_rgba(0,0,0,0.02)] transition hover:border-accent-soft hover:shadow-md">
+    <article
+      className={`rounded-2xl border bg-white/80 p-4 shadow-[0_1px_0_rgba(0,0,0,0.02)] transition ${
+        dim
+          ? "border-border opacity-40 grayscale"
+          : matches && activeMember
+            ? "border-accent shadow-md"
+            : "border-border hover:border-accent-soft hover:shadow-md"
+      }`}
+    >
       <div className="flex items-start justify-between gap-3">
         <time className="font-mono text-xs font-semibold text-ink-weak">
           {formatDate(release.releaseDate)}
@@ -38,14 +54,21 @@ export default function ReleaseCard({ release }: { release: Release }) {
 
       {release.lineup.length > 0 && (
         <div className="mt-3 flex flex-wrap gap-1">
-          {release.lineup.map((m) => (
-            <span
-              key={m}
-              className="rounded-full bg-accent/10 px-2 py-0.5 text-[11px] font-medium text-accent"
-            >
-              {m}
-            </span>
-          ))}
+          {release.lineup.map((m) => {
+            const isActive = activeMember === m;
+            return (
+              <span
+                key={m}
+                className={
+                  isActive
+                    ? "rounded-full bg-accent px-2 py-0.5 text-[11px] font-semibold text-white"
+                    : "rounded-full bg-accent/10 px-2 py-0.5 text-[11px] font-medium text-accent"
+                }
+              >
+                {m}
+              </span>
+            );
+          })}
         </div>
       )}
 
