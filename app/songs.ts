@@ -11,15 +11,31 @@ export const getCredits = (canonical: string): SongCredits | null => {
   return c;
 };
 
+const normalizePunct = (s: string): string =>
+  s
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/！/g, "!")
+    .replace(/？/g, "?")
+    .replace(/～/g, "〜")
+    .replace(/[「」『』]/g, "")
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/\s*〜\s*/g, "〜")
+    .replace(/([!?])\s+(?=[^\x00-\x7f])/g, "$1")
+    .replace(/\s+/g, " ")
+    .normalize("NFC");
+
 export const canonicalizeTitle = (title: string): string => {
-  let s = title.trim();
-  // Remove parenthetical version marker like (Juicetory Ver.) or (MEMORIAL EDIT)
-  s = s.replace(/\s*[(（][^)）]*[)）]\s*$/u, "");
-  // Remove dashed subtitle " -xxx-"
+  let s = normalizePunct(title.trim());
+  // Strip all parenthetical groups (version markers, furigana, etc.)
+  s = s.replace(/[(（][^)）]*[)）]/g, "");
+  // Strip dashed subtitle " -xxx-"
   s = s.replace(/\s+-[^-]+-$/u, "");
-  // Remove year suffix like " 2018"
+  // Strip year suffix like " 2018"
   s = s.replace(/\s+\d{4}$/u, "");
-  return s.trim();
+  return s.replace(/\s+/g, " ").trim();
 };
 
 export type SongAppearance = {

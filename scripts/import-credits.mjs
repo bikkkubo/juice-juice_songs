@@ -17,12 +17,28 @@ import path from "node:path";
 
 const CREDITS_PATH = "data/credits.json";
 
+const normalizePunct = (s) =>
+  String(s)
+    .replace(/&amp;/g, "&")
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/！/g, "!")
+    .replace(/？/g, "?")
+    .replace(/～/g, "〜")
+    .replace(/[「」『』]/g, "")
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .replace(/\s*〜\s*/g, "〜")
+    .replace(/([!?])\s+(?=[^\x00-\x7f])/g, "$1")
+    .replace(/\s+/g, " ")
+    .normalize("NFC");
+
 const canonicalize = (title) => {
-  let s = String(title).trim();
-  s = s.replace(/\s*[(（][^)）]*[)）]\s*$/u, "");
+  let s = normalizePunct(String(title).trim());
+  s = s.replace(/[(（][^)）]*[)）]/g, "");
   s = s.replace(/\s+-[^-]+-$/u, "");
   s = s.replace(/\s+\d{4}$/u, "");
-  return s.trim();
+  return s.replace(/\s+/g, " ").trim();
 };
 
 // 簡易 CSV パーサ (ダブルクォート対応)
