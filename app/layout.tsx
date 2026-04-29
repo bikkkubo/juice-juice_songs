@@ -17,9 +17,27 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.GITHUB_PAGES === "true"
+      ? "https://bikkkubo.github.io/juice-juice_songs"
+      : "http://localhost:3000"
+  ),
   title: "Juice=Juice 楽曲年表",
   description:
     "Juice=Juice がリリースしてきた楽曲・シングル・アルバムを年表形式でまとめた非公式ファンサイト",
+  openGraph: {
+    title: "Juice=Juice 楽曲年表",
+    description:
+      "2013年のインディーズデビューから現在までのシングル・アルバム・配信を年表で。",
+    locale: "ja_JP",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Juice=Juice 楽曲年表",
+    description:
+      "2013年のインディーズデビューから現在までのシングル・アルバム・配信を年表で。",
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

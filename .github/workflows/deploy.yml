@@ -30,7 +30,7 @@ jobs:
       - name: Build (static export)
         env:
           GITHUB_PAGES: "true"
-        run: npx next build
+        run: npm run build
 
       - name: Disable Jekyll
         run: touch out/.nojekyll

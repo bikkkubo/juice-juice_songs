@@ -21,3 +21,10 @@ export const MEMBER_COLOR_HEX: Record<string, string> = {
 
 export const memberColor = (name: string) =>
   MEMBER_COLOR_HEX[name] ?? "#cccccc";
+
+export const TYPE_HEX: Record<"indie" | "single" | "album" | "digital", string> = {
+  indie: "#A78BFA",
+  single: "#EB5A8C",
+  album: "#22C55E",
+  digital: "#38BDF8",
+};
