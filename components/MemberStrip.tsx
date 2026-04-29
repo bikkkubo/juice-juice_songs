@@ -1,4 +1,5 @@
 import type { Member } from "@/app/types";
+import { memberColor } from "@/app/colors";
 
 const formatDate = (iso: string) => {
   const [y, m] = iso.split("-");
@@ -13,34 +14,49 @@ export default function MemberStrip({ members }: { members: Member[] }) {
     <div className="space-y-5">
       <Group title="現メンバー" count={current.length}>
         {current.map((m) => (
-          <span
-            key={m.name}
-            className="rounded-full bg-type-single/12 px-3 py-1 text-sm font-medium text-type-single"
-            style={{
-              backgroundColor: "rgba(235, 90, 140, 0.10)",
-            }}
-            title={`${m.color} / 加入: ${m.joined}`}
-          >
-            {m.name}
-          </span>
+          <MemberPill key={m.name} member={m} variant="current" />
         ))}
       </Group>
 
       <Group title="歴代メンバー" count={past.length}>
         {past.map((m) => (
-          <span
-            key={m.name}
-            className="inline-flex items-center gap-1 rounded-full border border-border bg-surface px-3 py-1 text-sm text-ink-weak"
-            title={`${m.color} / ${m.joined} 〜 ${m.left}`}
-          >
-            <span>{m.name}</span>
-            <span className="text-[10px] font-mono">
-              {formatDate(m.joined)}–{m.left ? formatDate(m.left) : ""}
-            </span>
-          </span>
+          <MemberPill key={m.name} member={m} variant="past" />
         ))}
       </Group>
     </div>
+  );
+}
+
+function MemberPill({
+  member,
+  variant,
+}: {
+  member: Member;
+  variant: "current" | "past";
+}) {
+  const color = memberColor(member.color);
+  const isCurrent = variant === "current";
+  return (
+    <span
+      className={
+        isCurrent
+          ? "inline-flex items-center gap-1.5 rounded-full border border-border bg-white px-2.5 py-1 text-sm text-ink"
+          : "inline-flex items-center gap-1.5 rounded-full border border-border bg-surface px-2.5 py-1 text-sm text-ink-weak"
+      }
+      title={`${member.color}${member.note ? " / " + member.note : ""} / ${member.joined}${member.left ? " 〜 " + member.left : "〜現在"}`}
+    >
+      <span
+        aria-hidden
+        className="inline-block h-2.5 w-2.5 rounded-full ring-1 ring-border"
+        style={{ backgroundColor: color }}
+      />
+      <span>{member.name}</span>
+      {!isCurrent && (
+        <span className="font-mono text-[10px] text-ink-weak/80">
+          {formatDate(member.joined)}–{member.left ? formatDate(member.left) : ""}
+        </span>
+      )}
+    </span>
   );
 }
 
