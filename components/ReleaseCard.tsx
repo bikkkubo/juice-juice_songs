@@ -1,6 +1,8 @@
+import Link from "next/link";
 import type { Release } from "@/app/types";
 import { lyricsSearchUrl } from "@/app/lyrics";
 import { appleMusicUrl, spotifyUrl, youtubeUrl } from "@/app/streaming";
+import { canonicalizeTitle } from "@/app/songs";
 import Cover from "./Cover";
 
 const formatDate = (iso: string) => {
@@ -31,7 +33,8 @@ export default function ReleaseCard({ release, activeMember = null }: Props) {
 
   return (
     <article
-      className={`rounded-2xl border bg-white/80 p-4 shadow-[0_1px_0_rgba(0,0,0,0.02)] transition ${
+      id={release.id}
+      className={`scroll-mt-28 rounded-2xl border bg-white/80 p-4 shadow-[0_1px_0_rgba(0,0,0,0.02)] transition ${
         dim
           ? "border-border opacity-40 grayscale"
           : matches && activeMember
@@ -99,12 +102,15 @@ export default function ReleaseCard({ release, activeMember = null }: Props) {
                 key={i}
                 className="flex items-center justify-between gap-2 border-b border-border/60 pb-1 last:border-b-0 last:pb-0"
               >
-                <span className="flex items-baseline gap-1.5 break-all">
+                <Link
+                  href={`/songs/${encodeURIComponent(canonicalizeTitle(t))}`}
+                  className="flex flex-1 items-baseline gap-1.5 break-all transition hover:text-accent"
+                >
                   <span className="font-mono text-[10px] text-ink-weak">
                     {String(i + 1).padStart(2, "0")}
                   </span>
-                  <span>{t}</span>
-                </span>
+                  <span className="underline-offset-2 hover:underline">{t}</span>
+                </Link>
                 <a
                   href={lyricsSearchUrl(t)}
                   target="_blank"
