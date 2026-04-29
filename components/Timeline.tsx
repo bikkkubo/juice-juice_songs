@@ -4,30 +4,39 @@ import ReleaseCard from "./ReleaseCard";
 const yearOf = (date: string) => date.slice(0, 4);
 
 export default function Timeline({ releases }: { releases: Release[] }) {
-  let lastYear = "";
+  const grouped = new Map<string, Release[]>();
+  releases.forEach((r) => {
+    const y = yearOf(r.releaseDate);
+    if (!grouped.has(y)) grouped.set(y, []);
+    grouped.get(y)!.push(r);
+  });
 
   return (
-    <ol className="relative border-l border-line pl-8">
-      {releases.map((release) => {
-        const year = yearOf(release.releaseDate);
-        const showYear = year !== lastYear;
-        lastYear = year;
+    <div className="space-y-12">
+      {[...grouped.entries()].map(([year, items]) => (
+        <section key={year} data-year-anchor={year}>
+          <div className="mb-4 flex items-baseline gap-3">
+            <h2 className="font-mono text-3xl font-bold tracking-tight text-ink">
+              {year}
+            </h2>
+            <span className="text-[11px] font-mono text-ink-weak">
+              {items.length} releases
+            </span>
+          </div>
 
-        return (
-          <li key={release.id} className="relative mb-12 last:mb-0">
-            <span
-              aria-hidden
-              className="absolute -left-[37px] top-2 h-3 w-3 rounded-full border-2 border-accent bg-paper"
-            />
-            {showYear && (
-              <p className="mb-3 text-2xl font-bold tracking-tight text-ink">
-                {year}
-              </p>
-            )}
-            <ReleaseCard release={release} />
-          </li>
-        );
-      })}
-    </ol>
+          <ol className="relative space-y-5 border-l-2 border-accent-soft/60 pl-6">
+            {items.map((r) => (
+              <li key={r.id} className="relative">
+                <span
+                  aria-hidden
+                  className="absolute -left-[31px] top-3 h-3 w-3 rounded-full border-2 border-accent bg-bg"
+                />
+                <ReleaseCard release={r} />
+              </li>
+            ))}
+          </ol>
+        </section>
+      ))}
+    </div>
   );
 }

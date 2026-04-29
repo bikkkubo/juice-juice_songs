@@ -14,3 +14,16 @@ body {
   font-feature-settings: "palt";
   letter-spacing: 0.01em;
 }
+
+/* hide scrollbar on horizontal year-jump nav */
+.no-scrollbar {
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* offset for sticky header when jumping by anchor */
+[data-year-anchor] {
+  scroll-margin-top: 4.5rem;
+}
