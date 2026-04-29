@@ -16,6 +16,16 @@ npm run dev      # http://localhost:3000
 npm run build    # out/ に静的ファイル生成
 ```
 
+## ジャケット画像の自動取得
+
+`data/releases.json` の各リリースに `cover` URL を一括で埋めるスクリプトを同梱しています (iTunes Search API を利用)。
+
+```bash
+node scripts/fetch-covers.mjs
+```
+
+すでに `cover` が設定されているリリースはスキップされます。マッチしなかったリリースは手動で `cover` を埋めてください (`/public/covers/` に画像を置いて相対パスを指定する形が安心です)。
+
 ## 楽曲データの追加・修正
 
 - `data/releases.json` … シングル / アルバム / 配信などのリリース情報

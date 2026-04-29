@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import type { Member } from "@/app/types";
 import { memberColor } from "@/app/colors";
 
@@ -62,33 +63,45 @@ function MemberPill({
   const isCurrent = variant === "current";
 
   const base = isCurrent
-    ? "bg-white border-border text-ink"
-    : "bg-surface border-border text-ink-weak";
+    ? "bg-white text-ink"
+    : "bg-surface text-ink-weak";
 
   return (
-    <button
-      type="button"
-      onClick={() => onSelect(isActive ? null : member.name)}
-      aria-pressed={isActive}
-      className={`inline-flex items-center gap-1.5 rounded-full border px-2.5 py-1 text-sm transition ${base} ${
+    <span
+      className={`group inline-flex items-stretch overflow-hidden rounded-full border transition ${base} ${
         isActive
-          ? "ring-2 ring-accent ring-offset-1 ring-offset-bg"
-          : "hover:border-ink/30"
+          ? "border-accent ring-2 ring-accent/40"
+          : "border-border hover:border-ink/30"
       }`}
-      title={`${member.color}${member.note ? " / " + member.note : ""} / ${member.joined}${member.left ? " 〜 " + member.left : "〜現在"}`}
     >
-      <span
-        aria-hidden
-        className="inline-block h-2.5 w-2.5 rounded-full ring-1 ring-border"
-        style={{ backgroundColor: color }}
-      />
-      <span>{member.name}</span>
-      {!isCurrent && (
-        <span className="font-mono text-[10px] text-ink-weak/80">
-          {formatDate(member.joined)}–{member.left ? formatDate(member.left) : ""}
-        </span>
-      )}
-    </button>
+      <button
+        type="button"
+        onClick={() => onSelect(isActive ? null : member.name)}
+        aria-pressed={isActive}
+        className="inline-flex items-center gap-1.5 px-2.5 py-1 text-sm"
+        title={`${member.color}${member.note ? " / " + member.note : ""} / ${member.joined}${member.left ? " 〜 " + member.left : "〜現在"}`}
+      >
+        <span
+          aria-hidden
+          className="inline-block h-2.5 w-2.5 rounded-full ring-1 ring-border"
+          style={{ backgroundColor: color }}
+        />
+        <span>{member.name}</span>
+        {!isCurrent && (
+          <span className="font-mono text-[10px] text-ink-weak/80">
+            {formatDate(member.joined)}–{member.left ? formatDate(member.left) : ""}
+          </span>
+        )}
+      </button>
+      <Link
+        href={`/members/${encodeURIComponent(member.name)}`}
+        aria-label={`${member.name}の詳細ページ`}
+        className="flex items-center border-l border-border px-2 text-[11px] text-ink-weak transition hover:bg-accent hover:text-white"
+        onClick={(e) => e.stopPropagation()}
+      >
+        →
+      </Link>
+    </span>
   );
 }
 

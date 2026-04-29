@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import Link from "next/link";
 import releasesData from "@/data/releases.json";
 import membersData from "@/data/members.json";
 import type { Release, Member, ReleaseType } from "./types";
@@ -172,7 +173,7 @@ function ActiveMemberBanner({
 }) {
   const color = memberColor(colorName);
   return (
-    <div className="mb-6 flex items-center justify-between gap-2 rounded-lg border border-accent/40 bg-accent/5 px-3 py-2">
+    <div className="mb-6 flex flex-wrap items-center justify-between gap-2 rounded-lg border border-accent/40 bg-accent/5 px-3 py-2">
       <div className="flex items-center gap-2 text-xs">
         <span
           aria-hidden
@@ -184,13 +185,21 @@ function ActiveMemberBanner({
           {matchCount} / {total} リリースに参加
         </span>
       </div>
-      <button
-        type="button"
-        onClick={onClear}
-        className="rounded-full border border-border bg-white px-2.5 py-0.5 text-[11px] text-ink-weak transition hover:border-ink/30 hover:text-ink"
-      >
-        × 解除
-      </button>
+      <div className="flex items-center gap-2">
+        <Link
+          href={`/members/${encodeURIComponent(name)}`}
+          className="rounded-full border border-accent bg-accent px-2.5 py-0.5 text-[11px] font-semibold text-white transition hover:bg-accent/90"
+        >
+          詳細を見る →
+        </Link>
+        <button
+          type="button"
+          onClick={onClear}
+          className="rounded-full border border-border bg-white px-2.5 py-0.5 text-[11px] text-ink-weak transition hover:border-ink/30 hover:text-ink"
+        >
+          × 解除
+        </button>
+      </div>
     </div>
   );
 }
