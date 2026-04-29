@@ -1,5 +1,15 @@
 import releasesData from "@/data/releases.json";
-import type { Release } from "./types";
+import creditsData from "@/data/credits.json";
+import type { Release, SongCredits } from "./types";
+
+const credits = creditsData as Record<string, SongCredits>;
+
+export const getCredits = (canonical: string): SongCredits | null => {
+  const c = credits[canonical];
+  if (!c) return null;
+  if (!c.lyricist && !c.composer && !c.arranger) return null;
+  return c;
+};
 
 export const canonicalizeTitle = (title: string): string => {
   let s = title.trim();

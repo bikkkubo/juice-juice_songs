@@ -18,6 +18,12 @@ export type Release = {
   note?: string;
 };
 
+export type SongCredits = {
+  lyricist?: string;
+  composer?: string;
+  arranger?: string;
+};
+
 export type Member = {
   name: string;
   reading?: string;

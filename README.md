@@ -26,6 +26,28 @@ node scripts/fetch-covers.mjs
 
 すでに `cover` が設定されているリリースはスキップされます。マッチしなかったリリースは手動で `cover` を埋めてください (`/public/covers/` に画像を置いて相対パスを指定する形が安心です)。
 
+## 作詞・作曲クレジットの追加
+
+`data/credits.json` に楽曲の作詞・作曲・編曲情報を入れると、楽曲個別ページに表示されます。キーは正規化された曲名 (バージョン括弧書きを除いたもの)。
+
+```json
+{
+  "ロマンスの途中": {
+    "lyricist": "つんく",
+    "composer": "つんく",
+    "arranger": "鈴木Daichi秀行"
+  }
+}
+```
+
+CSV からの一括インポートも可:
+
+```bash
+node scripts/import-credits.mjs path/to/credits.csv
+```
+
+CSV ヘッダは `title,lyricist,composer,arranger` の形式。空欄は未指定として扱われ、既存エントリにマージされます。
+
 ## 楽曲データの追加・修正
 
 - `data/releases.json` … シングル / アルバム / 配信などのリリース情報

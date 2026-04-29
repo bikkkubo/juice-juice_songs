@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { getAllSongs, getSong } from "@/app/songs";
+import { getAllSongs, getCredits, getSong } from "@/app/songs";
 import releasesData from "@/data/releases.json";
 import membersData from "@/data/members.json";
 import type { Member, Release } from "@/app/types";
@@ -69,6 +69,7 @@ export default async function SongPage({
   const apple = appleMusicUrl(song.canonical);
   const spotify = spotifyUrl(song.canonical);
   const lyrics = lyricsSearchUrl(song.canonical);
+  const credits = getCredits(song.canonical);
 
   return (
     <>
@@ -113,6 +114,40 @@ export default async function SongPage({
                 </li>
               ))}
             </ul>
+          </section>
+        )}
+
+        {credits && (
+          <section className="mb-8">
+            <h2 className="mb-3 text-[11px] font-semibold tracking-[0.25em] text-ink-weak">
+              ♪ CREDITS
+            </h2>
+            <dl className="space-y-1.5 rounded-2xl border border-border bg-white p-4 text-sm">
+              {credits.lyricist && (
+                <div className="flex items-baseline gap-3">
+                  <dt className="w-12 shrink-0 font-mono text-[10px] tracking-wider text-ink-weak">
+                    作詞
+                  </dt>
+                  <dd className="text-ink">{credits.lyricist}</dd>
+                </div>
+              )}
+              {credits.composer && (
+                <div className="flex items-baseline gap-3">
+                  <dt className="w-12 shrink-0 font-mono text-[10px] tracking-wider text-ink-weak">
+                    作曲
+                  </dt>
+                  <dd className="text-ink">{credits.composer}</dd>
+                </div>
+              )}
+              {credits.arranger && (
+                <div className="flex items-baseline gap-3">
+                  <dt className="w-12 shrink-0 font-mono text-[10px] tracking-wider text-ink-weak">
+                    編曲
+                  </dt>
+                  <dd className="text-ink">{credits.arranger}</dd>
+                </div>
+              )}
+            </dl>
           </section>
         )}
 
