@@ -1,4 +1,5 @@
 import type { Release } from "@/app/types";
+import { lyricsSearchUrl } from "@/app/lyrics";
 
 const formatDate = (iso: string) => {
   const [y, m, d] = iso.split("-");
@@ -81,9 +82,28 @@ export default function ReleaseCard({ release, activeMember = null }: Props) {
               <span className="text-[10px] transition group-open:rotate-90">▸</span>
             </span>
           </summary>
-          <ol className="mt-2 list-decimal space-y-0.5 pl-5 text-sm text-ink/85">
+          <ol className="mt-2 space-y-1.5 text-sm text-ink/85">
             {release.tracks.map((t, i) => (
-              <li key={i}>{t}</li>
+              <li
+                key={i}
+                className="flex items-center justify-between gap-2 border-b border-border/60 pb-1 last:border-b-0 last:pb-0"
+              >
+                <span className="flex items-baseline gap-1.5">
+                  <span className="font-mono text-[10px] text-ink-weak">
+                    {String(i + 1).padStart(2, "0")}
+                  </span>
+                  <span>{t}</span>
+                </span>
+                <a
+                  href={lyricsSearchUrl(t)}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="shrink-0 font-mono text-[10px] text-ink-weak underline-offset-2 hover:text-accent hover:underline"
+                  title={`${t} の歌詞を歌ネットで検索`}
+                >
+                  歌詞 ↗
+                </a>
+              </li>
             ))}
           </ol>
         </details>

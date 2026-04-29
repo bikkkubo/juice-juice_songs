@@ -124,12 +124,24 @@ export default function HomePage() {
           )}
         </section>
 
-        <footer className="mt-20 border-t border-border pt-6 text-center text-[11px] text-ink-weak">
+        <footer className="mt-20 space-y-2 border-t border-border pt-6 text-center text-[11px] text-ink-weak">
           <p>
             非公式ファンサイト。楽曲・画像の権利は
             アップフロントワークス／ハロー！プロジェクトに帰属します。
           </p>
-          <p className="mt-1">
+          <p>
+            歌詞はJASRAC許諾済の{" "}
+            <a
+              className="text-accent underline-offset-2 hover:underline"
+              href="https://www.uta-net.com/search/?Aselect=3&Keyword=Juice%3DJuice"
+              target="_blank"
+              rel="noreferrer"
+            >
+              歌ネット ↗
+            </a>{" "}
+            の検索結果へリンクしています。
+          </p>
+          <p>
             <a
               className="text-accent underline-offset-2 hover:underline"
               href="https://helloproject.com/juicejuice/"
