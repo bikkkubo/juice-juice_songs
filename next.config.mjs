@@ -6,6 +6,9 @@ const nextConfig = {
   output: "export",
   images: { unoptimized: true },
   trailingSlash: true,
+  turbopack: {
+    root: process.cwd(),
+  },
   basePath: isPages ? `/${repo}` : "",
   assetPrefix: isPages ? `/${repo}/` : "",
 };

@@ -5,8 +5,10 @@ import membersData from "@/data/members.json";
 import releasesData from "@/data/releases.json";
 import type { Member, Release } from "@/app/types";
 import { memberColor } from "@/app/colors";
+import { getAllSongs } from "@/app/songs";
 import Header from "@/components/Header";
 import Timeline from "@/components/Timeline";
+import SiteFooter from "@/components/SiteFooter";
 
 type Params = { name: string };
 
@@ -19,7 +21,7 @@ export function generateMetadata({ params }: { params: Params }): Metadata {
   const m = (membersData as Member[]).find((x) => x.name === decoded);
   if (!m) return { title: "メンバーが見つかりません" };
   return {
-    title: `${m.name} - Juice=Juice 楽曲年表`,
+    title: `${m.name} - Juice=Juiceコール練習サイト`,
     description: `${m.name} (${m.color}) が参加した Juice=Juice のリリース一覧`,
   };
 }
@@ -73,7 +75,7 @@ export default async function MemberPage({
   return (
     <>
       <Header
-        releaseCount={allReleases.length}
+        songCount={getAllSongs().length}
         memberCount={allMembers.length}
       />
 
@@ -82,7 +84,7 @@ export default async function MemberPage({
           href="/"
           className="mb-6 inline-flex items-center gap-1 font-mono text-xs text-ink-weak transition hover:text-accent"
         >
-          ← TIMELINE に戻る
+          ← トップに戻る
         </Link>
 
         <header className="mb-10 rounded-2xl border border-border bg-white p-6">
@@ -209,14 +211,7 @@ export default async function MemberPage({
           )}
         </section>
 
-        <footer className="mt-20 border-t border-border pt-6 text-center text-[11px] text-ink-weak">
-          <Link
-            href="/"
-            className="text-accent underline-offset-2 hover:underline"
-          >
-            TIMELINE トップに戻る
-          </Link>
-        </footer>
+        <SiteFooter />
       </main>
     </>
   );

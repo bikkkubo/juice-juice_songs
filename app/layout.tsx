@@ -18,25 +18,37 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.GITHUB_PAGES === "true"
-      ? "https://bikkkubo.github.io/juice-juice_songs"
-      : "http://localhost:3000"
+    process.env.NEXT_PUBLIC_SITE_URL ??
+      (process.env.GITHUB_PAGES === "true"
+        ? "https://bikkkubo.github.io/juice-juice_songs"
+        : "https://hello-project.jp")
   ),
-  title: "Juice=Juice 楽曲年表",
+  title: "Juice=Juiceコール練習サイト",
   description:
-    "Juice=Juice がリリースしてきた楽曲・シングル・アルバムを年表形式でまとめた非公式ファンサイト",
+    "Juice=Juice のライブ前にコールのタイミングを確認・練習できる非公式ファンサイト",
   openGraph: {
-    title: "Juice=Juice 楽曲年表",
+    title: "Juice=Juiceコール練習サイト",
     description:
-      "2013年のインディーズデビューから現在までのシングル・アルバム・配信を年表で。",
+      "ライブ映像や音源に合わせてJuice=Juiceのコールを練習できます。",
     locale: "ja_JP",
     type: "website",
+    url: "/",
+    siteName: "Juice=Juiceコール練習サイト",
+    images: [
+      {
+        url: "/api/og-image",
+        width: 1200,
+        height: 630,
+        alt: "Juice=Juiceコール練習サイト",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Juice=Juice 楽曲年表",
+    title: "Juice=Juiceコール練習サイト",
     description:
-      "2013年のインディーズデビューから現在までのシングル・アルバム・配信を年表で。",
+      "ライブ映像や音源に合わせてJuice=Juiceのコールを練習できます。",
+    images: ["/api/og-image"],
   },
 };
 

@@ -17,6 +17,7 @@ const config: Config = {
           single: "#EB5A8C",
           album: "#22C55E",
           digital: "#38BDF8",
+          unreleased: "#64748B",
         },
         member: {
           apple: "#FF6881",

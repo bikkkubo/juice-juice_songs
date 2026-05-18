@@ -5,6 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && node scripts/post-build.mjs",
+    "deploy": "npm run build && wrangler pages deploy out --project-name hello-project-jp --commit-message \"deploy static site\" --commit-dirty=true",
+    "deploy:preview": "npm run build && wrangler pages deploy out --project-name hello-project-jp --branch preview --commit-message \"deploy preview\" --commit-dirty=true",
+    "db:migrate": "wrangler d1 execute hello-project-jp --remote --file schema.sql",
+    "db:seed:more-amore": "wrangler d1 execute hello-project-jp --remote --file scripts/seed-more-amore-calls.sql",
     "start": "next start",
     "lint": "next lint"
   },
@@ -14,12 +18,15 @@
     "react-dom": "^19.2.5"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20260507.1",
     "@types/node": "^20.16.10",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "autoprefixer": "^10.4.20",
+    "playwright": "^1.59.1",
     "postcss": "^8.4.47",
     "tailwindcss": "^3.4.13",
-    "typescript": "^5.6.3"
+    "typescript": "^5.6.3",
+    "wrangler": "^4.89.0"
   }
 }

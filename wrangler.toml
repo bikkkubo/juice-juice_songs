@@ -1,0 +1,12 @@
+name = "hello-project-jp"
+pages_build_output_dir = "out"
+compatibility_date = "2026-05-07"
+
+[vars]
+NODE_VERSION = "20"
+X_REDIRECT_URI = "https://hello-project.jp/api/auth/x/callback"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "hello-project-jp"
+database_id = "3f081699-eb4b-46bc-9640-a26de2aabecf"

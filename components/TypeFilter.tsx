@@ -9,6 +9,7 @@ const TYPES: Item[] = [
   { type: "album", label: "アルバム", chipClass: "bg-type-album" },
   { type: "indie", label: "インディーズ", chipClass: "bg-type-indie" },
   { type: "digital", label: "配信", chipClass: "bg-type-digital" },
+  { type: "unreleased", label: "未音源化", chipClass: "bg-type-unreleased" },
 ];
 
 type Props = {

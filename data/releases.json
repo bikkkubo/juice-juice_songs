@@ -727,5 +727,179 @@
     ],
     "note": "林仁愛 加入後初シングル / オリコン週間2位 / 「盛れ! ミ・アモーレ」がヒット",
     "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a9/29/38/a9293834-aa4a-c09a-3f6c-8077270fd53d/HKCN-50858.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "u2026-live",
+    "title": "GIRLS BE AMBITIOUS! 2026 / BLOODY BULLET / 甘えんな",
+    "type": "unreleased",
+    "typeLabel": "未音源化",
+    "releaseDate": "2026-01-01",
+    "tracks": [
+      "GIRLS BE AMBITIOUS! 2026",
+      "BLOODY BULLET",
+      "甘えんな"
+    ],
+    "lineup": [
+      "段原瑠々",
+      "工藤由愛",
+      "松永里愛",
+      "井上玲音",
+      "有澤一華",
+      "入江里咲",
+      "江端妃咲",
+      "石山咲良",
+      "遠藤彩加里",
+      "川嶋美楓",
+      "林仁愛"
+    ],
+    "note": "未音源化 / ライブ映像に合わせたコール表示・編集用ページ"
+  },
+  {
+    "id": "live-2025-1010-special",
+    "title": "スペシャルライブ2025 ～10月10日はJuice=Juiceの日～ ライブ音源",
+    "type": "unreleased",
+    "typeLabel": "ライブ音源",
+    "releaseDate": "2025-10-10",
+    "tracks": [
+      "素直に甘えて",
+      "雨の中の口笛",
+      "愛・愛・傘",
+      "TOKYOグライダー",
+      "この世界は捨てたもんじゃない"
+    ],
+    "lineup": [
+      "段原瑠々",
+      "工藤由愛",
+      "松永里愛",
+      "井上玲音",
+      "有澤一華",
+      "入江里咲",
+      "江端妃咲",
+      "石山咲良",
+      "遠藤彩加里",
+      "川嶋美楓",
+      "林仁愛"
+    ],
+    "links": {
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_kyCqrDNJoYCDEqGeM3G4bSMBbV6JN8HrI"
+    },
+    "note": "YouTube Musicのライブ音源プレイリストから登録 / コール表示・編集用ページ"
+  },
+  {
+    "id": "setlist-triangrooove2-special-2024",
+    "title": "TRIANGROOOVE2 Special セトリ用登録",
+    "type": "unreleased",
+    "typeLabel": "ライブ用登録",
+    "releaseDate": "2024-11-19",
+    "tracks": [
+      "POPPIN’ LOVE",
+      "ライバル",
+      "あばれてっか?! ハヴアグッタイ",
+      "This is 運命",
+      "情熱エクスタシー",
+      "Never Never Surrender",
+      "STAGE〜アガッてみな〜",
+      "GIRLS BE AMBITIOUS!"
+    ],
+    "lineup": [
+      "段原瑠々",
+      "工藤由愛",
+      "松永里愛",
+      "井上玲音",
+      "有澤一華",
+      "入江里咲",
+      "江端妃咲",
+      "石山咲良",
+      "遠藤彩加里",
+      "川嶋美楓"
+    ],
+    "links": {
+      "official": "https://orekoko.site/231/"
+    },
+    "note": "ライブセトリから登録 / コール表示・編集用ページ"
+  },
+  {
+    "id": "setlist-crimson-azure-special-2025",
+    "title": "Crimson×Azure Special セトリ用登録",
+    "type": "unreleased",
+    "typeLabel": "ライブ用登録",
+    "releaseDate": "2025-06-23",
+    "tracks": [
+      "Mon Amour",
+      "選ばれし私達",
+      "CHOICE & CHANCE",
+      "生まれたてのBaby Love",
+      "G.O.A.T."
+    ],
+    "lineup": [
+      "段原瑠々",
+      "工藤由愛",
+      "松永里愛",
+      "井上玲音",
+      "有澤一華",
+      "入江里咲",
+      "江端妃咲",
+      "石山咲良",
+      "遠藤彩加里",
+      "川嶋美楓"
+    ],
+    "links": {
+      "official": "https://orekoko.site/860/"
+    },
+    "note": "ライブセトリから登録 / コール表示・編集用ページ"
+  },
+  {
+    "id": "setlist-queen-of-hearts-2025",
+    "title": "Queen of Hearts セトリ用登録",
+    "type": "unreleased",
+    "typeLabel": "ライブ用登録",
+    "releaseDate": "2025-09-17",
+    "tracks": [
+      "KEEP ON 上昇志向!!"
+    ],
+    "lineup": [
+      "段原瑠々",
+      "工藤由愛",
+      "松永里愛",
+      "井上玲音",
+      "有澤一華",
+      "入江里咲",
+      "江端妃咲",
+      "石山咲良",
+      "遠藤彩加里",
+      "川嶋美楓",
+      "林仁愛"
+    ],
+    "links": {
+      "official": "https://orekoko.site/1150/"
+    },
+    "note": "ライブセトリから登録 / コール表示・編集用ページ"
+  },
+  {
+    "id": "setlist-up-to-11-2026",
+    "title": "UP TO 11 セトリ用登録",
+    "type": "unreleased",
+    "typeLabel": "ライブ用登録",
+    "releaseDate": "2026-04-18",
+    "tracks": [
+      "未来へ、さあ走り出せ!"
+    ],
+    "lineup": [
+      "段原瑠々",
+      "工藤由愛",
+      "松永里愛",
+      "井上玲音",
+      "有澤一華",
+      "入江里咲",
+      "江端妃咲",
+      "石山咲良",
+      "遠藤彩加里",
+      "川嶋美楓",
+      "林仁愛"
+    ],
+    "links": {
+      "official": "https://note.com/tsunechan0707/n/ne198dcf909c1"
+    },
+    "note": "ライブセトリから登録 / コール表示・編集用ページ"
   }
 ]

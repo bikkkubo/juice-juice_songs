@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Release } from "@/app/types";
 import { lyricsSearchUrl } from "@/app/lyrics";
 import { appleMusicUrl, spotifyUrl, youtubeUrl } from "@/app/streaming";
-import { canonicalizeTitle } from "@/app/songs";
+import { canonicalizeTitle, songPath } from "@/app/songs";
 import Cover from "./Cover";
 
 const formatDate = (iso: string) => {
@@ -10,11 +10,15 @@ const formatDate = (iso: string) => {
   return `${y}.${m}.${d}`;
 };
 
+const dateLabel = (release: Release) =>
+  release.type === "unreleased" ? "未音源化" : formatDate(release.releaseDate);
+
 const typeBg: Record<Release["type"], string> = {
   indie: "bg-type-indie/15 text-type-indie",
   single: "bg-type-single/15 text-type-single",
   album: "bg-type-album/15 text-type-album",
   digital: "bg-type-digital/15 text-type-digital",
+  unreleased: "bg-type-unreleased/15 text-type-unreleased",
 };
 
 type Props = {
@@ -47,7 +51,7 @@ export default function ReleaseCard({ release, activeMember = null }: Props) {
         <div className="min-w-0 flex-1">
           <div className="flex items-start justify-between gap-2">
             <time className="font-mono text-xs font-semibold text-ink-weak">
-              {formatDate(release.releaseDate)}
+              {dateLabel(release)}
             </time>
             <span
               className={`shrink-0 rounded-full px-2 py-0.5 text-[10px] font-semibold ${typeBg[release.type]}`}
@@ -88,42 +92,51 @@ export default function ReleaseCard({ release, activeMember = null }: Props) {
       )}
 
       {release.tracks.length > 0 && (
-        <details className="mt-3 group">
-          <summary className="cursor-pointer list-none text-xs font-mono text-ink-weak transition hover:text-accent">
-            <span className="inline-flex items-center gap-1">
-              <span aria-hidden>♪</span>
-              <span>{release.tracks.length}曲</span>
-              <span className="text-[10px] transition group-open:rotate-90">▸</span>
-            </span>
-          </summary>
-          <ol className="mt-2 space-y-1.5 text-sm text-ink/85">
-            {release.tracks.map((t, i) => (
-              <li
-                key={i}
-                className="flex items-center justify-between gap-2 border-b border-border/60 pb-1 last:border-b-0 last:pb-0"
-              >
-                <Link
-                  href={`/songs/${encodeURIComponent(canonicalizeTitle(t))}`}
-                  className="flex flex-1 items-baseline gap-1.5 break-all transition hover:text-accent"
+        <div className="mt-3">
+          <p className="mb-2 font-mono text-[11px] font-semibold tracking-wider text-ink-weak">
+            TRACKS
+          </p>
+          <ol className="space-y-1.5 text-sm text-ink/85">
+            {release.tracks.map((t, i) => {
+              const songHref = songPath(canonicalizeTitle(t));
+
+              return (
+                <li
+                  key={i}
+                  className="flex items-center justify-between gap-2 border-b border-border/60 pb-1 last:border-b-0 last:pb-0"
                 >
-                  <span className="font-mono text-[10px] text-ink-weak">
-                    {String(i + 1).padStart(2, "0")}
+                  <Link
+                    href={songHref}
+                    className="flex flex-1 items-baseline gap-1.5 break-all transition hover:text-accent"
+                  >
+                    <span className="font-mono text-[10px] text-ink-weak">
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                    <span className="underline-offset-2 hover:underline">{t}</span>
+                  </Link>
+                  <span className="flex shrink-0 items-center gap-2 font-mono text-[10px]">
+                    <Link
+                      href={songHref}
+                      className="rounded-full bg-accent/10 px-2 py-0.5 font-semibold text-accent transition hover:bg-accent hover:text-white"
+                      title={`${t} のコール練習を開く`}
+                    >
+                      コール
+                    </Link>
+                    <a
+                      href={lyricsSearchUrl(t)}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-ink-weak underline-offset-2 hover:text-accent hover:underline"
+                      title={`${t} の歌詞を歌ネットで検索`}
+                    >
+                      歌詞 ↗
+                    </a>
                   </span>
-                  <span className="underline-offset-2 hover:underline">{t}</span>
-                </Link>
-                <a
-                  href={lyricsSearchUrl(t)}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="shrink-0 font-mono text-[10px] text-ink-weak underline-offset-2 hover:text-accent hover:underline"
-                  title={`${t} の歌詞を歌ネットで検索`}
-                >
-                  歌詞 ↗
-                </a>
-              </li>
-            ))}
+                </li>
+              );
+            })}
           </ol>
-        </details>
+        </div>
       )}
 
       <div className="mt-3 flex flex-wrap items-center gap-2 text-[11px]">

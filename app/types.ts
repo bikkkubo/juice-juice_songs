@@ -1,4 +1,4 @@
-export type ReleaseType = "indie" | "single" | "album" | "digital";
+export type ReleaseType = "indie" | "single" | "album" | "digital" | "unreleased";
 
 export type Release = {
   id: string;
