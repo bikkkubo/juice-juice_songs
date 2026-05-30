@@ -1,0 +1,51 @@
+[
+  {
+    "slug": "juice-juice",
+    "name": "Juice=Juice",
+    "shortName": "Juice=Juice",
+    "artistKeyword": "Juice=Juice",
+    "officialUrl": "https://helloproject.com/juicejuice/"
+  },
+  {
+    "slug": "angerme",
+    "name": "アンジュルム",
+    "shortName": "ANGERME",
+    "artistKeyword": "アンジュルム",
+    "officialUrl": "https://helloproject.com/angerme/"
+  },
+  {
+    "slug": "morning-musume",
+    "name": "モーニング娘。",
+    "shortName": "モーニング娘。",
+    "artistKeyword": "モーニング娘。",
+    "officialUrl": "https://helloproject.com/morningmusume/"
+  },
+  {
+    "slug": "ocha-norma",
+    "name": "OCHA NORMA",
+    "shortName": "OCHA NORMA",
+    "artistKeyword": "OCHA NORMA",
+    "officialUrl": "https://helloproject.com/ochanorma/"
+  },
+  {
+    "slug": "tsubaki-factory",
+    "name": "つばきファクトリー",
+    "shortName": "つばきファクトリー",
+    "artistKeyword": "つばきファクトリー",
+    "officialUrl": "https://helloproject.com/tsubakifactory/"
+  },
+  {
+    "slug": "rosy-chronicle",
+    "name": "ロージークロニクル",
+    "shortName": "ロージークロニクル",
+    "artistKeyword": "ロージークロニクル",
+    "officialUrl": "https://helloproject.com/rosychronicle/"
+  },
+  {
+    "slug": "beyooooonds",
+    "name": "BEYOOOOONDS",
+    "shortName": "BEYOOOOONDS",
+    "artistKeyword": "BEYOOOOONDS",
+    "officialUrl": "https://helloproject.com/beyooooonds/"
+  }
+]

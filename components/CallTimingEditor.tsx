@@ -40,7 +40,13 @@ const defaultSongPhrase = (songTitle: string) => {
   return /[!！?？]$/.test(base) ? base : `${base}！`;
 };
 
-export default function CallTimingEditor({ songTitle }: { songTitle: string }) {
+export default function CallTimingEditor({
+  songTitle,
+  groupSlug = "juice-juice",
+}: {
+  songTitle: string;
+  groupSlug?: string;
+}) {
   const liveVideo = useMemo(() => getLiveVideo(songTitle), [songTitle]);
   const videoId = liveVideo?.videoId ?? "";
   const defaultCalls = liveVideo?.defaultCalls ?? EMPTY_TIMED_CALLS;
@@ -155,7 +161,7 @@ export default function CallTimingEditor({ songTitle }: { songTitle: string }) {
   useEffect(() => {
     if (!videoId) return;
     let cancelled = false;
-    const fallback = loadTimedCalls(songTitle, videoId, defaultCalls);
+    const fallback = loadTimedCalls(songTitle, videoId, defaultCalls, groupSlug);
     setTimedCalls(fallback);
     setSelectedId(fallback[0]?.id ?? null);
 
@@ -177,7 +183,7 @@ export default function CallTimingEditor({ songTitle }: { songTitle: string }) {
     return () => {
       cancelled = true;
     };
-  }, [defaultCalls, songTitle, videoId]);
+  }, [defaultCalls, songTitle, videoId, groupSlug]);
 
   useEffect(() => {
     if (!embedSrc) return;
@@ -223,7 +229,21 @@ export default function CallTimingEditor({ songTitle }: { songTitle: string }) {
     pollRef.current = window.setInterval(() => {
       const player = playerRef.current;
       if (!player) return;
-      setCurrentTime(player.getCurrentTime());
+      const time = player.getCurrentTime();
+      const playingState = window.YT?.PlayerState?.PLAYING ?? 1;
+
+      if (
+        typeof liveVideo?.endSeconds === "number" &&
+        time >= liveVideo.endSeconds &&
+        player.getPlayerState() === playingState
+      ) {
+        player.pauseVideo();
+        player.seekTo(liveVideo.endSeconds, false);
+        setCurrentTime(liveVideo.endSeconds);
+      } else {
+        setCurrentTime(time);
+      }
+
       const nextDuration = player.getDuration?.() ?? 0;
       if (Number.isFinite(nextDuration) && nextDuration > 0) {
         setDuration(nextDuration);
@@ -234,7 +254,7 @@ export default function CallTimingEditor({ songTitle }: { songTitle: string }) {
       if (pollRef.current) window.clearInterval(pollRef.current);
       pollRef.current = null;
     };
-  }, [isReady]);
+  }, [isReady, liveVideo?.endSeconds]);
 
   const saveToServer = (calls: TimedCall[]) => {
     if (!videoId) return;
@@ -263,7 +283,7 @@ export default function CallTimingEditor({ songTitle }: { songTitle: string }) {
     if (!canEdit || !videoId) return;
     const sorted = next.slice().sort((a, b) => a.time - b.time);
     setTimedCalls(sorted);
-    saveTimedCalls(songTitle, videoId, sorted);
+    saveTimedCalls(songTitle, videoId, sorted, groupSlug);
     saveToServer(sorted);
   };
 

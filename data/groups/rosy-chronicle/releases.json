@@ -1,0 +1,130 @@
+[
+  {
+    "id": "rosy-7418",
+    "title": "へいらっしゃい！～ニッポンで会いましょう～/ウブとズル(Special Edition)",
+    "type": "digital",
+    "typeLabel": "配信",
+    "releaseDate": "2025-03-19",
+    "tracks": [
+      "へいらっしゃい！～ニッポンで会いましょう～",
+      "ウブとズル",
+      "CHOちょこっとロッケンロール",
+      "未来ハジマリ",
+      "8bit片想い"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/7418/"
+    },
+    "cover": "https://helloproject.com/upload/images/5016da51f3b473f02112a7a4e1b5dc2025014938.webp"
+  },
+  {
+    "id": "rosy-7384",
+    "title": "へいらっしゃい！〜ニッポンで会いましょう〜/ウブとズル",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2025-03-19",
+    "tracks": [
+      "へいらっしゃい！～ニッポンで会いましょう～",
+      "ウブとズル",
+      "CHOちょこっとロッケンロール",
+      "未来ハジマリ",
+      "8bit片想い"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/7384/"
+    },
+    "cover": "https://helloproject.com/upload/images/e8c01514c9ee92f82dfdd935d17aed3ba194d321.webp"
+  },
+  {
+    "id": "rosy-7447",
+    "title": "ガオガオガオ",
+    "type": "digital",
+    "typeLabel": "配信",
+    "releaseDate": "2025-04-05",
+    "tracks": [
+      "ガオガオガオ",
+      "ガオガオガオ(アニメサイズ)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/7447/"
+    },
+    "cover": "https://helloproject.com/upload/images/06dca0464bb81a97bee4eb38eb388f182c8af22f.webp"
+  },
+  {
+    "id": "rosy-7502",
+    "title": "夏のイナズマ/ガオガオガオ(Special Edition)",
+    "type": "digital",
+    "typeLabel": "配信",
+    "releaseDate": "2025-07-23",
+    "tracks": [
+      "夏のイナズマ",
+      "ガオガオガオ",
+      "薔薇より美しい人生",
+      "ダイスキだけど付き合えない",
+      "女で地球は回ってる"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/7502/"
+    },
+    "cover": "https://helloproject.com/upload/images/2292c36d7b6a0bf40ea26e3e75ee9290b214fb7d.webp"
+  },
+  {
+    "id": "rosy-7459",
+    "title": "夏のイナズマ/ガオガオガオ",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2025-07-23",
+    "tracks": [
+      "夏のイナズマ",
+      "ガオガオガオ",
+      "薔薇より美しい人生",
+      "ダイスキだけど付き合えない",
+      "女で地球は回ってる"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/7459/"
+    },
+    "cover": "https://helloproject.com/upload/images/cb01786053486d72173769007be7476b3f3a31fc.webp"
+  },
+  {
+    "id": "rosy-7645",
+    "title": "Misery ～愛の天秤～/なんとかなるでしょ(Special Edition)",
+    "type": "digital",
+    "typeLabel": "配信",
+    "releaseDate": "2026-03-18",
+    "tracks": [
+      "Misery ～愛の天秤～",
+      "なんとかなるでしょ",
+      "記念日未満",
+      "バラ色アンソロージー"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/7645/"
+    },
+    "cover": "https://helloproject.com/upload/images/e0605cbb9e600421923149698590eb45c24d2653.webp"
+  },
+  {
+    "id": "rosy-7611",
+    "title": "Misery ～愛の天秤～/なんとかなるでしょ",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2026-03-18",
+    "tracks": [
+      "Misery～愛の天秤～",
+      "なんとかなるでしょ",
+      "記念日未満",
+      "バラ色アンソロージー"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/7611/"
+    },
+    "cover": "https://helloproject.com/upload/images/14585edc1ec2ce6f231c119f5557ea4c76f5415d.webp"
+  }
+]

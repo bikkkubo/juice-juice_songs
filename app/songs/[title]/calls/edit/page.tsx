@@ -7,6 +7,7 @@ import {
   songPath,
   songSlug,
 } from "@/app/songs";
+import { hasLiveVideoSource } from "@/app/liveVideoTitles";
 import membersData from "@/data/members.json";
 import type { Member } from "@/app/types";
 import Header from "@/components/Header";
@@ -15,10 +16,9 @@ import CallTimingEditor from "@/components/CallTimingEditor";
 type Params = { title: string };
 
 export function generateStaticParams(): Params[] {
-  return getAllSongs().flatMap((song) => [
-    { title: songSlug(song.canonical) },
-    { title: song.canonical },
-  ]);
+  return getAllSongs()
+    .filter((song) => hasLiveVideoSource(song.canonical))
+    .map((song) => ({ title: songSlug(song.canonical) }));
 }
 
 export async function generateMetadata({

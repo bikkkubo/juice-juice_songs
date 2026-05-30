@@ -39,6 +39,7 @@ type CallEntry = {
 export type YouTubePlayer = {
   getCurrentTime: () => number;
   getPlayerState: () => number;
+  pauseVideo: () => void;
   seekTo: (seconds: number, allowSeekAhead: boolean) => void;
 };
 
@@ -47,6 +48,15 @@ export type TimedCall = {
   time: number;
   phrase: string;
   note: string;
+};
+
+type CallHistoryNote = {
+  id: string;
+  eventDate: string;
+  body: string;
+  sourceLabel: string;
+  sourceUrl: string;
+  updatedAt?: string;
 };
 
 type LiveVideoConfig = {
@@ -220,9 +230,10 @@ const createEntry = (template: CallTemplate): CallEntry => ({
   createdAt: new Date().toISOString(),
 });
 
-const storageKey = (songTitle: string) => `juice-calls:${songTitle}`;
-const timedStorageKey = (songTitle: string, videoId: string) =>
-  `juice-timed-calls:${songTitle}:${videoId}`;
+const storageKey = (groupSlug: string, songTitle: string) =>
+  `calls:${groupSlug}:${songTitle}`;
+const timedStorageKey = (groupSlug: string, songTitle: string, videoId: string) =>
+  `timed-calls:${groupSlug}:${songTitle}:${videoId}`;
 
 const MORE_AMORE_VIDEO_ID = "G36amiUCkXU";
 
@@ -316,9 +327,8 @@ const LIVE_VIDEO_BY_SONG: Record<string, LiveVideoConfig> = {
   [normalizeSongKey("甘えんな")]: {
     videoId: "WvdT3_XHYIk",
   },
-  [normalizeSongKey("ひとりで生きられそうって それってねえ、褒めているの?")]: {
-    videoId: "WvdT3_XHYIk",
-  },
+  [normalizeSongKey("ひとりで生きられそうって それってねえ、褒めているの?")]:
+    youtubeMusicSource("-l3hTH4M7EQ"),
   [normalizeSongKey("Fiesta! Fiesta!")]: {
     videoId: "BulYnxM_23U",
   },
@@ -336,7 +346,12 @@ const LIVE_VIDEO_BY_SONG: Record<string, LiveVideoConfig> = {
   [normalizeSongKey("イジワルしないで 抱きしめてよ")]:
     youtubeMusicSource("sVNsd-Wn_UU"),
   [normalizeSongKey("素直に甘えて")]: youtubeMusicSource("NsfJvn7-aDM"),
-  [normalizeSongKey("微炭酸")]: youtubeMusicSource("oMgjwi9ssHI"),
+  [normalizeSongKey("微炭酸")]: {
+    videoId: "v4JVTZ3kK-Y",
+    sourceDescription:
+      "YouTubeのBAND Live Ver.映像に合わせてコールを表示します。",
+    watchUrl: "https://www.youtube.com/watch?v=v4JVTZ3kK-Y",
+  },
   [normalizeSongKey("ノクチルカ")]: youtubeMusicSource("uSKuScmtrfE"),
   [normalizeSongKey("雨の中の口笛")]: youtubeMusicSource("ltsS3O29aM4"),
   [normalizeSongKey("愛・愛・傘")]: youtubeMusicSource("6Y2X6RxYnYA"),
@@ -345,10 +360,167 @@ const LIVE_VIDEO_BY_SONG: Record<string, LiveVideoConfig> = {
     youtubeMusicSource("JQ270gg4PPM"),
   [normalizeSongKey("プライド・ブライト")]: youtubeMusicSource("sjz8xSJdaUc"),
   [normalizeSongKey("Va-Va-Voom")]: youtubeMusicSource("xdw3rkeSJlA"),
-  [normalizeSongKey("この世界は捨てたもんじゃない")]:
-    youtubeMusicSource("ku_JoTRHYpU"),
+  [normalizeSongKey("この世界は捨てたもんじゃない")]: {
+    videoId: "lXB1gMTP-ew",
+    startSeconds: 0,
+    endSeconds: 293,
+    sourceDescription:
+      "YouTubeの00:00〜04:53にあるハロ！ステ Live Editに合わせてコールを表示します。",
+    watchUrl: "https://www.youtube.com/watch?v=lXB1gMTP-ew",
+  },
   [normalizeSongKey("Goal〜明日はあっちだよ〜")]:
     youtubeMusicSource("QYiMYubszU8"),
+  [normalizeSongKey("ナイモノラブ")]: {
+    videoId: "fIQP9oPbB0U",
+    sourceDescription:
+      "YouTubeのConcert 2025 Queen of Hearts Special Flush映像に合わせてコールを表示します。",
+  },
+  [normalizeSongKey("Never Never Surrender")]: {
+    videoId: "rgUER272LsA",
+    startSeconds: 1562,
+    endSeconds: 1799,
+    sourceDescription:
+      "YouTubeの26:02〜29:59にあるハロ！ステ#468ライブ映像に合わせてコールを表示します。",
+    watchUrl: "https://www.youtube.com/watch?v=rgUER272LsA&t=1562s",
+  },
+  [normalizeSongKey("今夜はHearty Party")]: {
+    videoId: "FxFGv8kvk8M",
+    startSeconds: 174,
+    endSeconds: 468,
+    sourceDescription:
+      "YouTubeの02:54〜07:48にあるハロ！ステ Live Editに合わせてコールを表示します。",
+    watchUrl: "https://www.youtube.com/watch?v=FxFGv8kvk8M&t=174s",
+  },
+  [normalizeSongKey("G.O.A.T.")]: {
+    videoId: "TI6oxfA67_4",
+    startSeconds: 3375,
+    endSeconds: 3684,
+    sourceDescription:
+      "YouTubeの56:15〜1:01:24にあるハロ！ステ Live Editに合わせてコールを表示します。",
+    watchUrl: "https://www.youtube.com/watch?v=TI6oxfA67_4&t=3375s",
+  },
+  [normalizeSongKey("次々続々")]: {
+    videoId: "lYw9xr9RtV4",
+    sourceDescription:
+      "YouTubeのライブ映像に合わせてコールを表示します。アンジュルム『次々続々』LIVE 2025.6.18 at 横浜アリーナ。",
+  },
+  [normalizeSongKey("マナーモード")]: {
+    videoId: "cyw0mfsqZgk",
+    sourceDescription:
+      "YouTubeのライブ映像に合わせてコールを表示します。アンジュルム ライブツアー 2025秋 Keep Your Smile！版。",
+  },
+  [normalizeSongKey("Celebrate! Celebrate!")]: {
+    videoId: "bH9CiWgzVLo",
+    sourceDescription:
+      "YouTubeのハロ！ステ Live Editに合わせてコールを表示します。",
+  },
+  [normalizeSongKey("BaBaBa Burning Love！")]: {
+    videoId: "U0tr7ptqOUY",
+    sourceDescription:
+      "YouTubeのひなフェス2026 Live Ver.に合わせてコールを表示します。",
+  },
+  [normalizeSongKey("トラブルメーカー")]: {
+    videoId: "7izkdW-52Ko",
+    sourceDescription:
+      "YouTubeのアンジュルム 2025 autumn Keep Your Smile！ finalライブ映像に合わせてコールを表示します。",
+  },
+  [normalizeSongKey("右ななめ後ろから")]: {
+    videoId: "dGz_UMQqj5s",
+    sourceDescription:
+      "YouTubeのアンジュルム 2025 autumn Keep Your Smile！ finalライブ映像に合わせてコールを表示します。",
+  },
+  [normalizeSongKey("プリズンブレイカー")]: {
+    videoId: "poKfg2NS680",
+    sourceDescription:
+      "YouTubeのアンジュルム 2025 autumn Keep Your Smile！ finalライブ映像に合わせてコールを表示します。",
+  },
+  [normalizeSongKey("もう一歩")]: {
+    videoId: "lrMj2T0mG1o",
+    sourceDescription:
+      "YouTubeのアンジュルム ライブツアー 2025秋 Keep Your Smile！映像に合わせてコールを表示します。",
+  },
+  [normalizeSongKey("臥薪嘗胆")]: {
+    videoId: "76aY8jGZMo0",
+    sourceDescription:
+      "YouTubeのアンジュルム ライブツアー 2025秋 Keep Your Smile！映像に合わせてコールを表示します。",
+  },
+  [normalizeSongKey("FAST PASS")]: {
+    videoId: "oNOybrbt3hA",
+    sourceDescription:
+      "YouTubeのアンジュルム ライブツアー 2025秋 Keep Your Smile！映像に合わせてコールを表示します。",
+  },
+  [normalizeSongKey("限りあるMoment")]: {
+    videoId: "lXB1gMTP-ew",
+    startSeconds: 1600,
+    endSeconds: 1887,
+    sourceDescription:
+      "YouTubeの26:40〜31:27にあるハロ！ステ Live Editに合わせてコールを表示します。",
+    watchUrl: "https://www.youtube.com/watch?v=lXB1gMTP-ew&t=1600s",
+  },
+  [normalizeSongKey("光のうた")]: {
+    videoId: "1zhDVdNiimc",
+    startSeconds: 0,
+    endSeconds: 312,
+    sourceDescription:
+      "YouTubeの00:00〜05:12にあるハロ！ステ Live Editに合わせてコールを表示します。",
+    watchUrl: "https://www.youtube.com/watch?v=1zhDVdNiimc",
+  },
+  [normalizeSongKey("ライアーライナー")]: {
+    videoId: "sDTpOztpBR0",
+    sourceDescription:
+      "YouTubeのハロ！ステ Live Editに合わせてコールを表示します。",
+  },
+  [normalizeSongKey("ちはやぶる")]: {
+    videoId: "YlQEhapgvd4",
+    sourceDescription:
+      "YouTubeのハロ！ステ Live Editに合わせてコールを表示します。",
+  },
+  [normalizeSongKey("今日を胸に飾って")]: {
+    videoId: "IbKd8pkTFmM",
+    sourceDescription:
+      "YouTubeのOCHA NORMA 2025 LIVE at BUDOKAN #OCHAnnelライブ映像に合わせてコールを表示します。",
+  },
+  [normalizeSongKey("Go Your Way")]: {
+    videoId: "WrDpW0sdpWg",
+    sourceDescription:
+      "YouTubeのOCHA NORMA LIVE TOUR 2025 ウチらの地元は日本じゃん！映像に合わせてコールを表示します。",
+  },
+  [normalizeSongKey("ラヴィ・ダヴィ")]: {
+    videoId: "vEdNoYxA-LQ",
+    sourceDescription:
+      "YouTubeのOCHA NORMA LIVE TOUR 2025 ウチらの地元は日本じゃん！映像に合わせてコールを表示します。",
+  },
+  [normalizeSongKey("なんだかんだエヴリデー！")]: {
+    videoId: "eRsEzAY3crw",
+    sourceDescription:
+      "YouTubeのOCHA NORMA LIVE TOUR 2025 ウチらの地元は日本じゃん！映像に合わせてコールを表示します。",
+  },
+  [normalizeSongKey("黙ってついてこい！")]: {
+    videoId: "1BvqouCDrRg",
+    sourceDescription:
+      "YouTubeのハロ！コン2025ライブ映像に合わせてコールを表示します。",
+  },
+  [normalizeSongKey("わかってるっつーの！")]: {
+    videoId: "s2wz7cggwWA",
+    sourceDescription:
+      "YouTubeのHello! Project ひなフェス2025ライブ映像に合わせてコールを表示します。",
+  },
+  [normalizeSongKey("女の愛想は武器じゃない")]: {
+    videoId: "DEIbUkpIbxU",
+    startSeconds: 1448,
+    endSeconds: 1694,
+    sourceDescription:
+      "YouTubeの24:08〜28:14にある日本武道館公演映像に合わせてコールを表示します。",
+    watchUrl: "https://www.youtube.com/watch?v=DEIbUkpIbxU&t=1448s",
+  },
+  [normalizeSongKey("想定内！")]: {
+    videoId: "AQl96dvqssY",
+    startSeconds: 0,
+    endSeconds: 258,
+    sourceDescription:
+      "YouTubeの00:00〜04:18にあるハロ！ステ Live Editに合わせてコールを表示します。",
+    watchUrl: "https://www.youtube.com/watch?v=AQl96dvqssY",
+  },
 };
 
 export const getLiveVideo = (songTitle: string) =>
@@ -379,10 +551,10 @@ export const buildYouTubeEmbedSrc = ({
   return `https://www.youtube-nocookie.com/embed/${videoId}?${params.toString()}`;
 };
 
-const loadEntries = (songTitle: string): CallEntry[] => {
+const loadEntries = (songTitle: string, groupSlug: string): CallEntry[] => {
   if (typeof window === "undefined") return [];
   try {
-    const raw = window.localStorage.getItem(storageKey(songTitle));
+    const raw = window.localStorage.getItem(storageKey(groupSlug, songTitle));
     if (!raw) return [];
     const parsed = JSON.parse(raw);
     return Array.isArray(parsed) ? parsed : [];
@@ -391,18 +563,28 @@ const loadEntries = (songTitle: string): CallEntry[] => {
   }
 };
 
-const saveEntries = (songTitle: string, entries: CallEntry[]) => {
-  window.localStorage.setItem(storageKey(songTitle), JSON.stringify(entries));
+const saveEntries = (
+  songTitle: string,
+  entries: CallEntry[],
+  groupSlug: string
+) => {
+  window.localStorage.setItem(
+    storageKey(groupSlug, songTitle),
+    JSON.stringify(entries)
+  );
 };
 
 export const loadTimedCalls = (
   songTitle: string,
   videoId: string,
-  defaults: TimedCall[] = []
+  defaults: TimedCall[] = [],
+  groupSlug = "juice-juice"
 ): TimedCall[] => {
   if (typeof window === "undefined") return defaults;
   try {
-    const raw = window.localStorage.getItem(timedStorageKey(songTitle, videoId));
+    const raw = window.localStorage.getItem(
+      timedStorageKey(groupSlug, songTitle, videoId)
+    );
     if (!raw) return defaults;
     const parsed = JSON.parse(raw);
     if (!Array.isArray(parsed)) return defaults;
@@ -416,10 +598,11 @@ export const loadTimedCalls = (
 export const saveTimedCalls = (
   songTitle: string,
   videoId: string,
-  calls: TimedCall[]
+  calls: TimedCall[],
+  groupSlug = "juice-juice"
 ) => {
   window.localStorage.setItem(
-    timedStorageKey(songTitle, videoId),
+    timedStorageKey(groupSlug, songTitle, videoId),
     JSON.stringify(calls)
   );
 };
@@ -460,9 +643,11 @@ export const parseTimeInput = (value: string): number | null => {
 export default function SongCallLab({
   songTitle,
   editHref,
+  groupSlug = "juice-juice",
 }: {
   songTitle: string;
   editHref?: string;
+  groupSlug?: string;
 }) {
   const [entries, setEntries] = useState<CallEntry[]>([]);
   const [auth, setAuth] = useState<AuthState | null>(null);
@@ -476,8 +661,8 @@ export default function SongCallLab({
   const intervalRef = useRef<number | null>(null);
 
   useEffect(() => {
-    setEntries(loadEntries(songTitle));
-  }, [songTitle]);
+    setEntries(loadEntries(songTitle, groupSlug));
+  }, [songTitle, groupSlug]);
 
   useEffect(() => {
     let cancelled = false;
@@ -540,7 +725,7 @@ export default function SongCallLab({
       ...entries,
     ];
     setEntries(next);
-    saveEntries(songTitle, next);
+    saveEntries(songTitle, next, groupSlug);
     setPhrase("");
     setTiming("");
     setNote("");
@@ -549,7 +734,7 @@ export default function SongCallLab({
   const removeEntry = (id: string) => {
     const next = entries.filter((entry) => entry.id !== id);
     setEntries(next);
-    saveEntries(songTitle, next);
+    saveEntries(songTitle, next, groupSlug);
   };
 
   const resetPractice = () => {
@@ -575,18 +760,27 @@ export default function SongCallLab({
       </div>
 
       {liveVideo && (
-        <SyncedCallPlayer
-          songTitle={songTitle}
-          videoId={liveVideo.videoId}
-          startSeconds={liveVideo.startSeconds}
-          endSeconds={liveVideo.endSeconds}
-          defaultCalls={liveVideo.defaultCalls ?? EMPTY_TIMED_CALLS}
-          sourceLabel={liveVideo.sourceLabel}
-          sourceDescription={liveVideo.sourceDescription}
-          watchUrl={liveVideo.watchUrl}
-          auth={auth}
-          editHref={editHref}
-        />
+        <>
+          <CallHistoryPanel
+            songTitle={songTitle}
+            videoId={liveVideo.videoId}
+            groupSlug={groupSlug}
+            auth={auth}
+          />
+          <SyncedCallPlayer
+            songTitle={songTitle}
+            videoId={liveVideo.videoId}
+            startSeconds={liveVideo.startSeconds}
+            endSeconds={liveVideo.endSeconds}
+            defaultCalls={liveVideo.defaultCalls ?? EMPTY_TIMED_CALLS}
+            sourceLabel={liveVideo.sourceLabel}
+            sourceDescription={liveVideo.sourceDescription}
+            watchUrl={liveVideo.watchUrl}
+            auth={auth}
+            editHref={editHref}
+            groupSlug={groupSlug}
+          />
+        </>
       )}
 
       <div className="grid gap-4 md:grid-cols-[1fr_1.2fr]">
@@ -732,6 +926,240 @@ export default function SongCallLab({
   );
 }
 
+function CallHistoryPanel({
+  songTitle,
+  videoId,
+  groupSlug,
+  auth,
+}: {
+  songTitle: string;
+  videoId: string;
+  groupSlug: string;
+  auth: AuthState | null;
+}) {
+  const callVersion = "beginner";
+  const canEdit = auth?.canEdit ?? false;
+  const [notes, setNotes] = useState<CallHistoryNote[]>([]);
+  const [draftBody, setDraftBody] = useState("");
+  const [draftDate, setDraftDate] = useState("");
+  const [draftSourceLabel, setDraftSourceLabel] = useState("");
+  const [draftSourceUrl, setDraftSourceUrl] = useState("");
+  const [isSaving, setIsSaving] = useState(false);
+  const [status, setStatus] = useState<string | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    const params = new URLSearchParams({
+      groupSlug,
+      songTitle,
+      videoId,
+      callVersion,
+    });
+
+    fetch(`/api/call-history?${params.toString()}`)
+      .then(async (response): Promise<{ notes?: CallHistoryNote[] } | null> =>
+        response.ok
+          ? ((await response.json()) as { notes?: CallHistoryNote[] })
+          : null
+      )
+      .then((data) => {
+        if (cancelled || !data?.notes) return;
+        setNotes(data.notes);
+      })
+      .catch(() => undefined);
+
+    return () => {
+      cancelled = true;
+    };
+  }, [callVersion, groupSlug, songTitle, videoId]);
+
+  const saveNotes = async (next: CallHistoryNote[]) => {
+    if (!canEdit) return;
+    setIsSaving(true);
+    setStatus(null);
+
+    const normalized = next
+      .map((note) => ({
+        ...note,
+        body: note.body.trim(),
+        eventDate: note.eventDate.trim(),
+        sourceLabel: note.sourceLabel.trim(),
+        sourceUrl: note.sourceUrl.trim(),
+      }))
+      .filter((note) => note.body);
+
+    setNotes(normalized);
+
+    try {
+      const response = await fetch("/api/call-history", {
+        method: "PUT",
+        credentials: "include",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({
+          groupSlug,
+          songTitle,
+          videoId,
+          callVersion,
+          notes: normalized,
+        }),
+      });
+      if (!response.ok) throw new Error("save_failed");
+      setStatus("保存しました");
+    } catch {
+      setStatus("保存に失敗しました");
+    } finally {
+      setIsSaving(false);
+    }
+  };
+
+  const addNote = () => {
+    if (!canEdit || !draftBody.trim()) return;
+    const note: CallHistoryNote = {
+      id:
+        typeof crypto !== "undefined" && "randomUUID" in crypto
+          ? crypto.randomUUID()
+          : `${Date.now()}-${Math.random()}`,
+      eventDate: draftDate,
+      body: draftBody,
+      sourceLabel: draftSourceLabel,
+      sourceUrl: draftSourceUrl,
+    };
+    void saveNotes([note, ...notes]);
+    setDraftBody("");
+    setDraftDate("");
+    setDraftSourceLabel("");
+    setDraftSourceUrl("");
+  };
+
+  const removeNote = (id: string) => {
+    if (!canEdit) return;
+    void saveNotes(notes.filter((note) => note.id !== id));
+  };
+
+  if (!canEdit && notes.length === 0) return null;
+
+  return (
+    <div className="mb-5 rounded-2xl border border-border bg-white p-4">
+      <div className="mb-3 flex flex-wrap items-start justify-between gap-3">
+        <div>
+          <h3 className="text-[11px] font-semibold tracking-[0.22em] text-ink-weak">
+            ♪ CALL HISTORY
+          </h3>
+          <p className="mt-1 text-xs leading-relaxed text-ink-weak">
+            この曲のコールが追加・変化した背景メモです。曲・動画・初心者版ごとに管理します。
+          </p>
+        </div>
+        <span className="rounded-full border border-border bg-surface px-2.5 py-1 text-[11px] text-ink-weak">
+          {canEdit ? "編集可" : "閲覧のみ"}
+        </span>
+      </div>
+
+      {notes.length === 0 ? (
+        <p className="rounded-xl border border-dashed border-border bg-surface px-3 py-4 text-center text-xs text-ink-weak">
+          まだコール履歴メモはありません。
+        </p>
+      ) : (
+        <ol className="space-y-2">
+          {notes.map((note) => (
+            <li
+              key={note.id}
+              className="rounded-xl border border-border bg-surface/70 px-3 py-3"
+            >
+              <div className="flex items-start justify-between gap-3">
+                <div className="min-w-0">
+                  {note.eventDate && (
+                    <p className="font-mono text-[10px] text-accent">
+                      {note.eventDate}
+                    </p>
+                  )}
+                  <p className="mt-1 whitespace-pre-wrap break-words text-sm leading-relaxed text-ink">
+                    {note.body}
+                  </p>
+                  {(note.sourceLabel || note.sourceUrl) && (
+                    <p className="mt-2 text-[11px] text-ink-weak">
+                      参考:{" "}
+                      {note.sourceUrl ? (
+                        <a
+                          href={note.sourceUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="text-accent underline-offset-2 hover:underline"
+                        >
+                          {note.sourceLabel || note.sourceUrl} ↗
+                        </a>
+                      ) : (
+                        note.sourceLabel
+                      )}
+                    </p>
+                  )}
+                </div>
+                {canEdit && (
+                  <button
+                    type="button"
+                    onClick={() => removeNote(note.id)}
+                    disabled={isSaving}
+                    className="shrink-0 rounded-full border border-border bg-white px-2 py-0.5 text-[10px] text-ink-weak transition hover:border-ink/30 hover:text-ink disabled:cursor-not-allowed disabled:opacity-60"
+                  >
+                    削除
+                  </button>
+                )}
+              </div>
+            </li>
+          ))}
+        </ol>
+      )}
+
+      {canEdit && (
+        <div className="mt-3 rounded-xl border border-accent/30 bg-accent/5 p-3">
+          <p className="mb-2 text-[10px] font-semibold tracking-[0.18em] text-ink-weak">
+            HISTORY MEMO EDIT
+          </p>
+          <div className="grid gap-2 sm:grid-cols-[140px_1fr]">
+            <input
+              value={draftDate}
+              onChange={(event) => setDraftDate(event.target.value)}
+              placeholder="例: 2025秋 仙台"
+              className="rounded-md border border-border bg-white px-3 py-2 text-sm text-ink outline-none transition placeholder:text-ink-weak/60 focus:border-accent"
+            />
+            <input
+              value={draftSourceLabel}
+              onChange={(event) => setDraftSourceLabel(event.target.value)}
+              placeholder="参考ラベル任意"
+              className="rounded-md border border-border bg-white px-3 py-2 text-sm text-ink outline-none transition placeholder:text-ink-weak/60 focus:border-accent"
+            />
+          </div>
+          <input
+            value={draftSourceUrl}
+            onChange={(event) => setDraftSourceUrl(event.target.value)}
+            placeholder="参考URL任意"
+            className="mt-2 w-full rounded-md border border-border bg-white px-3 py-2 text-sm text-ink outline-none transition placeholder:text-ink-weak/60 focus:border-accent"
+          />
+          <textarea
+            value={draftBody}
+            onChange={(event) => setDraftBody(event.target.value)}
+            rows={3}
+            placeholder="例: 最後のヲタク歌唱は、2025年秋ツアー仙台公演からメンバー希望で増えた。"
+            className="mt-2 w-full resize-none rounded-md border border-border bg-white px-3 py-2 text-sm text-ink outline-none transition placeholder:text-ink-weak/60 focus:border-accent"
+          />
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            <button
+              type="button"
+              onClick={addNote}
+              disabled={isSaving || !draftBody.trim()}
+              className="rounded-md bg-ink px-3 py-2 text-xs font-semibold text-white transition hover:bg-ink/90 disabled:cursor-not-allowed disabled:bg-border disabled:text-ink-weak"
+            >
+              履歴メモを追加
+            </button>
+            {status && (
+              <span className="text-[11px] text-ink-weak">{status}</span>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 function SyncedCallPlayer({
   songTitle,
   videoId,
@@ -743,6 +1171,7 @@ function SyncedCallPlayer({
   watchUrl: sourceWatchUrl,
   auth,
   editHref,
+  groupSlug,
 }: {
   songTitle: string;
   videoId: string;
@@ -754,6 +1183,7 @@ function SyncedCallPlayer({
   watchUrl?: string;
   auth: AuthState | null;
   editHref?: string;
+  groupSlug: string;
 }) {
   const reactId = useId();
   const playerElementId = `yt-player-${reactId.replace(/:/g, "")}`;
@@ -801,7 +1231,7 @@ function SyncedCallPlayer({
 
   useEffect(() => {
     let cancelled = false;
-    const fallback = loadTimedCalls(songTitle, videoId, defaultCalls);
+    const fallback = loadTimedCalls(songTitle, videoId, defaultCalls, groupSlug);
     setTimedCalls(fallback);
 
     fetch(
@@ -821,7 +1251,7 @@ function SyncedCallPlayer({
     return () => {
       cancelled = true;
     };
-  }, [songTitle, videoId, defaultCalls]);
+  }, [songTitle, videoId, defaultCalls, groupSlug]);
 
   useEffect(() => {
     if (!embedSrc) return;
@@ -897,6 +1327,13 @@ function SyncedCallPlayer({
       const playingState = window.YT?.PlayerState?.PLAYING ?? 1;
       if (player.getPlayerState() !== playingState) return;
 
+      if (typeof endSeconds === "number" && time >= endSeconds) {
+        player.pauseVideo();
+        player.seekTo(endSeconds, false);
+        setCurrentTime(endSeconds);
+        return;
+      }
+
       const due = timedCalls
         .slice()
         .sort((a, b) => a.time - b.time)
@@ -919,12 +1356,12 @@ function SyncedCallPlayer({
       if (pollRef.current) window.clearInterval(pollRef.current);
       pollRef.current = null;
     };
-  }, [isReady, timedCalls, voiceEnabled]);
+  }, [endSeconds, isReady, timedCalls, voiceEnabled]);
 
   const updateTimedCalls = (next: TimedCall[]) => {
     const sorted = next.slice().sort((a, b) => a.time - b.time);
     setTimedCalls(sorted);
-    saveTimedCalls(songTitle, videoId, sorted);
+    saveTimedCalls(songTitle, videoId, sorted, groupSlug);
     if (canEdit) {
       void fetch("/api/calls", {
         method: "PUT",

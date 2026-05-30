@@ -21,10 +21,7 @@ import SiteFooter from "@/components/SiteFooter";
 type Params = { title: string };
 
 export function generateStaticParams(): Params[] {
-  return getAllSongs().flatMap((s) => [
-    { title: songSlug(s.canonical) },
-    { title: s.canonical },
-  ]);
+  return getAllSongs().map((s) => ({ title: songSlug(s.canonical) }));
 }
 
 export async function generateMetadata({

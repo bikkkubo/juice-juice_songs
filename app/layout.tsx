@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Noto_Sans_JP, Inter } from "next/font/google";
+import { ROOT_SITE_NAME, rootOpenGraph } from "./metadata";
 import "./globals.css";
 
 const noto = Noto_Sans_JP({
@@ -23,31 +24,15 @@ export const metadata: Metadata = {
         ? "https://bikkkubo.github.io/juice-juice_songs"
         : "https://hello-project.jp")
   ),
-  title: "Juice=Juiceコール練習サイト",
+  title: ROOT_SITE_NAME,
   description:
-    "Juice=Juice のライブ前にコールのタイミングを確認・練習できる非公式ファンサイト",
-  openGraph: {
-    title: "Juice=Juiceコール練習サイト",
-    description:
-      "ライブ映像や音源に合わせてJuice=Juiceのコールを練習できます。",
-    locale: "ja_JP",
-    type: "website",
-    url: "/",
-    siteName: "Juice=Juiceコール練習サイト",
-    images: [
-      {
-        url: "/api/og-image",
-        width: 1200,
-        height: 630,
-        alt: "Juice=Juiceコール練習サイト",
-      },
-    ],
-  },
+    "ハロー！プロジェクト各グループのライブ前にコールのタイミングを確認・練習できる非公式ファンサイト",
+  openGraph: rootOpenGraph,
   twitter: {
     card: "summary_large_image",
-    title: "Juice=Juiceコール練習サイト",
+    title: ROOT_SITE_NAME,
     description:
-      "ライブ映像や音源に合わせてJuice=Juiceのコールを練習できます。",
+      "ライブ映像や音源に合わせてハロー！プロジェクト楽曲のコールを練習できます。",
     images: ["/api/og-image"],
   },
 };

@@ -1,12 +1,11 @@
-import releasesData from "@/data/releases.json";
-import creditsData from "@/data/credits.json";
-import aliasesData from "@/data/aliases.json";
 import type { Release, SongCredits } from "./types";
+import { DEFAULT_GROUP_SLUG, getGroupDataset } from "./groups";
 
-const credits = creditsData as Record<string, SongCredits>;
-const aliases = aliasesData as Record<string, string>;
-
-export const getCredits = (canonical: string): SongCredits | null => {
+export const getCredits = (
+  canonical: string,
+  groupSlug = DEFAULT_GROUP_SLUG
+): SongCredits | null => {
+  const credits = getGroupDataset(groupSlug)?.credits ?? {};
   const c = credits[canonical];
   if (!c) return null;
   if (!c.lyricist && !c.composer && !c.arranger) return null;
@@ -29,7 +28,11 @@ const normalizePunct = (s: string): string =>
     .replace(/\s+/g, " ")
     .normalize("NFC");
 
-export const canonicalizeTitle = (title: string): string => {
+export const canonicalizeTitle = (
+  title: string,
+  groupSlug = DEFAULT_GROUP_SLUG
+): string => {
+  const aliases = getGroupDataset(groupSlug)?.aliases ?? {};
   let s = normalizePunct(title.trim());
   if (s === "GIRLS BE AMBITIOUS! 2026") return s;
   // Strip all parenthetical groups (version markers, furigana, etc.)
@@ -136,18 +139,22 @@ export const songSlug = (canonical: string): string => {
   return ascii || `song-${hashTitle(canonical)}`;
 };
 
-export const songPath = (canonical: string): string => `/songs/${songSlug(canonical)}`;
+export const songPath = (
+  canonical: string,
+  groupSlug = DEFAULT_GROUP_SLUG
+): string => `/${groupSlug}/songs/${songSlug(canonical)}`;
 
-const buildIndex = (): Map<string, Song> => {
+const buildIndex = (groupSlug: string): Map<string, Song> => {
   const map = new Map<string, Song>();
+  const releases = getGroupDataset(groupSlug)?.releases ?? [];
 
-  const sorted = (releasesData as Release[])
+  const sorted = releases
     .slice()
     .sort((a, b) => a.releaseDate.localeCompare(b.releaseDate));
 
   for (const r of sorted) {
     for (const t of r.tracks) {
-      const canon = canonicalizeTitle(t);
+      const canon = canonicalizeTitle(t, groupSlug);
       if (!canon) continue;
       let song = map.get(canon);
       if (!song) {
@@ -165,18 +172,38 @@ const buildIndex = (): Map<string, Song> => {
   return map;
 };
 
-const songIndex = buildIndex();
+const indexCache = new Map<string, Map<string, Song>>();
+const slugIndexCache = new Map<string, Map<string, Song>>();
 
-const slugIndex = new Map(
-  Array.from(songIndex.values()).map((song) => [songSlug(song.canonical), song])
-);
+const getIndex = (groupSlug: string): Map<string, Song> => {
+  const cached = indexCache.get(groupSlug);
+  if (cached) return cached;
+  const index = buildIndex(groupSlug);
+  indexCache.set(groupSlug, index);
+  slugIndexCache.set(
+    groupSlug,
+    new Map(Array.from(index.values()).map((song) => [songSlug(song.canonical), song]))
+  );
+  return index;
+};
 
-export const getAllSongs = (): Song[] => Array.from(songIndex.values());
+const getSlugIndex = (groupSlug: string): Map<string, Song> => {
+  getIndex(groupSlug);
+  return slugIndexCache.get(groupSlug) ?? new Map();
+};
 
-export const getSong = (canonical: string): Song | null =>
-  songIndex.get(canonical) ?? null;
+export const getAllSongs = (groupSlug = DEFAULT_GROUP_SLUG): Song[] =>
+  Array.from(getIndex(groupSlug).values());
 
-export const getSongByParam = (param: string): Song | null => {
+export const getSong = (
+  canonical: string,
+  groupSlug = DEFAULT_GROUP_SLUG
+): Song | null => getIndex(groupSlug).get(canonical) ?? null;
+
+export const getSongByParam = (
+  param: string,
+  groupSlug = DEFAULT_GROUP_SLUG
+): Song | null => {
   const decoded = decodeURIComponent(param);
-  return slugIndex.get(decoded) ?? getSong(decoded);
+  return getSlugIndex(groupSlug).get(decoded) ?? getSong(decoded, groupSlug);
 };

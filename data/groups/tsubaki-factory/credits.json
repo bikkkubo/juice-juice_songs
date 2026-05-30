@@ -1,0 +1,567 @@
+{
+  "17才": {
+    "lyricist": "有馬三恵子",
+    "composer": "筒美京平",
+    "arranger": "近藤圭一"
+  },
+  "BE": {
+    "lyricist": "つんく",
+    "composer": "つんく",
+    "arranger": "湯浅公一"
+  },
+  "BE(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "つんく",
+    "composer": "つんく"
+  },
+  "ENDLESS YOUTH": {
+    "lyricist": "つんく",
+    "composer": "つんく",
+    "arranger": "高橋諭一"
+  },
+  "EZPZ!!": {
+    "lyricist": "井筒日美",
+    "composer": "Shusui/Samuel Waermo/Stefan Ekstedt",
+    "arranger": "Stefan Ekstedt"
+  },
+  "FireWorks": {
+    "lyricist": "SHOCK EYE",
+    "composer": "SHOCK EYE",
+    "arranger": "草野将史"
+  },
+  "Hair up 空へ！": {
+    "lyricist": "Lurie Jeannie Renee/Minichiello Mia Gabriella/Mora Matias Gabriel",
+    "composer": "Lurie Jeannie Renee/Minichiello Mia Gabriella/Mora Matias Gabriel"
+  },
+  "I Need You ～夜空の観覧車～": {
+    "lyricist": "星部ショウ",
+    "composer": "星部ショウ",
+    "arranger": "浜田ピエール裕介"
+  },
+  "Just Try!": {
+    "lyricist": "つんく",
+    "composer": "つんく",
+    "arranger": "大久保薫"
+  },
+  "Just Try!(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "つんく",
+    "composer": "つんく"
+  },
+  "LET&#x27;S LIVE!": {
+    "lyricist": "つんく",
+    "composer": "つんく",
+    "arranger": "平田祥一郎"
+  },
+  "My Darling ～Do you love me?～": {
+    "lyricist": "中島卓偉",
+    "composer": "中島卓偉",
+    "arranger": "板垣祐介"
+  },
+  "My Days for You": {
+    "lyricist": "NOBE",
+    "composer": "中島卓偉",
+    "arranger": "鈴木俊介"
+  },
+  "Power Flower ～今こそ一丸となれ～": {
+    "lyricist": "SHOCK EYE",
+    "composer": "SHOCK EYE",
+    "arranger": "草野将史"
+  },
+  "Stay free & Stay tuned": {
+    "lyricist": "中島卓偉",
+    "composer": "中島卓偉",
+    "arranger": "炭竃智弘"
+  },
+  "You&#x27;re My Friend feat.KIKI": {
+    "lyricist": "岩里祐穂",
+    "composer": "AKIRASTAR",
+    "arranger": "荒幡亮平"
+  },
+  "アイドル天職音頭": {
+    "lyricist": "星部ショウ",
+    "composer": "星部ショウ",
+    "arranger": "大久保薫"
+  },
+  "アタシリズム": {
+    "lyricist": "児玉雨子",
+    "composer": "星部ショウ",
+    "arranger": "荒幡亮平"
+  },
+  "アタシリズム(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "児玉雨子",
+    "composer": "星部ショウ"
+  },
+  "アドレナリン・ダメ": {
+    "lyricist": "児玉雨子",
+    "composer": "中島卓偉",
+    "arranger": "炭竃智弘"
+  },
+  "アドレナリン・ダメ(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "児玉雨子",
+    "composer": "中島卓偉"
+  },
+  "あの子が歌うのを見たんだ": {
+    "lyricist": "塩田泰造",
+    "composer": "市川淳",
+    "arranger": "市川淳"
+  },
+  "イマナンジ？": {
+    "lyricist": "Soflan Daichi",
+    "composer": "玉木千尋",
+    "arranger": "玉木千尋"
+  },
+  "いままで生きてきてどうこう": {
+    "lyricist": "江本純子",
+    "composer": "SOUNDKIDS",
+    "arranger": "岡出莉菜・遠藤浩二"
+  },
+  "うるわしのカメリア": {
+    "lyricist": "児玉雨子",
+    "composer": "加藤裕介",
+    "arranger": "加藤裕介"
+  },
+  "かっちょ良い歌": {
+    "lyricist": "つんく",
+    "composer": "つんく",
+    "arranger": "朝井泰生"
+  },
+  "かっちょ良い歌(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "つんく",
+    "composer": "つんく"
+  },
+  "ガラクタDIAMOND": {
+    "lyricist": "森由里子",
+    "composer": "馬飼野康二/鎌田俊哉",
+    "arranger": "炭竃智弘"
+  },
+  "キャベツ白書～春編～": {
+    "lyricist": "角田崇徳",
+    "composer": "角田崇徳",
+    "arranger": "上杉洋史"
+  },
+  "これが夢なら": {
+    "lyricist": "太田善也",
+    "composer": "和田俊輔",
+    "arranger": "和田俊輔"
+  },
+  "サマー・チャレンジャー": {
+    "lyricist": "児玉雨子",
+    "composer": "中島卓偉",
+    "arranger": "板垣祐介"
+  },
+  "サンクユーベリーベリー": {
+    "lyricist": "塩田泰造",
+    "composer": "たいせい",
+    "arranger": "市川淳"
+  },
+  "シークレットサマー": {
+    "lyricist": "大森祥子",
+    "composer": "渡辺和紀",
+    "arranger": "渡辺和紀"
+  },
+  "ジリリ キテル": {
+    "lyricist": "つんく",
+    "composer": "つんく",
+    "arranger": "湯浅公一"
+  },
+  "スキップ・スキップ・スキップ": {
+    "lyricist": "児玉雨子",
+    "composer": "KOUGA",
+    "arranger": "鈴木俊介"
+  },
+  "だからなんなんだ！": {
+    "lyricist": "星部ショウ",
+    "composer": "酒井陽一",
+    "arranger": "酒井陽一"
+  },
+  "デートの日は二度くらいシャワーして出かけたい": {
+    "lyricist": "つんく",
+    "composer": "つんく",
+    "arranger": "江上浩太郎"
+  },
+  "でも…いいよ": {
+    "lyricist": "西野蒟蒻",
+    "composer": "Erik Lidbom/Julie Yu",
+    "arranger": "Erik Lidbom"
+  },
+  "てんぷら食べたい": {
+    "lyricist": "江本純子",
+    "composer": "SOUNDKIDS",
+    "arranger": "遠藤浩二・栗本修"
+  },
+  "ナインティーンの蜃気楼": {
+    "lyricist": "児玉雨子",
+    "composer": "中島卓偉",
+    "arranger": "鈴木俊介"
+  },
+  "ナインティーンの蜃気楼(&#x27;19 Summer Ver.)": {
+    "lyricist": "児玉雨子",
+    "composer": "中島卓偉",
+    "arranger": "鈴木俊介"
+  },
+  "ネガポジポジ": {
+    "lyricist": "江本純子",
+    "composer": "SOUNDKIDS",
+    "arranger": "岡出莉菜・遠藤浩二"
+  },
+  "ハッピークラッカー": {
+    "lyricist": "SHOCK EYE",
+    "composer": "SHOCK EYE",
+    "arranger": "草野将史"
+  },
+  "ハナモヨウ": {
+    "lyricist": "MEG.ME",
+    "composer": "KOUGA",
+    "arranger": "KOUGA"
+  },
+  "ひょっこりひょうたん島": {
+    "lyricist": "井上ひさし/山元護久",
+    "composer": "宇野誠一郎",
+    "arranger": "田中直"
+  },
+  "ふりさけみれば・・・": {
+    "lyricist": "三浦徳子",
+    "composer": "近藤圭一",
+    "arranger": "田中直"
+  },
+  "ふわり、恋時計": {
+    "lyricist": "井筒日美",
+    "composer": "星部ショウ",
+    "arranger": "中西亮輔"
+  },
+  "ベイビースパイダー": {
+    "lyricist": "西野蒟蒻",
+    "composer": "Shusui/Samuel Waermo/Stefan Ekstedt",
+    "arranger": "Samuel Waermo/Stefan Ekstedt"
+  },
+  "マサユメ": {
+    "lyricist": "児玉雨子",
+    "composer": "中島卓偉",
+    "arranger": "炭竃智弘"
+  },
+  "マサユメ(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "児玉雨子",
+    "composer": "中島卓偉"
+  },
+  "メドレーおへその国からこんにちは⇒Love take it all⇒FOREVER LOVE⇒桃色スパークリング(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "つんく",
+    "composer": "つんく"
+  },
+  "メドレー彼女になりたいっ！！！⇒アジアン セレブレイション⇒サヨナラ 激しき恋⇒行け 行け モンキーダンス⇒超HAPPY SONG(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "つんく",
+    "composer": "つんく"
+  },
+  "もうサイコー！": {
+    "lyricist": "Alana Da Fonseca,Jordan Yaeger",
+    "composer": "Alana Da Fonseca,Jordan Yaeger"
+  },
+  "ロックンロールに掴みたい": {
+    "lyricist": "福田花音",
+    "composer": "和田俊輔",
+    "arranger": "和田俊輔"
+  },
+  "愛は今、愛を求めてる": {
+    "lyricist": "井筒日美",
+    "composer": "隆勇人",
+    "arranger": "鈴木俊介"
+  },
+  "愛は今、愛を求めてる(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "井筒日美",
+    "composer": "隆勇人"
+  },
+  "意識高い乙女のジレンマ": {
+    "lyricist": "西野蒟蒻",
+    "composer": "KOUGA",
+    "arranger": "大久保薫"
+  },
+  "雨宿りのエピローグ": {
+    "lyricist": "山崎あおい",
+    "composer": "KOUGA",
+    "arranger": "KOUGA"
+  },
+  "可能性のコンチェルト": {
+    "lyricist": "イイジマケン",
+    "composer": "n-buna",
+    "arranger": "佐々木“コジロー”貴之"
+  },
+  "可能性のコンチェルト(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "イイジマケン",
+    "composer": "n-buna"
+  },
+  "怪獣のバラード": {
+    "lyricist": "岡田冨美子",
+    "composer": "東海林修",
+    "arranger": "市川淳"
+  },
+  "間違いじゃない 泣いたりしない": {
+    "lyricist": "西野蒟蒻",
+    "composer": "Shusui/Albin Hillborg/Anders Dannvik",
+    "arranger": "Albin Hillborg/Anders Dannvik"
+  },
+  "間違いじゃない 泣いたりしない(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "西野蒟蒻",
+    "composer": "Shusui/Albin Hillborg/Anders Dannvik"
+  },
+  "帰ろう レッツゴー！": {
+    "lyricist": "児玉雨子",
+    "composer": "星部ショウ",
+    "arranger": "板垣祐介"
+  },
+  "気高く咲き誇れ！": {
+    "lyricist": "児玉雨子/Rap詞：角田崇徳",
+    "composer": "Jean Luc Ponpon",
+    "arranger": "Jean Luc Ponpon"
+  },
+  "気絶するほど愛してる！": {
+    "lyricist": "福田花音",
+    "composer": "和田俊輔",
+    "arranger": "和田俊輔"
+  },
+  "居間はだめ": {
+    "lyricist": "江本純子",
+    "composer": "SOUNDKIDS",
+    "arranger": "遠藤浩二・栗本修"
+  },
+  "君と僕の絆": {
+    "lyricist": "中島卓偉",
+    "composer": "中島卓偉",
+    "arranger": "宮永治郎"
+  },
+  "君と僕の絆 feat.KIKI": {
+    "lyricist": "中島卓偉",
+    "composer": "中島卓偉",
+    "arranger": "宮永治郎"
+  },
+  "月夜のパ・ド・ドゥ": {
+    "lyricist": "西野蒟蒻",
+    "composer": "Shusui/Albin Hillborg",
+    "arranger": "Albin Hillborg"
+  },
+  "鼓動OK？": {
+    "lyricist": "児玉雨子",
+    "composer": "Erik Lidbom/miwaflower",
+    "arranger": "Erik Lidbom"
+  },
+  "光のカーテン": {
+    "lyricist": "児玉雨子",
+    "composer": "石井健太郎",
+    "arranger": "石井健太郎"
+  },
+  "今夜だけ浮かれたかった": {
+    "lyricist": "児玉雨子",
+    "composer": "中島卓偉",
+    "arranger": "炭竃智弘"
+  },
+  "今夜だけ浮かれたかった(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "児玉雨子",
+    "composer": "中島卓偉"
+  },
+  "最上級Story": {
+    "lyricist": "井筒日美",
+    "composer": "ArmySlick/小久保祐希",
+    "arranger": "ArmySlick"
+  },
+  "最上級Story(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "井筒日美",
+    "composer": "ArmySlick/小久保祐希"
+  },
+  "三回目のデート神話": {
+    "lyricist": "児玉雨子",
+    "composer": "中島卓偉",
+    "arranger": "炭竃智弘"
+  },
+  "三回目のデート神話(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "児玉雨子",
+    "composer": "中島卓偉"
+  },
+  "私がオバさんになっても": {
+    "lyricist": "森高千里",
+    "composer": "斉藤英夫",
+    "arranger": "Carlos K."
+  },
+  "七分咲きのつづき": {
+    "lyricist": "山崎あおい",
+    "composer": "KOUGA",
+    "arranger": "KOUGA"
+  },
+  "弱さじゃないよ、恋は": {
+    "lyricist": "山崎あおい",
+    "composer": "Shusui/Josef Melin",
+    "arranger": "Josef Melin"
+  },
+  "弱さじゃないよ、恋は(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "山崎あおい",
+    "composer": "Shusui/Josef Melin"
+  },
+  "就活センセーション": {
+    "lyricist": "中島卓偉",
+    "composer": "中島卓偉",
+    "arranger": "ダンス☆マン"
+  },
+  "春恋歌": {
+    "lyricist": "大森祥子",
+    "composer": "鈴木秋則",
+    "arranger": "鈴木俊介"
+  },
+  "純愛クラッシャー": {
+    "lyricist": "井筒日美",
+    "composer": "Erik Lidbom",
+    "arranger": "Erik Lidbom"
+  },
+  "純情cm": {
+    "lyricist": "大橋莉子",
+    "composer": "大橋莉子",
+    "arranger": "hisakuni"
+  },
+  "純情cm(センチメートル)": {
+    "lyricist": "大橋莉子",
+    "composer": "大橋莉子",
+    "arranger": "hisakuni"
+  },
+  "初恋サンライズ": {
+    "lyricist": "井筒日美",
+    "composer": "山田祐輔",
+    "arranger": "近藤圭一"
+  },
+  "初恋サンライズ(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "井筒日美",
+    "composer": "山田祐輔"
+  },
+  "笑って": {
+    "lyricist": "津野米咲",
+    "composer": "津野米咲",
+    "arranger": "平田祥一郎"
+  },
+  "青春エクサバイト": {
+    "lyricist": "山崎あおい",
+    "composer": "Erik Lidbom/Julie Yu",
+    "arranger": "Erik Lidbom"
+  },
+  "青春まんまんなか！": {
+    "lyricist": "もりちよこ",
+    "composer": "KOUGA",
+    "arranger": "KOUGA"
+  },
+  "青春まんまんなか！(First Take)": {
+    "lyricist": "もりちよこ",
+    "composer": "KOUGA",
+    "arranger": "CMJK"
+  },
+  "青春まんまんなか！(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "もりちよこ",
+    "composer": "KOUGA"
+  },
+  "雪のプラネタリウム": {
+    "lyricist": "井筒日美",
+    "composer": "KOUGA",
+    "arranger": "KOUGA"
+  },
+  "足りないもの埋めてゆく旅": {
+    "lyricist": "宮嶋淳子",
+    "composer": "山崎真吾",
+    "arranger": "山崎真吾"
+  },
+  "足りないもの埋めてゆく旅(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "宮嶋淳子",
+    "composer": "山崎真吾"
+  },
+  "大好きなのに、大好きだから": {
+    "lyricist": "山崎あおい",
+    "composer": "中島卓偉",
+    "arranger": "炭竃智弘"
+  },
+  "断捨ISM": {
+    "lyricist": "SHOCK EYE",
+    "composer": "SHOCK EYE",
+    "arranger": "草野将史"
+  },
+  "断捨ISM(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "SHOCK EYE",
+    "composer": "SHOCK EYE"
+  },
+  "低温火傷": {
+    "lyricist": "児玉雨子",
+    "composer": "大橋莉子",
+    "arranger": "近藤圭一"
+  },
+  "低温火傷(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "児玉雨子",
+    "composer": "大橋莉子"
+  },
+  "都会の一人暮らし": {
+    "lyricist": "つんく",
+    "composer": "つんく",
+    "arranger": "鈴木俊介"
+  },
+  "独り占め": {
+    "lyricist": "つんく",
+    "composer": "つんく",
+    "arranger": "大久保薫"
+  },
+  "悲しみがとまらない": {
+    "lyricist": "康珍化",
+    "composer": "林哲司",
+    "arranger": "炭竃智弘"
+  },
+  "表面張力～Surface Tension～": {
+    "lyricist": "チーム飛松/児玉雨子",
+    "composer": "チーム飛松/白戸佑輔",
+    "arranger": "鈴木俊介"
+  },
+  "付き合ってるのに片思い": {
+    "lyricist": "つんく",
+    "composer": "つんく",
+    "arranger": "大久保薫"
+  },
+  "抱きしめられてみたい": {
+    "lyricist": "児玉雨子",
+    "composer": "大橋莉子",
+    "arranger": "平田祥一郎"
+  },
+  "抱きしめられてみたい(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "児玉雨子",
+    "composer": "大橋莉子"
+  },
+  "本当の姉妹みたい": {
+    "lyricist": "福田花音",
+    "composer": "和田俊輔",
+    "arranger": "和田俊輔"
+  },
+  "妄想だけならフリーダム": {
+    "lyricist": "児玉雨子",
+    "composer": "板垣祐介",
+    "arranger": "板垣祐介"
+  },
+  "妄想だけならフリーダム(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "児玉雨子",
+    "composer": "板垣祐介"
+  },
+  "約束・連絡・記念日": {
+    "lyricist": "児玉雨子",
+    "composer": "星部ショウ",
+    "arranger": "大久保薫"
+  },
+  "約束してね": {
+    "lyricist": "太田善也",
+    "composer": "和田俊輔",
+    "arranger": "和田俊輔"
+  },
+  "勇気 It&#x27;s my Life！": {
+    "lyricist": "山崎あおい",
+    "composer": "Shusui/Samuel Waermo/Stefan Ekstedt",
+    "arranger": "Stefan Ekstedt"
+  },
+  "勇気 It&#x27;s my Life！(コンサートツアー 2023秋 可惜夜)": {
+    "lyricist": "山崎あおい",
+    "composer": "Shusui/Samuel Waermo/Stefan Ekstedt"
+  },
+  "涙のヒロイン降板劇": {
+    "lyricist": "山崎あおい",
+    "composer": "Shusui/Josef Melin",
+    "arranger": "Josef Melin"
+  },
+  "恋のUFOキャッチャー": {
+    "lyricist": "ジンツチハシ",
+    "composer": "ジンツチハシ",
+    "arranger": "ジンツチハシ"
+  }
+}

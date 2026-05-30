@@ -37,11 +37,28 @@ type CallApprovalSong = {
   approvedBy: string | null;
 };
 
+type LiveVideoSubmission = {
+  id: string;
+  groupSlug: string;
+  groupName: string;
+  url: string;
+  performanceName: string;
+  startPosition: string;
+  note: string;
+  status: string;
+  createdAt: string;
+  reviewedBy: string;
+  reviewedAt: string | null;
+};
+
 export default function AdminPage() {
   const [me, setMe] = useState<MeResponse | null>(null);
   const [users, setUsers] = useState<AdminUser[]>([]);
   const [logins, setLogins] = useState<LoginUser[]>([]);
   const [callSongs, setCallSongs] = useState<CallApprovalSong[]>([]);
+  const [liveVideoSubmissions, setLiveVideoSubmissions] = useState<
+    LiveVideoSubmission[]
+  >([]);
   const [username, setUsername] = useState("");
   const [role, setRole] = useState("editor");
   const [message, setMessage] = useState("");
@@ -72,6 +89,16 @@ export default function AdminPage() {
         songs: CallApprovalSong[];
       };
       setCallSongs(data.songs);
+    }
+
+    const liveVideoResponse = await fetch("/api/live-video-submissions", {
+      credentials: "include",
+    });
+    if (liveVideoResponse.ok) {
+      const data = (await liveVideoResponse.json()) as {
+        submissions: LiveVideoSubmission[];
+      };
+      setLiveVideoSubmissions(data.submissions);
     }
   };
 
@@ -139,6 +166,20 @@ export default function AdminPage() {
       response.ok
         ? `${songTitle} を${approved ? "承認" : "非承認に"}しました`
         : "承認状態を更新できませんでした"
+    );
+    await load();
+  };
+
+  const setLiveVideoSubmissionStatus = async (id: string, status: string) => {
+    const response = await fetch("/api/live-video-submissions", {
+      method: "PUT",
+      credentials: "include",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ id, status }),
+    });
+
+    setMessage(
+      response.ok ? "ライブ映像URL申請の状態を更新しました" : "状態を更新できませんでした"
     );
     await load();
   };
@@ -343,6 +384,96 @@ export default function AdminPage() {
                       >
                         {approved ? "承認済み" : "承認する"}
                       </button>
+                    </li>
+                  );
+                })}
+              </ul>
+            )}
+          </div>
+
+          <div className="rounded-2xl border border-border bg-white p-4">
+            <div className="mb-3 flex flex-wrap items-end justify-between gap-2">
+              <div>
+                <h2 className="text-[11px] font-semibold tracking-[0.2em] text-ink-weak">
+                  LIVE VIDEO URL SUBMISSIONS
+                </h2>
+                <p className="mt-1 text-xs leading-relaxed text-ink-weak">
+                  トップバーの「映像URL申請」から送信されたURLです。adminのみ確認できます。
+                </p>
+              </div>
+              <span className="font-mono text-[11px] text-ink-weak">
+                {
+                  liveVideoSubmissions.filter(
+                    (submission) => submission.status === "pending"
+                  ).length
+                }{" "}
+                pending
+              </span>
+            </div>
+
+            {liveVideoSubmissions.length === 0 ? (
+              <p className="rounded-lg border border-dashed border-border bg-surface px-4 py-6 text-center text-sm text-ink-weak">
+                申請されたライブ映像URLはまだありません
+              </p>
+            ) : (
+              <ul className="space-y-2">
+                {liveVideoSubmissions.map((submission) => {
+                  const reviewed = submission.status === "reviewed";
+                  return (
+                    <li
+                      key={submission.id}
+                      className="rounded-lg border border-border bg-surface/60 px-3 py-2"
+                    >
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="min-w-0">
+                          <p className="font-semibold text-ink">
+                            {submission.groupName || submission.groupSlug}
+                          </p>
+                          <p className="mt-0.5 break-words text-sm font-semibold text-ink">
+                            {submission.performanceName || "公演名未入力"}
+                            {submission.startPosition ? (
+                              <span className="ml-2 font-mono text-xs font-normal text-ink-weak">
+                                {submission.startPosition}
+                              </span>
+                            ) : null}
+                          </p>
+                          <a
+                            href={submission.url}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="break-all text-sm text-accent underline-offset-2 hover:underline"
+                          >
+                            {submission.url}
+                          </a>
+                          {submission.note && (
+                            <p className="mt-1 whitespace-pre-wrap text-xs leading-relaxed text-ink-weak">
+                              {submission.note}
+                            </p>
+                          )}
+                          <p className="mt-1 font-mono text-[11px] text-ink-weak">
+                            submitted {submission.createdAt}
+                            {submission.reviewedAt
+                              ? ` / reviewed ${submission.reviewedAt}`
+                              : ""}
+                          </p>
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setLiveVideoSubmissionStatus(
+                              submission.id,
+                              reviewed ? "pending" : "reviewed"
+                            )
+                          }
+                          className={
+                            reviewed
+                              ? "shrink-0 rounded-md border border-border bg-white px-3 py-1.5 text-xs font-semibold text-ink transition hover:border-accent hover:text-accent"
+                              : "shrink-0 rounded-md border border-accent bg-accent px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-accent/90"
+                          }
+                        >
+                          {reviewed ? "確認済み" : "未確認"}
+                        </button>
+                      </div>
                     </li>
                   );
                 })}

@@ -7,3 +7,4 @@ out/
 .env*.local
 .dev.vars
 next-env.d.ts
+tsconfig.tsbuildinfo

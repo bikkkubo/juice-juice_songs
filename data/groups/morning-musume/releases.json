@@ -1,0 +1,3070 @@
+[
+  {
+    "id": "mm-2378",
+    "title": "モーニングコーヒー",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "1998-01-28",
+    "tracks": [
+      "モーニングコーヒー",
+      "愛の種"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/2378/"
+    },
+    "cover": "https://helloproject.com/upload/images/8a419355c49758b87a7013c98883b277116643d3.webp"
+  },
+  {
+    "id": "mm-1045",
+    "title": "サマーナイトタウン",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "1998-05-27",
+    "tracks": [
+      "サマーナイトタウン",
+      "A MEMORY OF SUMMER &#x27;98"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/1045/"
+    },
+    "cover": "https://helloproject.com/upload/images/07eb67d36ebe25cf819ce610113db159c5c0ef15.webp"
+  },
+  {
+    "id": "mm-541",
+    "title": "ファーストタイム",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "1998-07-08",
+    "tracks": [
+      "Good Morning",
+      "サマーナイトタウン",
+      "どうにかして土曜日",
+      "モーニングコーヒー",
+      "夢の中",
+      "愛の種",
+      "ワガママ",
+      "未来の扉",
+      "ウソつきあんた",
+      "さみしい日"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/541/"
+    },
+    "cover": "https://helloproject.com/upload/images/97b1eb32af2ffe4a2a5d7dc180fc6b13fb338bd4.webp"
+  },
+  {
+    "id": "mm-1046",
+    "title": "抱いて HOLD ON ME!",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "1998-09-09",
+    "tracks": [
+      "抱いて HOLD ON ME!※映画「モ－ニング刑事。(コップ)」エンディングテ－マ",
+      "例えば",
+      "抱いて HOLD ON ME!"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/1046/"
+    },
+    "cover": "https://helloproject.com/upload/images/f8666fad2bbceb82ae8694569e42f783bb6902d7.webp"
+  },
+  {
+    "id": "mm-542",
+    "title": "モーニング刑事。",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "1998-09-30",
+    "tracks": [
+      "だけど 愛しすぎて(Mix for Screen)",
+      "おねがいネイル",
+      "ヨロシク！",
+      "恋のABC",
+      "強くならなくちゃ…ね",
+      "抱いて HOLD ON ME!(Sexy Long version)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/542/"
+    },
+    "cover": "https://helloproject.com/upload/images/42873b21e8249bd71719f9fb9d41e026b2740d8f.webp"
+  },
+  {
+    "id": "mm-1134",
+    "title": "ファーストタイム",
+    "type": "single",
+    "typeLabel": "CDMD",
+    "releaseDate": "1998-12-23",
+    "tracks": [
+      "GoodMorning",
+      "サマーナイトタウン",
+      "どうにかして土曜日",
+      "モーニングコーヒー",
+      "夢の中",
+      "愛の種",
+      "ワガママ",
+      "未来の扉",
+      "ウソつきあんた",
+      "さみしい日"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/1134/"
+    }
+  },
+  {
+    "id": "mm-1047",
+    "title": "Memory 青春の光",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "1999-02-10",
+    "tracks": [
+      "Memory 青春の光",
+      "Happy Night",
+      "Never Forget"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/1047/"
+    },
+    "cover": "https://helloproject.com/upload/images/c24c5d4abd12028e2d1d7fa18fc2e6c7a734c35d.webp"
+  },
+  {
+    "id": "mm-1048",
+    "title": "真夏の光線",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "1999-05-12",
+    "tracks": [
+      "真夏の光線",
+      "恋の始発列車"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/1048/"
+    },
+    "cover": "https://helloproject.com/upload/images/d516fd8424134c5878c162a9706cb55e5394bb30.webp"
+  },
+  {
+    "id": "mm-1049",
+    "title": "ふるさと",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "1999-07-14",
+    "tracks": [
+      "ふるさと",
+      "忘れらんない"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/1049/"
+    },
+    "cover": "https://helloproject.com/upload/images/eab61b5342653ecc8c866f321b8e47f076e5df5a.webp"
+  },
+  {
+    "id": "mm-1135",
+    "title": "セカンド モ-ニング",
+    "type": "single",
+    "typeLabel": "CDMD",
+    "releaseDate": "1999-07-28",
+    "tracks": [
+      "NIGHT OF TOKYO CITY",
+      "真夏の光線(Vacation Mix)",
+      "Memory 青春の光",
+      "好きで×5",
+      "ふるさと",
+      "抱いてHOLD ON ME!(N.Y.Mix)",
+      "パパに似ている彼",
+      "せんこう花火",
+      "恋の始発列車(Album Version)",
+      "乙女の心理学",
+      "Never Forget(Large Vocal Mix)",
+      "ダディドゥデドダディ！"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/1135/"
+    }
+  },
+  {
+    "id": "mm-543",
+    "title": "セカンドモーニング",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "1999-07-28",
+    "tracks": [
+      "NIGHT OF TOKYO CITY",
+      "真夏の光線(Vacation Mix)",
+      "Memory 青春の光",
+      "好きで×5",
+      "ふるさと",
+      "抱いてHOLD ON ME!(N.Y.Mix)",
+      "パパに似ている彼",
+      "せんこう花火",
+      "恋の始発列車(Album Version)",
+      "乙女の心理学",
+      "Never Forget(Large Vocal Mix)",
+      "ダディドゥデドダディ！"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/543/"
+    },
+    "cover": "https://helloproject.com/upload/images/e2b3fa34255419af99422daba17909de8854fa5f.webp"
+  },
+  {
+    "id": "mm-1050",
+    "title": "LOVEマシーン",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "1999-09-09",
+    "tracks": [
+      "LOVEマシーン",
+      "21世紀"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/1050/"
+    },
+    "cover": "https://helloproject.com/upload/images/33378b4bf13f0b049d71ac8a6406d4de4f18211f.webp"
+  },
+  {
+    "id": "mm-1052",
+    "title": "LOVEマシーン",
+    "type": "single",
+    "typeLabel": "アナログシングル",
+    "releaseDate": "1999-10-06",
+    "tracks": [
+      "LOVEマシーン",
+      "LOVEマシーン〜analog remix〜",
+      "シークレットトラック非音楽著作物"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/1052/"
+    },
+    "cover": "https://helloproject.com/upload/images/e1b2ae04a9cecfec7cb88055732f4b33e2bcb963.webp"
+  },
+  {
+    "id": "mm-1051",
+    "title": "恋のダンスサイト",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2000-01-26",
+    "tracks": [
+      "恋のダンスサイト",
+      "恋はロケンロー"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/1051/"
+    },
+    "cover": "https://helloproject.com/upload/images/dfbf17c01cd76bda8b9496619d869f146d646392.webp"
+  },
+  {
+    "id": "mm-1053",
+    "title": "恋のダンスサイト",
+    "type": "single",
+    "typeLabel": "アナログシングル",
+    "releaseDate": "2000-02-09",
+    "tracks": [
+      "恋のダンスサイト(Original)",
+      "恋のダンスサイト(Groove That Soul Remix)",
+      "恋のダンスサイト(M．I．D． KH－R CLUB MIX)",
+      "恋のダンスサイト(PANDART SASANOOOHA Remix)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/1053/"
+    },
+    "cover": "https://helloproject.com/upload/images/d40d9c1af3be29f1c8a175778ada7aa722c67374.webp"
+  },
+  {
+    "id": "mm-544",
+    "title": "3rd-LOVEパラダイス-",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2000-03-29",
+    "tracks": [
+      "〜おはよう〜",
+      "LOVEマシーン",
+      "愛車 ローンで",
+      "くちづけのその後",
+      "恋のダンスサイト",
+      "ランチタイム 〜レバニラ炒め〜",
+      "DANCEするのだ！",
+      "おもいで",
+      "原宿6:00集合",
+      "WHY",
+      "「、、、 好きだよ！」",
+      "〜おやすみ〜"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/544/"
+    },
+    "cover": "https://helloproject.com/upload/images/88c6a07192104a0614629feb50715bba193a2650.webp"
+  },
+  {
+    "id": "mm-1136",
+    "title": "3rd-LOVEパラダイス-",
+    "type": "single",
+    "typeLabel": "CDMD",
+    "releaseDate": "2000-03-29",
+    "tracks": [
+      "〜おはよう〜",
+      "LOVEマシーン",
+      "愛車ローンで",
+      "くちづけのその後",
+      "恋のダンスサイト",
+      "ランチタイム 〜レバニラ炒め〜",
+      "DANCEするのだ！",
+      "おもいで",
+      "原宿6:00集合",
+      "WHY",
+      "「、、、 好きだよ！」",
+      "〜おやすみ〜"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/1136/"
+    }
+  },
+  {
+    "id": "mm-545",
+    "title": "ハッピーサマーウェディング",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2000-05-17",
+    "tracks": [
+      "ハッピーサマーウェディング",
+      "通学列車"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/545/"
+    },
+    "cover": "https://helloproject.com/upload/images/2656728fa48a0e0f5f446e364da865c2502a0096.webp"
+  },
+  {
+    "id": "mm-546",
+    "title": "映画「ピンチランナー」オリジナル・サウンドトラック",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2000-07-05",
+    "tracks": [
+      "オープニングテーマ",
+      "さなえのテーマ",
+      "知子のテーマ",
+      "真穂のテーマ",
+      "道子のテーマ",
+      "麗子のテーマ",
+      "あゆみのテーマ",
+      "朝比奈学園陸上部のテーマ",
+      "失意",
+      "疾走",
+      "ゴール",
+      "新・ラーメン大好き小池さんの唄",
+      "ダンスするのだ！(MASTERS OF FUNK Flavor Remix)",
+      "おもいで(BEAT WAVE SPIRAL MIX)",
+      "ナチュラル〜抱きしめてこのままで〜"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/546/"
+    },
+    "cover": "https://helloproject.com/upload/images/f2fce042f2897d4258da9e487ede1c8ff396ce3f.webp"
+  },
+  {
+    "id": "mm-547",
+    "title": "I WISH",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2000-09-06",
+    "tracks": [
+      "I WISH",
+      "あこがれ My Boy"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/547/"
+    },
+    "cover": "https://helloproject.com/upload/images/44c807f6bbac03e9a7e384a72e43a53de03efabf.webp"
+  },
+  {
+    "id": "mm-548",
+    "title": "恋愛レボリューション21",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2000-12-13",
+    "tracks": [
+      "恋愛レボリューション21",
+      "インスピレーション！"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/548/"
+    },
+    "cover": "https://helloproject.com/upload/images/c3b600b75ba7fbea8c0da43a30e63df363e62ba2.webp"
+  },
+  {
+    "id": "mm-1054",
+    "title": "恋愛レボリューション21",
+    "type": "single",
+    "typeLabel": "アナログシングル",
+    "releaseDate": "2001-01-24",
+    "tracks": [
+      "恋愛レボリューション21",
+      "インスピレーション！"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/1054/"
+    }
+  },
+  {
+    "id": "mm-1137",
+    "title": "ベスト！モーニング娘。1",
+    "type": "album",
+    "typeLabel": "MDアルバム",
+    "releaseDate": "2001-01-31",
+    "tracks": [
+      "LOVEマシーン",
+      "抱いてHOLD ON ME!",
+      "恋のダンスサイト",
+      "サマーナイトタウン",
+      "ハッピーサマーウェディング",
+      "I WISH",
+      "恋愛レボリューション21",
+      "Memory 青春の光",
+      "真夏の光線(VacationMix)",
+      "モーニングコーヒー",
+      "ふるさと",
+      "Say Yeah!-もっとミラクルナイト-",
+      "DANCEするのだ！",
+      "Never Forget(LargeVocalMix)",
+      "愛の種"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/1137/"
+    },
+    "cover": "https://helloproject.com/upload/images/961f6ea275c145182125555b8d606628ba3e92c9.webp"
+  },
+  {
+    "id": "mm-549",
+    "title": "ベスト！モーニング娘。1",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2001-01-31",
+    "tracks": [
+      "LOVEマシーン",
+      "抱いてHOLD ON ME!",
+      "恋のダンスサイト",
+      "サマーナイトタウン",
+      "ハッピーサマーウェディング",
+      "I WISH",
+      "恋愛レボリューション21",
+      "Memory 青春の光",
+      "真夏の光線(VacationMix)",
+      "モーニングコーヒー",
+      "ふるさと",
+      "Say Yeah!-もっとミラクルナイト-",
+      "DANCEするのだ！",
+      "Never Forget(LargeVocalMix)",
+      "愛の種"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/549/"
+    },
+    "cover": "https://helloproject.com/upload/images/961f6ea275c145182125555b8d606628ba3e92c9.webp"
+  },
+  {
+    "id": "mm-1055",
+    "title": "ベスト！モーニング娘。1",
+    "type": "album",
+    "typeLabel": "アナログアルバム",
+    "releaseDate": "2001-03-28",
+    "tracks": [
+      "LOVEマシーン",
+      "抱いてHOLD ON ME!",
+      "恋のダンスサイト",
+      "サマーナイトタウン",
+      "ハッピーサマーウェディング",
+      "I WISH",
+      "恋愛レボリューション21",
+      "Memory 青春の光",
+      "真夏の光線(VacationMix)",
+      "モーニングコーヒー",
+      "ふるさと",
+      "Say Yeah!-もっとミラクルナイト-",
+      "DANCEするのだ！",
+      "Never Forget(LargeVocalMix)",
+      "愛の種"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/1055/"
+    },
+    "cover": "https://helloproject.com/upload/images/0ff86be9c8275133d3fd81affcd9aaf56c189447.webp"
+  },
+  {
+    "id": "mm-550",
+    "title": "ザ☆ピ〜ス！",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2001-07-25",
+    "tracks": [
+      "ザ☆ピ〜ス！",
+      "でっかい宇宙に愛がある"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/550/"
+    },
+    "cover": "https://helloproject.com/upload/images/6002ed5b2537077e8b78416f3e68570974a38afb.webp"
+  },
+  {
+    "id": "mm-552",
+    "title": "Mr.Moonlight〜愛のビッグバンド〜",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2001-10-31",
+    "tracks": [
+      "Mr.Moonlight〜愛のビッグバンド〜",
+      "ポップコーンラブ！"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/552/"
+    },
+    "cover": "https://helloproject.com/upload/images/ef1661f2919525a8fb0081199b335b43e850a78f.webp"
+  },
+  {
+    "id": "mm-553",
+    "title": "そうだ!We're ALIVE",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2002-02-20",
+    "tracks": [
+      "そうだ！We&#x27;re ALIVE",
+      "モーニングコーヒー(2002version)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/553/"
+    },
+    "cover": "https://helloproject.com/upload/images/d6a7b22cdfda73649722bc8b54175951bed7bc40.webp"
+  },
+  {
+    "id": "mm-554",
+    "title": "4th「いきまっしょい!」",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2002-03-27",
+    "tracks": [
+      "ザ☆ピ〜ス！(CompleteVersion)",
+      "いいことある記念の瞬間",
+      "Mr.Moonlight〜愛のビッグバンド〜(LongVersion)",
+      "初めてのロックコンサート",
+      "男友達",
+      "そうだ！We&#x27;re ALIVE",
+      "でっかい宇宙に愛がある(Album Version)",
+      "いきまっしょい！",
+      "電車の二人",
+      "本気で熱いテーマソング",
+      "好きな先輩",
+      "恋愛レボリューション21(13人 Version)",
+      "なんにも言わずに I LOVE YOU"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/554/"
+    },
+    "cover": "https://helloproject.com/upload/images/8ade556e843fc1ba9117564ab7017561286e03a2.webp"
+  },
+  {
+    "id": "mm-4144",
+    "title": "モーニング娘。のミュージカル モーニング・タウン オリジナルキャスト盤",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2002-07-17",
+    "tracks": [
+      "overture",
+      "夢ヶ丘ステーション〜夢ヶ丘商店街編〜",
+      "トオルちゃんは銀行マンの歌",
+      "4人は幼なじみ",
+      "なんとなくアルバイト",
+      "家はだんご屋YEAH!×3",
+      "Cake is No.1",
+      "あまいもんバトルのテーマ",
+      "うまくいかないな〜",
+      "不思議なケーキ",
+      "あんブラン",
+      "だんご屋大改装のテーマ",
+      "なぞの女",
+      "夢に向かって",
+      "完成したぜ！あんブラン",
+      "グルメライター",
+      "さよなら My TOWN",
+      "さよなら My FRIENDS",
+      "夢ヶ丘ステーション〜夢ヶ丘南口編〜",
+      "キッチンズバーガー",
+      "僕は後藤マキ",
+      "いつも完璧 紺野です！",
+      "なんてったって社長令嬢",
+      "キッチンズバーガー(reprise)",
+      "どこだろどこだろどこでしょね",
+      "どこだろどこだろどこでしょね(reprise)",
+      "どうぞ どうぞ！",
+      "どうも どうも！",
+      "初めてのハッピーバースディ！",
+      "逃げる女",
+      "僕は後藤マキ〜哀愁編〜",
+      "LOVE IS DESTINY",
+      "振られちゃった…私",
+      "OH MY DREAM",
+      "好きか嫌いかセレナーデ",
+      "答えて欲しいんだ",
+      "キッチンズバーガー(ファイナルダンス)",
+      "でっかい宇宙に愛がある"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/4144/"
+    },
+    "cover": "https://helloproject.com/upload/images/b16e4e8b231764e7eee2dd0b549f496fff1065fb.webp"
+  },
+  {
+    "id": "mm-555",
+    "title": "Do it! Now",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2002-07-24",
+    "tracks": [
+      "Do it! Now",
+      "ちょっとイカした PURE BOY"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/555/"
+    },
+    "cover": "https://helloproject.com/upload/images/727da8244f7206e4c2653236ecbf9e7901fa13a4.webp"
+  },
+  {
+    "id": "mm-556",
+    "title": "ここにいるぜぇ!",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2002-10-30",
+    "tracks": [
+      "ここにいるぜぇ！",
+      "純LOVER"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/556/"
+    },
+    "cover": "https://helloproject.com/upload/images/c622f4f4a55cc944416a600ed8135772fb6f937b.webp"
+  },
+  {
+    "id": "mm-558",
+    "title": "モーニング娘。のひょっこりひょうたん島",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2003-02-19",
+    "tracks": [
+      "モーニング娘。のひょっこりひょうたん島",
+      "宝石箱"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/558/"
+    },
+    "cover": "https://helloproject.com/upload/images/94d42308737f9fd67262efb50ffc2f1d50086395.webp"
+  },
+  {
+    "id": "mm-559",
+    "title": "No.5",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2003-03-26",
+    "tracks": [
+      "Intro",
+      "Do it! Now",
+      "TOP!",
+      "友達(♀)が気に入っている男からの伝言",
+      "ここにいるぜぇ！",
+      "「すっごい仲間」",
+      "強気で行こうぜ！",
+      "女神〜Mousseな優しさ〜(Original long version)",
+      "YES!POCKY GIRLS(Original long version)",
+      "HEY!未来",
+      "がんばっちゃえ！",
+      "「すごく好きなのに…ね」",
+      "卒業旅行〜モーニング娘。旅立つ人に贈る唄〜"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/559/"
+    },
+    "cover": "https://helloproject.com/upload/images/b3e8c24cbc1fc8f3ada656d8589c7cf363b13965.webp"
+  },
+  {
+    "id": "mm-560",
+    "title": "AS FOR ONE DAY",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2003-04-23",
+    "tracks": [
+      "AS FOR ONE DAY",
+      "Never Forget(Rock Ver.)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/560/"
+    },
+    "cover": "https://helloproject.com/upload/images/f49d4d784d08c34cefde044729689e729d04f1b3.webp"
+  },
+  {
+    "id": "mm-4146",
+    "title": "モーニング娘。主演ミュージカル 江戸っ娘。忠臣蔵 オリジナルキャスト盤",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2003-07-02",
+    "tracks": [
+      "どっこぃ！江戸っ娘。忠臣蔵(江戸っ娘。Ver.)",
+      "くのいち羅舞羅舞隊のうた(フルば～じょん)",
+      "LET&#x27;S GO TOGETHER(フルVer.)",
+      "青春の誓い",
+      "おとっつあん結婚？！",
+      "おとっつあん結婚？！パート2",
+      "すっごいよ！",
+      "くやしぃ～～～！",
+      "BAD＆BLUE",
+      "やばいって",
+      "THE 解体新書",
+      "くのいち羅舞羅舞隊のうた(クールば～じょん)",
+      "瓦版だよ～！",
+      "うるさい女～羅舞羅舞隊VS奥女中～",
+      "なにも 迷わない(フルVer.)",
+      "立ち上がれ！",
+      "どっこぃ！江戸っ娘。忠臣蔵(オールキャストVer.)",
+      "どっこぃ！江戸っ娘。忠臣蔵(instハートウォームVer.)",
+      "くのいち羅舞羅舞隊のうた(instサスペンスば～じょん)",
+      "LET&#x27;S GO TOGETHER(instお囃子Ver.)",
+      "青春の誓い(inst参上Ver.)",
+      "BAD＆BLUE(instルンルンお出かけVer.)",
+      "立ち上がれ！(instピアノVer.)",
+      "どっこぃ！江戸っ娘。忠臣蔵(instフュージョンVer.)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/4146/"
+    },
+    "cover": "https://helloproject.com/upload/images/b4a5519fe4e634149b81975cf13a8b07178dc88e.webp"
+  },
+  {
+    "id": "mm-561",
+    "title": "シャボン玉",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2003-07-30",
+    "tracks": [
+      "シャボン玉",
+      "涙にはしたくない"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/561/"
+    },
+    "cover": "https://helloproject.com/upload/images/5ec868654c2586bd833a877ab4608fac2b5cc403.webp"
+  },
+  {
+    "id": "mm-565",
+    "title": "Go Girl 〜恋のヴィクトリー〜",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2003-11-06",
+    "tracks": [
+      "Go Girl 〜恋のヴィクトリー〜",
+      "恋ING"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/565/"
+    },
+    "cover": "https://helloproject.com/upload/images/a1ad5aa612ec252189aa00de74ee192f80b11624.webp"
+  },
+  {
+    "id": "mm-567",
+    "title": "愛あらば IT'S ALL RIGHT",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2004-01-21",
+    "tracks": [
+      "愛あらば IT&#x27;S ALL RIGHT",
+      "出来る女"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/567/"
+    },
+    "cover": "https://helloproject.com/upload/images/0c9acbeb561bc6f448a618310ec693c47a24a3b6.webp"
+  },
+  {
+    "id": "mm-571",
+    "title": "ベスト!モーニング娘。2",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2004-03-31",
+    "tracks": [
+      "Go Girl 〜恋のヴィクトリー〜",
+      "Do it! Now",
+      "ここにいるぜぇ！",
+      "愛あらば IT&#x27;S ALL RIGHT",
+      "ザ☆ピ〜ス！",
+      "Mr.Moonlight〜愛のビッグバンド〜",
+      "シャボン玉",
+      "そうだ！We&#x27;re ALIVE",
+      "AS FOR ONE DAY",
+      "モーニング娘。のひょっこりひょうたん島",
+      "でっかい宇宙に愛がある",
+      "YAH!愛したい！(日本テレビ系『リリパット王国』のテーマ曲)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/571/"
+    },
+    "cover": "https://helloproject.com/upload/images/2ceb3dd0210c76014eb264e46f6d007d8b272959.webp"
+  },
+  {
+    "id": "mm-572",
+    "title": "浪漫 〜MY DEAR BOY〜",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2004-05-12",
+    "tracks": [
+      "浪漫 〜MY DEAR BOY〜",
+      "ファインエモーション！"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/572/"
+    },
+    "cover": "https://helloproject.com/upload/images/e6214dcea832f515c34e436e97db75b31302137f.webp"
+  },
+  {
+    "id": "mm-574",
+    "title": "女子かしまし物語",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2004-07-22",
+    "tracks": [
+      "女子かしまし物語",
+      "がんばれ 日本 サッカー ファイト！"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/574/"
+    },
+    "cover": "https://helloproject.com/upload/images/4b51ec5baa16dbb5fb5d42c68b71645d72dd1231.webp"
+  },
+  {
+    "id": "mm-593",
+    "title": "涙が止まらない放課後",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2004-11-03",
+    "tracks": [
+      "涙が止まらない放課後",
+      "寝坊です。デートなのに…"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/593/"
+    },
+    "cover": "https://helloproject.com/upload/images/d45856ec68bfe664ca6f3946e48d8a7554f16bd5.webp"
+  },
+  {
+    "id": "mm-596",
+    "title": "愛の第6感",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2004-12-08",
+    "tracks": [
+      "涙が止まらない放課後",
+      "すき焼き",
+      "春の歌",
+      "女子かしまし物語",
+      "直感〜時として恋は〜",
+      "独占欲",
+      "レモン色とミルクティ",
+      "浪漫 〜MY DEAR BOY〜",
+      "声",
+      "HELP!!",
+      "SHIP TO THE FUTURE",
+      "女子かしまし物語2"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/596/"
+    },
+    "cover": "https://helloproject.com/upload/images/89812da9a79e40a0fe8b54f5ff6368e3f3293523.webp"
+  },
+  {
+    "id": "mm-584",
+    "title": "モーニング娘。EARLY SINGLE BOX",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2004-12-15",
+    "tracks": [
+      "モーニングコーヒー",
+      "愛の種",
+      "モーニングコーヒー(Unreleased”B♭”Version)",
+      "サマーナイトタウン",
+      "A MEMORY OF SUMMER&#x27;98",
+      "サマーナイトタウン(First Live Version)",
+      "抱いてHOLD ON ME!",
+      "例えば",
+      "抱いてHOLD ON ME!(「モーニング刑事」Version)",
+      "Memory 青春の光",
+      "Happy Night",
+      "Never Forget",
+      "Memory 青春の光(99.4.18 Live Version)",
+      "真夏の光線",
+      "恋の始発列車",
+      "真夏の光線(Early Version)",
+      "ふるさと",
+      "忘れらんない",
+      "ふるさと(Early Vocal Version)",
+      "LOVEマシーン",
+      "21世紀",
+      "LOVEマシーン(Early Unison Version)",
+      "恋のダンスサイト",
+      "恋はロケンロー",
+      "恋のダンスサイト(Groove That Soul Remix)",
+      "恋のダンスサイト(M.I.D. KH-R CLUB MIX)",
+      "Good Morning",
+      "どうにかして土曜日",
+      "未来の扉",
+      "ウソつきあんた",
+      "好きで×5",
+      "パパに似ている彼",
+      "せんこう花火",
+      "ダディドゥデドダディ！",
+      "愛車ローンで",
+      "くちづけのその後",
+      "DANCEするのだ！",
+      "原宿6:00集合"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/584/"
+    },
+    "cover": "https://helloproject.com/upload/images/84d531bd35100fca939ab280120c4ce41af00120.webp"
+  },
+  {
+    "id": "mm-599",
+    "title": "THE マンパワー!!!",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2005-01-19",
+    "tracks": [
+      "THE マンパワー！！！",
+      "ラヴ＆ピィ〜ス！HEROがやって来たっ。"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/599/"
+    },
+    "cover": "https://helloproject.com/upload/images/20cdbaeb0d9bda6291fc3169167b729427adeee9.webp"
+  },
+  {
+    "id": "mm-576",
+    "title": "モーニングコーヒー",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2005-03-02",
+    "tracks": [
+      "モーニングコーヒー",
+      "愛の種",
+      "モーニングコーヒー(Unreleased”B♭”Version)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/576/"
+    },
+    "cover": "https://helloproject.com/upload/images/397c9e849b90039bb32e9949edc57c7a60b07fb1.webp"
+  },
+  {
+    "id": "mm-577",
+    "title": "サマーナイトタウン",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2005-03-02",
+    "tracks": [
+      "サマーナイトタウン",
+      "A MEMORY OF SUMMER&#x27;98",
+      "サマーナイトタウン(First Live Version)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/577/"
+    },
+    "cover": "https://helloproject.com/upload/images/545a12eb6ba588e2de80932a3a4f05c493c9778c.webp"
+  },
+  {
+    "id": "mm-579",
+    "title": "Memory 青春の光",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2005-03-02",
+    "tracks": [
+      "Memory 青春の光",
+      "Happy Night",
+      "Never Forget",
+      "Memory 青春の光(99.4.18 Live Version)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/579/"
+    },
+    "cover": "https://helloproject.com/upload/images/e9a56c2a9747373cfe1e3b7303caa0ee15005ff3.webp"
+  },
+  {
+    "id": "mm-581",
+    "title": "ふるさと",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2005-03-02",
+    "tracks": [
+      "ふるさと",
+      "忘れらんない",
+      "ふるさと(Early Vocal Version)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/581/"
+    },
+    "cover": "https://helloproject.com/upload/images/38395ac6171a0c9e077093109b418f0f4ecfbf7b.webp"
+  },
+  {
+    "id": "mm-583",
+    "title": "恋のダンスサイト",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2005-03-02",
+    "tracks": [
+      "恋のダンスサイト",
+      "恋はロケンロー",
+      "恋のダンスサイト(Groove That Soul Remix)",
+      "恋のダンスサイト(M.I.D. KH-R CLUB MIX)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/583/"
+    },
+    "cover": "https://helloproject.com/upload/images/cfe338c10b3339dc02b8892274fb17a8aa6594d5.webp"
+  },
+  {
+    "id": "mm-582",
+    "title": "LOVEマシーン",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2005-03-02",
+    "tracks": [
+      "LOVEマシーン",
+      "21世紀",
+      "LOVEマシーン(Early Unison Version)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/582/"
+    },
+    "cover": "https://helloproject.com/upload/images/609a8e32e771412d0c53132e1a7b236c84031a6d.webp"
+  },
+  {
+    "id": "mm-580",
+    "title": "真夏の光線",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2005-03-02",
+    "tracks": [
+      "真夏の光線",
+      "恋の始発列車",
+      "真夏の光線(Early Version)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/580/"
+    },
+    "cover": "https://helloproject.com/upload/images/604c181790ca1256ae65573ae66bb2736d8ed164.webp"
+  },
+  {
+    "id": "mm-601",
+    "title": "大阪 恋の歌",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2005-04-27",
+    "tracks": [
+      "大阪 恋の歌",
+      "NATURE IS GOOD!"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/601/"
+    },
+    "cover": "https://helloproject.com/upload/images/b03e31861c769bf89a57c01a1914171ac9c42949.webp"
+  },
+  {
+    "id": "mm-605",
+    "title": "色っぽい じれったい",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2005-07-27",
+    "tracks": [
+      "色っぽい じれったい",
+      "愛と太陽に包まれて"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/605/"
+    },
+    "cover": "https://helloproject.com/upload/images/2d045ee3ed9c3c0425825377faa7c51fc6c3b679.webp"
+  },
+  {
+    "id": "mm-607",
+    "title": "直感2〜逃した魚は大きいぞ！〜",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2005-11-09",
+    "tracks": [
+      "直感2〜逃した魚は大きいぞ！〜",
+      "恋は発想 Do The Hustle!"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/607/"
+    },
+    "cover": "https://helloproject.com/upload/images/70eaba917cdb9925a7b4f69ecefd08ded53930eb.webp"
+  },
+  {
+    "id": "mm-610",
+    "title": "レインボー7",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2006-02-15",
+    "tracks": [
+      "HOW DO YOU LIKE JAPAN?〜日本はどんな感じでっか?〜",
+      "THE マンパワー！！！",
+      "青空がいつまでも続くような未来であれ！",
+      "大阪 恋の歌",
+      "INDIGO BLUE LOVE",
+      "レインボーピンク",
+      "色っぽい じれったい",
+      "無色透明なままで",
+      "パープルウインド",
+      "さよなら SEE YOU AGAIN アディオス BYE BYE チャッチャ！",
+      "直感2〜逃した魚は大きいぞ！〜(全くその通リミックス)",
+      "女子かしまし物語3"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/610/"
+    },
+    "cover": "https://helloproject.com/upload/images/e4dd438360178df20b3f9d66806a56dc4319e4d2.webp"
+  },
+  {
+    "id": "mm-612",
+    "title": "SEXY BOY〜そよ風に寄り添って〜",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2006-03-15",
+    "tracks": [
+      "SEXY BOY〜そよ風に寄り添って〜",
+      "チャンス チャンス ブギ"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/612/"
+    },
+    "cover": "https://helloproject.com/upload/images/047a43b4dfc08b49230d0b540f29d96237905a82.webp"
+  },
+  {
+    "id": "mm-614",
+    "title": "Ambitious!野心的でいいじゃん",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2006-06-21",
+    "tracks": [
+      "Ambitious!野心的でいいじゃん",
+      "わたしがついてる。"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/614/"
+    },
+    "cover": "https://helloproject.com/upload/images/939f1b607fcf8dc013c0c33ae9f6db2d4ac4c027.webp"
+  },
+  {
+    "id": "mm-617",
+    "title": "「リボンの騎士 ザ・ミュージカル」ソング・セレクション",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2006-07-26",
+    "tracks": [
+      "Mystery of Life",
+      "GOD",
+      "フララフラ",
+      "あなたに会いたい",
+      "大臣の願い〜魔女",
+      "リボンの騎士",
+      "牢番",
+      "戦いのとき",
+      "スカウト",
+      "葬送",
+      "大団円"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/617/"
+    },
+    "cover": "https://helloproject.com/upload/images/72a716269e036fb61a1f5983b547e9eca6be432a.webp"
+  },
+  {
+    "id": "mm-629",
+    "title": "歩いてる",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2006-11-08",
+    "tracks": [
+      "歩いてる",
+      "踊れ!モーニングカレー"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/629/"
+    },
+    "cover": "https://helloproject.com/upload/images/3e57238be8b35a5af4d79022a107543b8738aa60.webp"
+  },
+  {
+    "id": "mm-633",
+    "title": "(7.5)冬冬モーニング娘。ミニ!",
+    "type": "album",
+    "typeLabel": "CDミニアルバム",
+    "releaseDate": "2006-12-13",
+    "tracks": [
+      "歩いてる",
+      "キラキラ冬のシャイニーG",
+      "雪/愛×あなた≧好き",
+      "寒いから冬だもん！〜どうもこうもないっすよミキティ〜",
+      "コタツの歌〜jyuken story〜",
+      "わ〜MERRYピンXmas!"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/633/"
+    },
+    "cover": "https://helloproject.com/upload/images/498149b1224524935d2093676cdac34d33619bff.webp"
+  },
+  {
+    "id": "mm-637",
+    "title": "笑顔YESヌード",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2007-02-14",
+    "tracks": [
+      "笑顔YESヌード",
+      "サヨナラのかわりに"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/637/"
+    },
+    "cover": "https://helloproject.com/upload/images/6801a77695e1763d9484191ae18f6ad07bb16a8f.webp"
+  },
+  {
+    "id": "mm-643",
+    "title": "SEXY 8 BEAT",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2007-03-21",
+    "tracks": [
+      "元気+",
+      "歩いてる(ALBUM EDIT)",
+      "未来の太陽",
+      "笑顔YESヌード(ALBUM MIX)",
+      "春 ビューティフル エブリデイ",
+      "SEXY BOY〜そよ風に寄り添って〜",
+      "Ambitious!野心的でいいじゃん",
+      "その出会いのために",
+      "シャニムニ パラダイス",
+      "宝の箱",
+      "BE ポジティブ！"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/643/"
+    },
+    "cover": "https://helloproject.com/upload/images/be870d53d647927739ea00f6562ec1155f49e15e.webp"
+  },
+  {
+    "id": "mm-649",
+    "title": "悲しみトワイライト",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2007-04-25",
+    "tracks": [
+      "悲しみトワイライト",
+      "Hand made CITY"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/649/"
+    },
+    "cover": "https://helloproject.com/upload/images/ed2d8eff5b8bb32f06753a15dab903d6bec95d84.webp"
+  },
+  {
+    "id": "mm-655",
+    "title": "女に 幸あれ",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2007-07-25",
+    "tracks": [
+      "女に 幸あれ",
+      "Please!自由の扉"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/655/"
+    },
+    "cover": "https://helloproject.com/upload/images/fb393534e4bb608796c744d60e31fcd5405806f0.webp"
+  },
+  {
+    "id": "mm-667",
+    "title": "モーニング娘。ALL SINGLES COMPLETE 〜10th ANNIVERSARY〜",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2007-10-24",
+    "tracks": [
+      "モーニングコーヒー",
+      "サマーナイトタウン",
+      "抱いてHOLD ON ME!",
+      "Memory 青春の光",
+      "真夏の光線",
+      "ふるさと",
+      "LOVEマシーン",
+      "恋のダンスサイト",
+      "ハッピーサマーウェディング",
+      "I WISH",
+      "恋愛レボリューション21",
+      "ザ☆ピ〜ス！",
+      "Mr.Moonlight〜愛のビッグバンド〜",
+      "そうだ!We&#x27;re ALIVE",
+      "Do it! Now",
+      "ここにいるぜぇ！",
+      "モーニング娘。のひょっこりひょうたん島",
+      "AS FOR ONE DAY",
+      "シャボン玉",
+      "Go Girl 〜恋のヴィクトリー〜",
+      "愛あらば IT&#x27;S ALL RIGHT",
+      "浪漫 〜MY DEAR BOY〜",
+      "女子かしまし物語",
+      "涙が止まらない放課後",
+      "THE マンパワー！！！",
+      "大阪 恋の歌",
+      "色っぽい じれったい",
+      "直感2〜逃した魚は大きいぞ！〜",
+      "SEXY BOY〜そよ風に寄り添って〜",
+      "Ambitious!野心的でいいじゃん",
+      "歩いてる",
+      "笑顔YESヌード",
+      "悲しみトワイライト",
+      "女に 幸あれ",
+      "HELLO TO YOU〜ハロー！プロジェクト10周年記念テーマ〜",
+      "そうだ！We&#x27;re ALIVE"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/667/"
+    },
+    "cover": "https://helloproject.com/upload/images/6063a050e2439aded294886179bf360fcc37cad7.webp"
+  },
+  {
+    "id": "mm-674",
+    "title": "みかん",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2007-11-21",
+    "tracks": [
+      "みかん",
+      "ボン キュッ！ボン キュッ！BOMB GIRL"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/674/"
+    },
+    "cover": "https://helloproject.com/upload/images/ba5b8d93a0e4561ce9d169ac803652dffc02ac4d.webp"
+  },
+  {
+    "id": "mm-685",
+    "title": "リゾナント ブルー",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2008-04-16",
+    "tracks": [
+      "リゾナント ブルー",
+      "その場面でビビっちゃいけないじゃん！"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/685/"
+    },
+    "cover": "https://helloproject.com/upload/images/4130ecb027de9ad3fb84d57f661602e76353980d.webp"
+  },
+  {
+    "id": "mm-700",
+    "title": "ペッパー警部",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2008-09-24",
+    "tracks": [
+      "ペッパー警部",
+      "ロマンス"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/700/"
+    },
+    "cover": "https://helloproject.com/upload/images/e3a1f09933cbe731d48beed36a94cd92c8dcb5c5.webp"
+  },
+  {
+    "id": "mm-704",
+    "title": "COVER YOU",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2008-11-26",
+    "tracks": [
+      "渚のシンドバッド",
+      "どうにもとまらない",
+      "居酒屋",
+      "ペッパー警部(ALBUM Ver.)",
+      "白い蝶のサンバ",
+      "青春時代",
+      "林檎殺人事件",
+      "ロマンス(ALBUM Ver.)",
+      "街の灯り",
+      "恋のダイヤル6700",
+      "ピンポンパン体操",
+      "わたしの青い鳥",
+      "ジョニィへの伝言",
+      "UFO"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/704/"
+    },
+    "cover": "https://helloproject.com/upload/images/fb78f301a9861660841a09ccb05630ec3673d679.webp"
+  },
+  {
+    "id": "mm-716",
+    "title": "泣いちゃうかも",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2009-02-18",
+    "tracks": [
+      "泣いちゃうかも",
+      "弱虫"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/716/"
+    },
+    "cover": "https://helloproject.com/upload/images/18acf8ed6374b37baf7c0e73fbbf500491cdf1c1.webp"
+  },
+  {
+    "id": "mm-721",
+    "title": "プラチナ 9 DISC",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2009-03-18",
+    "tracks": [
+      "SONGS",
+      "リゾナント ブルー",
+      "雨の降らない星では愛せないだろう？",
+      "Take off is now!",
+      "泣いちゃうかも",
+      "私の魅力に 気付かない鈍感な人",
+      "グルグルJUMP",
+      "みかん",
+      "情熱のキスを一つ",
+      "It&#x27;s You",
+      "女に 幸あれ",
+      "片思いの終わりに",
+      "悲しみトワイライト"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/721/"
+    },
+    "cover": "https://helloproject.com/upload/images/d53ca4a1060e0147ea85e9dc798daa121ee5cb33.webp"
+  },
+  {
+    "id": "mm-727",
+    "title": "しょうがない 夢追い人",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2009-05-13",
+    "tracks": [
+      "しょうがない 夢追い人",
+      "3、2、1 BREAKIN&#x27;OUT!"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/727/"
+    },
+    "cover": "https://helloproject.com/upload/images/114b0517e0b21aa6afd4684e0536a300ed18f7a3.webp"
+  },
+  {
+    "id": "mm-736",
+    "title": "なんちゃって恋愛",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2009-08-12",
+    "tracks": [
+      "なんちゃって恋愛",
+      "秋麗",
+      "すべては愛の力"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/736/"
+    },
+    "cover": "https://helloproject.com/upload/images/13e7e3a18ed264dff16a423914eea0ac81846934.webp"
+  },
+  {
+    "id": "mm-745",
+    "title": "モーニング娘。全シングル カップリングコレクション",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2009-10-07",
+    "tracks": [
+      "愛の種",
+      "A MEMORY OF SUMMER &#x27;98",
+      "例えば",
+      "Happy Night",
+      "Never Forget",
+      "恋の始発列車",
+      "忘れらんない",
+      "21世紀",
+      "恋はロケンロ－",
+      "通学列車",
+      "あこがれ My Boy",
+      "インスピレーション！",
+      "でっかい宇宙に愛がある",
+      "ポップコーンラブ！",
+      "モーニングコーヒー(2002version)",
+      "ちょっとイカした PURE BOY",
+      "純LOVER",
+      "宝石箱",
+      "Never Forget(Rock Ver.)",
+      "涙にはしたくない",
+      "恋ING",
+      "出来る女",
+      "ファインエモーション！",
+      "がんばれ 日本 サッカー ファイト！",
+      "寝坊です。デートなのに…",
+      "ラヴ＆ピィ〜ス！HEROがやって来たっ。",
+      "NATURE IS GOOD!",
+      "愛と太陽に包まれて",
+      "恋は発想 Do The Hustle!",
+      "チャンス チャンス ブギ",
+      "わたしがついてる。",
+      "踊れ！モーニングカレー",
+      "サヨナラのかわりに",
+      "Hand made CITY",
+      "Please!自由の扉",
+      "ボン キュッ！ボン キュッ！BOMB GIRL",
+      "その場面でビビっちゃいけないじゃん！",
+      "ロマンス",
+      "弱虫",
+      "3、2、1 BREAKIN&#x27;OUT!",
+      "秋麗",
+      "すべては愛の力",
+      "Please！自由の扉"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/745/"
+    },
+    "cover": "https://helloproject.com/upload/images/bc6313f11ae10ef535343c41012eeb03c36c0e62.webp"
+  },
+  {
+    "id": "mm-751",
+    "title": "気まぐれプリンセス",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2009-10-28",
+    "tracks": [
+      "気まぐれプリンセス",
+      "愛して 愛して 後一分"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/751/"
+    },
+    "cover": "https://helloproject.com/upload/images/2be57f97c1abec5a9e0c4cd33d97ab8c19eb142c.webp"
+  },
+  {
+    "id": "mm-764",
+    "title": "女が目立って なぜイケナイ",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2010-02-10",
+    "tracks": [
+      "女が目立って なぜイケナイ",
+      "泣き出すかもしれないよ"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/764/"
+    },
+    "cover": "https://helloproject.com/upload/images/a5e9eb0d75dbdc48be5b4d3e52998e420685c983.webp"
+  },
+  {
+    "id": "mm-774",
+    "title": "⑩ MY ME",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2010-03-17",
+    "tracks": [
+      "Moonlight night 〜月夜の晩だよ〜",
+      "気まぐれプリンセス",
+      "元気ピカッピカッ！",
+      "涙ッチ",
+      "女が目立って なぜイケナイ",
+      "大きい瞳",
+      "あの日に戻りたい",
+      "なんちゃって恋愛",
+      "大阪 美味いねん",
+      "Loving you forever",
+      "しょうがない 夢追い人",
+      "雨の降らない星では愛せないだろう？(中国語Ver.)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/774/"
+    },
+    "cover": "https://helloproject.com/upload/images/878ad005640cc91341c07f9d92fe00c10c26a39f.webp"
+  },
+  {
+    "id": "mm-782",
+    "title": "青春コレクション",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2010-06-09",
+    "tracks": [
+      "青春コレクション",
+      "友(とも)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/782/"
+    },
+    "cover": "https://helloproject.com/upload/images/893cfbfbda8d25b3bea1ce33dc001b7ff16bd997.webp"
+  },
+  {
+    "id": "mm-801",
+    "title": "あっぱれ回転ずし！",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2010-10-27",
+    "tracks": [
+      "あっぱれ回転ずし！",
+      "くら寿司 ビッくらポン！"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/801/"
+    },
+    "cover": "https://helloproject.com/upload/images/c6bb46a51f26674afc2cb8a6eba5f7ff501ef3ee.webp"
+  },
+  {
+    "id": "mm-794",
+    "title": "女と男のララバイゲーム",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2010-11-17",
+    "tracks": [
+      "女と男のララバイゲーム",
+      "愛され過ぎることはないのよ"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/794/"
+    },
+    "cover": "https://helloproject.com/upload/images/49368e892f7836c22c6a43bc7983998b58f2a890.webp"
+  },
+  {
+    "id": "mm-803",
+    "title": "Fantasy！拾壱",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2010-12-01",
+    "tracks": [
+      "女と男のララバイゲーム(AL Ver.)",
+      "ブラボー！",
+      "Fantasyが始まる",
+      "女心となんとやら",
+      "愛の炎",
+      "I&#x27;m Lucky girl",
+      "すんごいマイバースディ",
+      "1から10まで愛してほしい",
+      "愛しく苦しいこの夜に",
+      "電話でね",
+      "青春コレクション"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/803/"
+    },
+    "cover": "https://helloproject.com/upload/images/823dcefca2262b52e8257dfbe11c57ed37573368.webp"
+  },
+  {
+    "id": "mm-824",
+    "title": "まじですかスカ!",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2011-04-06",
+    "tracks": [
+      "まじですかスカ！",
+      "もっと愛してほしいの"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/824/"
+    },
+    "cover": "https://helloproject.com/upload/images/9a97f1668e6a2b069e769fe2ac2af57431679bf9.webp"
+  },
+  {
+    "id": "mm-833",
+    "title": "Only you",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2011-06-15",
+    "tracks": [
+      "Only you",
+      "やめてよ！シンドバッド"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/833/"
+    },
+    "cover": "https://helloproject.com/upload/images/343333c008a306029e9f1fb29258b0ab3ba6092b.webp"
+  },
+  {
+    "id": "mm-851",
+    "title": "この地球の平和を本気で願ってるんだよ!",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2011-09-14",
+    "tracks": [
+      "この地球の平和を本気で願ってるんだよ！",
+      "彼と一緒にお店がしたい！",
+      "自信持って 夢を持って 飛び立つから"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/851/"
+    },
+    "cover": "https://helloproject.com/upload/images/c5a1de946420a9338d47dd28f7b12e8d4b600817.webp"
+  },
+  {
+    "id": "mm-859",
+    "title": "12,スマート",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2011-10-12",
+    "tracks": [
+      "Give me 愛",
+      "Only you",
+      "シルバーの腕時計",
+      "好きだな君が",
+      "怪傑ポジティブA",
+      "この愛を重ねて",
+      "この地球の平和を本気で願ってるんだよ！",
+      "彼と一緒にお店がしたい！",
+      "My Way〜女子校花道〜",
+      "乙女のタイミング",
+      "OK YEAH!",
+      "まじですかスカ！"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/859/"
+    },
+    "cover": "https://helloproject.com/upload/images/2451707fff18d02a9a43833984c3daad33795b44.webp"
+  },
+  {
+    "id": "mm-882",
+    "title": "ピョコピョコ ウルトラ",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2012-01-25",
+    "tracks": [
+      "ピョコピョコ ウルトラ",
+      "悲しき恋のメロディー"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/882/"
+    },
+    "cover": "https://helloproject.com/upload/images/4ac27c3e005af899737c77435dba8e90f9c43244.webp"
+  },
+  {
+    "id": "mm-892",
+    "title": "恋愛ハンター",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2012-04-11",
+    "tracks": [
+      "恋愛ハンター",
+      "私がいて 君がいる",
+      "笑顔に涙〜THANK YOU! DEAR MY FRIENDS〜"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/892/"
+    },
+    "cover": "https://helloproject.com/upload/images/0aeec66d2be1785ca2d372d1a698131e3811ac08.webp"
+  },
+  {
+    "id": "mm-909",
+    "title": "One・Two・Three/The 摩天楼 ショー",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2012-07-04",
+    "tracks": [
+      "One・Two・Three",
+      "The 摩天楼ショー",
+      "私の時代！",
+      "アイサレタイノニ…",
+      "青春ど真ん中"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/909/"
+    },
+    "cover": "https://helloproject.com/upload/images/6857aa8911093865f55b414439156b8611cdfb01.webp"
+  },
+  {
+    "id": "mm-2027",
+    "title": "モーニング娘。オールナイトニッポンモバイル CD BOX",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2012-09-07",
+    "tracks": [
+      "第1回 ついにスタート！卒業発表もしちゃいました！(高橋・新垣)",
+      "第1回 けっこう厳しい！？娘。の上下関係教えます！(高橋・新垣)",
+      "第2回 ガキさんおすすめグッズベスト3！iPhone好きすぎススメすぎ！(新垣・光井)",
+      "第2回 9期メンバーについての質問にバンバン答えます！(新垣・光井)",
+      "第3回 娘。でお酒飲みに行くの？飲めるのはこのメンバーらしいよ！(新垣・道重)",
+      "第3回 最後はぶっちゃけフリートーク！初コンサートの思い出。先輩が…(新垣・道重)",
+      "第4回 好きな給食のメニューは？えりぽんはイチゴでフクちゃんは？(新垣・譜久村・生田)",
+      "第4回 二人からガキさんに質問！「あれ、新垣さんて昭和なんですか…」(新垣・譜久村・生田)",
+      "第5回 まだ小学生！貴重な鞘師のモノマネ解禁！＆第一印象は「なんだコイツ」！？(新垣・鞘師・鈴木)",
+      "第6回 れいなの水分取らない疑惑に本人が答えます！お酒はどう？(新垣・田中)",
+      "第6回 れいなが気合の大掃除！この二人、実はいいコンビ！(新垣・田中)",
+      "第7回 ツアーの差し入れ話で大盛り上がり！フクちゃんお母さんに怒られた…(新垣・譜久村・生田)",
+      "第8回 ガキさん上半期のビックリベスト3！意外なランキング！？(新垣・光井)",
+      "第8回 みっつぃーこだわりの骨折ファッション！誰も同意しなかったんですけど…(新垣・光井)",
+      "第9回 質問コーナー2！のつもりがバスツアーの話だけで終わっちゃった！(高橋・新垣)",
+      "第9回 質問コーナー2！のつもりが今回はコンビニトークで…(高橋・新垣)",
+      "第10回 さゆが夏にやり残したことベスト3！ガキさんにつっこみまくりですよ。(新垣・道重)",
+      "第10回 妄想暴走！9期メンバーがお酒飲めるようになったらこうなる！(新垣・道重)",
+      "第11回 質問コーナー！男に生まれ変わったらどうする？愛ガキでケンカ！原因は？(高橋・新垣)",
+      "第11回 ガキさんから愛ちゃんへ。そして愛ちゃんからみなさんへメッセージ。ラストは笑顔？涙？(高橋・新垣)",
+      "第12回 亀がガキさん家に泊りにきた！いろいろ大変だったみたいです…(新垣)",
+      "第13回 ガキさんが質問攻め！工藤だけは「さん」付けじゃありません！(新垣・佐藤)",
+      "第14回 光井2011年ベスト3！ネットショッピングのオススメは◯○！(新垣・光井)",
+      "第14回 生田のガキさん好き度がパワーアップ！ちょっと気持ち悪い？(新垣・光井)",
+      "第15回 生田ベスト3！ハロプロショップでいっぱい買い物しちゃいました！(新垣・生田)",
+      "第15回 ガキさんファン代表？の生田。ハロプロショップで狙ったグッズは？(新垣・生田)",
+      "第16回 これは必聴！くどぅーが見た9期メンバーのホンネの印象！(新垣・工藤)",
+      "第17回 年下の先輩がたくさんいる飯窪。気を使ってる？そして茶色の話も。(新垣・飯窪)",
+      "第18回 フリートーク後編はまたまた10期エピソードで大爆笑！さゆみんの鼻も暴走！(新垣・道重)",
+      "第19回 れいなが昔ミキティにどうしても負けたくなくって競り合ってたこと初告白！(新垣・田中)",
+      "第20回 フクちゃんの舞台袖で独り言ブツブツの真相はこれか？(新垣・譜久村・石田)",
+      "第21回 2009-2012振返り 進化し、変化する大人の時期でした！(新垣)",
+      "第21回 生田がバスツアーにファンとして参加！やっぱりKY？そしてガキさんから最後のメッセージ！(新垣)",
+      "愛ガキ特別編① 愛ちゃんからのメッセージがグダグダで…(笑)(高橋・新垣)",
+      "愛ガキ特別編② 娘。に入って変わったこと？学校行くの大変だったなあ〜(高橋・新垣)",
+      "愛ガキ特別編③ 愛ちゃんリーダー時代。二人でちょっとモメたよね…(高橋・新垣)",
+      "愛ガキ特別編④ ガキさんリーダー時代。9期が成長したんだよ！(高橋・新垣)",
+      "光井愛佳特別編① オープニング いろいろ話しますよ！(光井)",
+      "光井愛佳特別編② 骨折発覚から愛ちゃん卒業コンサートまで。(光井)",
+      "光井愛佳特別編③ 冬ハロー〜春ツアー。もどかしい…いろいろ葛藤がありました…(光井)",
+      "光井愛佳特別編④ 最後の決断。そして卒業コンサートへ。(光井)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/2027/"
+    },
+    "cover": "https://helloproject.com/upload/images/03da903e986bc79025f3abbe4103f1d98c1b4aae.webp"
+  },
+  {
+    "id": "mm-937",
+    "title": "⑬カラフルキャラクター",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2012-09-12",
+    "tracks": [
+      "One・Two・Three",
+      "What&#x27;s Up？ 愛はどうなのよ〜",
+      "Be Alive",
+      "ラララのピピピ",
+      "ドッカ〜ン カプリッチオ",
+      "The 摩天楼ショー",
+      "ゼロから始まる青春",
+      "恋愛ハンター",
+      "地球が泣いている",
+      "涙一滴",
+      "笑って！YOU",
+      "ピョコピョコ ウルトラ"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/937/"
+    },
+    "cover": "https://helloproject.com/upload/images/88dded3117061636c370bec8f482efa131ff66fd.webp"
+  },
+  {
+    "id": "mm-940",
+    "title": "ワクテカ Take a chance",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2012-10-10",
+    "tracks": [
+      "ワクテカ Take a chance",
+      "普通の少女A",
+      "大好き100万点",
+      "信念だけは貫き通せ！",
+      "Loveイノベーション"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/940/"
+    },
+    "cover": "https://helloproject.com/upload/images/75d73992c10dc30541e7122733fadf8c43521825.webp"
+  },
+  {
+    "id": "mm-956",
+    "title": "Help me!!",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2013-01-23",
+    "tracks": [
+      "Help me!!",
+      "Happy大作戦",
+      "哀愁ロマンティック",
+      "私のでっかい花",
+      "なには友あれ！",
+      "大好きだから絶対に許さない"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/956/"
+    },
+    "cover": "https://helloproject.com/upload/images/b1473c64c2a16fd2e36d4fdea2d4eaecfb3a99c8.webp"
+  },
+  {
+    "id": "mm-983",
+    "title": "ブレインストーミング/君さえ居れば何も要らない",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2013-04-17",
+    "tracks": [
+      "ブレインストーミング",
+      "君さえ居れば何も要らない",
+      "A B C D E-cha E-chaしたい",
+      "トキメクトキメケ",
+      "いつもとおんなじ制服で",
+      "Rockの定義"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/983/"
+    },
+    "cover": "https://helloproject.com/upload/images/0d357077f4cf8f9dd3c187e752d32137def783d7.webp"
+  },
+  {
+    "id": "mm-1002",
+    "title": "わがまま 気のまま 愛のジョーク/愛の軍団",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2013-08-28",
+    "tracks": [
+      "わがまま 気のまま 愛のジョーク",
+      "愛の軍団",
+      "負ける気しない 今夜の勝負",
+      "坊や",
+      "ふんわり恋人一年生"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/1002/"
+    },
+    "cover": "https://helloproject.com/upload/images/63fe2cc0458ede3863d51222d2c2bb9823b4868c.webp"
+  },
+  {
+    "id": "mm-1017",
+    "title": "The Best！〜Updated モーニング娘。〜",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2013-09-25",
+    "tracks": [
+      "LOVEマシーン(updated)",
+      "I WISH(updated)",
+      "恋愛レボリューション21(updated)",
+      "ザ☆ピ〜ス！(updated)",
+      "そうだ！We&#x27;re ALIVE(updated)",
+      "THE マンパワー！！！(updated)",
+      "歩いてる(updated)",
+      "恋愛ハンター(updated)",
+      "One・Two・Three(updated)",
+      "ワクテカ Take a chance(updated)",
+      "Help me!!(updated)",
+      "ブレインストーミング(updated)",
+      "君さえ居れば何も要らない(updated)",
+      "わがまま 気のまま 愛のジョーク",
+      "ウルフボーイ"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/1017/"
+    },
+    "cover": "https://helloproject.com/upload/images/5ef4c3b473c8cdb304c494c5413ab76d14a1bc96.webp"
+  },
+  {
+    "id": "mm-14",
+    "title": "笑顔の君は太陽さ/君の代わりは居やしない/What is LOVE?",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2014-01-29",
+    "tracks": [
+      "笑顔の君は太陽さ",
+      "君の代わりは居やしない",
+      "What is LOVE？"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/14/"
+    },
+    "cover": "https://helloproject.com/upload/images/e61fb702c079eeec6fa162889f0875736b8cf079.webp"
+  },
+  {
+    "id": "mm-1030",
+    "title": "モーニング娘。'14 カップリングコレクション2",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2014-03-12",
+    "tracks": [
+      "愛して 愛して 後一分",
+      "泣き出すかもしれないよ",
+      "友(とも)",
+      "くら寿司 ビッくらポン！",
+      "愛され過ぎることはないのよ",
+      "もっと愛してほしいの",
+      "やめてよ！シンドバッド",
+      "彼と一緒にお店がしたい！",
+      "自信持って 夢を持って 飛び立つから",
+      "悲しき恋のメロディー",
+      "私がいて 君がいる",
+      "笑顔に涙〜THANK YOU! DEAR MY FRIENDS〜",
+      "私の時代！",
+      "アイサレタイノニ…",
+      "青春ど真ん中",
+      "普通の少女A",
+      "大好き100万点",
+      "信念だけは貫き通せ！",
+      "Loveイノベーション",
+      "Happy大作戦",
+      "哀愁ロマンティック",
+      "私のでっかい花",
+      "なには友あれ！",
+      "大好きだから絶対に許さない",
+      "A B C D E-cha E-chaしたい",
+      "トキメクトキメケ",
+      "いつもとおんなじ制服で",
+      "Rockの定義",
+      "負ける気しない 今夜の勝負",
+      "坊や",
+      "ふんわり恋人一年生"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/1030/"
+    },
+    "cover": "https://helloproject.com/upload/images/1d766845b9871a0aed1997855987ce298467fece.webp"
+  },
+  {
+    "id": "mm-1035",
+    "title": "時空を超え 宇宙を超え/Password is 0",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2014-04-16",
+    "tracks": [
+      "時空を超え 宇宙を超え",
+      "Password is 0"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/1035/"
+    },
+    "cover": "https://helloproject.com/upload/images/74d24a76bfffdf63edeb27dfe402e1db62cfaa5e.webp"
+  },
+  {
+    "id": "mm-2311",
+    "title": "演劇女子部 ミュージカル LILIUMリリウム 少女純潔歌劇 オリジナルサウンドトラック",
+    "type": "album",
+    "typeLabel": "アルバム",
+    "releaseDate": "2014-08-06",
+    "tracks": [
+      "Forget-me-not 〜私を忘れないで〜",
+      "Eli, Eli, Lema Sabachthani?",
+      "シルベチカなんて知らない！",
+      "繭期のティーチング",
+      "幻想幻惑イノセンス",
+      "プリンセス・マーガレット",
+      "或る庭師の物語",
+      "ひとりぼっちのスノウ",
+      "TRUE OF VAMP",
+      "共同幻想ユートピア",
+      "もう泣かないと決めた",
+      "あなたを愛した記憶",
+      "永遠の繭期の終わり",
+      "少女純潔"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/2311/"
+    },
+    "cover": "https://helloproject.com/upload/images/3abcbf89a04ebf19afdf89792aa77e88f50680bb.webp"
+  },
+  {
+    "id": "mm-2360",
+    "title": "TIKI BUN/シャバダバ ドゥ〜/見返り美人",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2014-10-15",
+    "tracks": [
+      "TIKI BUN",
+      "シャバダバ ドゥ〜",
+      "見返り美人"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/2360/"
+    },
+    "cover": "https://helloproject.com/upload/images/22aed5cc0f4c760a61f1befb82c62f639cf7d2b4.webp"
+  },
+  {
+    "id": "mm-2390",
+    "title": "14章〜The message〜",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2014-10-29",
+    "tracks": [
+      "TIKI BUN(Album Version)",
+      "Password is 0",
+      "明日を作るのは君",
+      "キラリと光る星",
+      "恋人には絶対に知られたくない真実",
+      "What is LOVE?",
+      "私は私なんだ",
+      "笑えない話",
+      "笑顔の君は太陽さ",
+      "君の代わりは居やしない",
+      "大人になれば 大人になれる",
+      "時空を超え 宇宙を超え"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/2390/"
+    },
+    "cover": "https://helloproject.com/upload/images/9ea1355d586f8d4db769acdbf917853e785fa1f7.webp"
+  },
+  {
+    "id": "mm-4100",
+    "title": "青春小僧が泣いている/夕暮れは雨上がり/イマココカラ",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2015-04-15",
+    "tracks": [
+      "青春小僧が泣いている",
+      "夕暮れは雨上がり",
+      "イマココカラ"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/4100/"
+    },
+    "cover": "https://helloproject.com/upload/images/0c32a5a24b6c6c1e0f2460c57215afb839e7c051.webp"
+  },
+  {
+    "id": "mm-4353",
+    "title": "演劇女子部 ミュージカル「TRIANGLE-トライアングル-」オリジナルサウンドトラック",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2015-07-15",
+    "tracks": [
+      "トライアングル アルファ",
+      "サクラの恋",
+      "うらやましがりやのダイス",
+      "ローズウッドの告白",
+      "触れればココロがあふれだす",
+      "手をはなさない"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/4353/"
+    },
+    "cover": "https://helloproject.com/upload/images/412edca63a3eaf4be94acbd79755ebcae4d40f4c.webp"
+  },
+  {
+    "id": "mm-4400",
+    "title": "Oh my wish!/スカッとMy Heart/今すぐ飛び込む勇気",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2015-08-19",
+    "tracks": [
+      "Oh my wish!",
+      "スカッとMy Heart",
+      "今すぐ飛び込む勇気"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/4400/"
+    },
+    "cover": "https://helloproject.com/upload/images/0bf41c6591c56fb571bfd055d7d5010c55382fdd.webp"
+  },
+  {
+    "id": "mm-4513",
+    "title": "冷たい風と片思い/ENDLESS SKY/One and Only",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2015-12-29",
+    "tracks": [
+      "冷たい風と片思い",
+      "ENDLESS SKY",
+      "One and Only"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/4513/"
+    },
+    "cover": "https://helloproject.com/upload/images/2d7bc1306eb474d0325be5c507a4ea438a85a52c.webp"
+  },
+  {
+    "id": "mm-4792",
+    "title": "冷たい風と片思い/ENDLESS SKY/One and Only",
+    "type": "single",
+    "typeLabel": "アナログシングル",
+    "releaseDate": "2016-05-11",
+    "tracks": [
+      "冷たい風と片思い",
+      "ENDLESS SKY",
+      "冷たい風と片思い(TYPE B)",
+      "One and Only"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/4792/"
+    },
+    "cover": "https://helloproject.com/upload/images/c0d3126f58d97cfaab5e5df1aa286d7dfbc74865.webp"
+  },
+  {
+    "id": "mm-4755",
+    "title": "泡沫サタデーナイト！/The Vision/Tokyoという片隅",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2016-05-11",
+    "tracks": [
+      "泡沫サタデーナイト！",
+      "The Vision",
+      "Tokyoという片隅"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/4755/"
+    },
+    "cover": "https://helloproject.com/upload/images/387addffaa3e3b0c36c2fba2b8721f30cb46dcf1.webp"
+  },
+  {
+    "id": "mm-4893",
+    "title": "演劇女子部「続・11人いる！東の地平・西の永遠」オリジナルサウンドトラック",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2016-07-13",
+    "tracks": [
+      "愛の言葉",
+      "東の地平・西の永遠",
+      "好きだから‥"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/4893/"
+    },
+    "cover": "https://helloproject.com/upload/images/0f470be824afe0817e3b709a1bfea7d854c39ef1.webp"
+  },
+  {
+    "id": "mm-4908",
+    "title": "泡沫サタデーナイト！/The Vision/Tokyoという片隅",
+    "type": "single",
+    "typeLabel": "アナログシングル",
+    "releaseDate": "2016-08-10",
+    "tracks": [
+      "泡沫サタデーナイト！",
+      "The Vision",
+      "Tokyoという片隅",
+      "泡沫サタデーナイト！(川辺ヒロシREMIX)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/4908/"
+    },
+    "cover": "https://helloproject.com/upload/images/039f2b2584addd2b7602f6c4ad52503f5503fb45.webp"
+  },
+  {
+    "id": "mm-4995",
+    "title": "セクシーキャットの演説/ムキダシで向き合って/そうじゃない",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2016-11-23",
+    "tracks": [
+      "セクシーキャットの演説",
+      "ムキダシで向き合って",
+      "そうじゃない"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/4995/"
+    },
+    "cover": "https://helloproject.com/upload/images/aa3098cc2d3d82a13a431f14a74e52f4bd0217c3.webp"
+  },
+  {
+    "id": "mm-5129",
+    "title": "BRAND NEW MORNING/ジェラシー ジェラシー",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2017-03-08",
+    "tracks": [
+      "BRAND NEW MORNING",
+      "ジェラシー ジェラシー",
+      "モーニングみそ汁",
+      "Get you!"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/5129/"
+    },
+    "cover": "https://helloproject.com/upload/images/a3d9928e80884aab7e32960b766ad7aad157f718.webp"
+  },
+  {
+    "id": "mm-5251",
+    "title": "演劇女子部「ファラオの墓」オリジナルサウンドラック",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2017-07-12",
+    "tracks": [
+      "いつか会えるその日まで",
+      "砂漠の鷹",
+      "愛さえあれば",
+      "永遠の愛",
+      "ファラオの墓"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/5251/"
+    },
+    "cover": "https://helloproject.com/upload/images/6cd1c022a2d29db13e45743edff258dcbaffee78.webp"
+  },
+  {
+    "id": "mm-5369",
+    "title": "ミンミンロケンロー！",
+    "type": "digital",
+    "typeLabel": "配信",
+    "releaseDate": "2017-07-28",
+    "tracks": [
+      "ミンミンロケンロー！"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/5369/"
+    },
+    "cover": "https://helloproject.com/upload/images/c6b2231b228336124160c295f0a0260e34a69710.webp"
+  },
+  {
+    "id": "mm-5393",
+    "title": "邪魔しないで Here We Go！/弩級のゴーサイン/若いんだし！",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2017-10-04",
+    "tracks": [
+      "邪魔しないで Here We Go!",
+      "弩級のゴーサイン",
+      "若いんだし！"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/5393/"
+    },
+    "cover": "https://helloproject.com/upload/images/ddf198330d37a233c0b8543d543df76ab7d27b0b.webp"
+  },
+  {
+    "id": "mm-5448",
+    "title": "愛の種(20th Anniversary Ver.)",
+    "type": "digital",
+    "typeLabel": "配信シングル",
+    "releaseDate": "2017-11-03",
+    "tracks": [
+      "愛の種(20th Anniversary Ver.)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/5448/"
+    },
+    "cover": "https://helloproject.com/upload/images/4673f094a5d806fc19bb03e0e33836cef6716632.webp"
+  },
+  {
+    "id": "mm-5480",
+    "title": "五線譜のたすき",
+    "type": "digital",
+    "typeLabel": "配信シングル",
+    "releaseDate": "2017-11-30",
+    "tracks": [
+      "五線譜のたすき"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/5480/"
+    },
+    "cover": "https://helloproject.com/upload/images/5b894f8b1b7a76dd853ad181fd6f76c7394ee89d.webp"
+  },
+  {
+    "id": "mm-5416",
+    "title": "⑮ Thank you, too",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2017-12-06",
+    "tracks": [
+      "ジェラシー ジェラシー (Album Version)",
+      "ロマンスに目覚める妄想女子の歌",
+      "CHO DAI",
+      "私のなんにもわかっちゃない",
+      "邪魔しないで Here We Go！",
+      "Style of my love",
+      "ナルシス カマってちゃん協奏曲第5番",
+      "青春Say A-HA",
+      "若いんだし！",
+      "もう 我慢できないわ〜Love ice cream〜",
+      "弩級のゴーサイン",
+      "恋は時に",
+      "女子かしまし物語 (モーニング娘。&#x27;17 Ver.)",
+      "BRAND NEW MORNING",
+      "愛の種(20th Anniversary Ver.)",
+      "女子かしまし物語(モーニング娘。&#x27;17 Ver.)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/5416/"
+    },
+    "cover": "https://helloproject.com/upload/images/d59483357289c426c4ef8ce452ba2f3d422a7955.webp"
+  },
+  {
+    "id": "mm-5528",
+    "title": "雑煮でケンカしてんじゃねーよ",
+    "type": "digital",
+    "typeLabel": "配信",
+    "releaseDate": "2017-12-22",
+    "tracks": [
+      "雑煮でケンカしてんじゃねーよ"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/5528/"
+    },
+    "cover": "https://helloproject.com/upload/images/6c00f448f54a71ec8fa70a8d2b73eb3e9e9205ec.webp"
+  },
+  {
+    "id": "mm-5567",
+    "title": "モーニングコーヒー(20th Anniversary Ver.)",
+    "type": "digital",
+    "typeLabel": "配信シングル",
+    "releaseDate": "2018-01-28",
+    "tracks": [
+      "モーニングコーヒー(20th Anniversary Ver.)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/5567/"
+    },
+    "cover": "https://helloproject.com/upload/images/e788921bb521d42bdf1c6c3005ec2bed78a981b5.webp"
+  },
+  {
+    "id": "mm-5552",
+    "title": "花が咲く 太陽浴びて",
+    "type": "digital",
+    "typeLabel": "配信シングル",
+    "releaseDate": "2018-01-28",
+    "tracks": [
+      "花が咲く 太陽浴びて"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/5552/"
+    },
+    "cover": "https://helloproject.com/upload/images/270857556b3f9d871a77ec95b46d22278235cdbb.webp"
+  },
+  {
+    "id": "mm-5514",
+    "title": "二十歳のモーニング娘。",
+    "type": "album",
+    "typeLabel": "CDミニアルバム",
+    "releaseDate": "2018-02-07",
+    "tracks": [
+      "モーニングコーヒー(20th Anniversary Ver.)",
+      "WE ARE LEADERS! ～リーダーってのもつらいもの～",
+      "花が咲く 太陽浴びて",
+      "ENDLESS HOME",
+      "お天気の日のお祭り",
+      "タネはツバサ(Wings of the Seed)",
+      "五線譜のたすき",
+      "愛の種(20th Anniversary Ver.)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/5514/"
+    },
+    "cover": "https://helloproject.com/upload/images/1579c37668d4b864f8e90c9c927cfc577451a0c2.webp"
+  },
+  {
+    "id": "mm-5656",
+    "title": "Are you Happy?/A gonna",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2018-06-13",
+    "tracks": [
+      "Are you Happy?",
+      "A gonna"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/5656/"
+    },
+    "cover": "https://helloproject.com/upload/images/ee4e2e678a87e40400f2dcd2ca1c2b4d2c96dfed.webp"
+  },
+  {
+    "id": "mm-5681",
+    "title": "演劇女子部「ファラオの墓～蛇王・スネフェル」オリジナルサウンドトラック",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2018-07-11",
+    "tracks": [
+      "宿命",
+      "砂漠の鷹「ファラオの墓～蛇王・スネフェル～」Ver.",
+      "永遠の愛「ファラオの墓～蛇王・スネフェル～」Ver.",
+      "ファラオの墓「ファラオの墓～蛇王・スネフェル～」Ver."
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/5681/"
+    },
+    "cover": "https://helloproject.com/upload/images/cfcadd896b5543ae3f12e6e3c0f4b8251ab46f8d.webp"
+  },
+  {
+    "id": "mm-5776",
+    "title": "フラリ銀座/自由な国だから",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2018-10-24",
+    "tracks": [
+      "フラリ銀座",
+      "自由な国だから",
+      "Y字路の途中"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/5776/"
+    },
+    "cover": "https://helloproject.com/upload/images/3fce63a1540e253378f734336a677c9b17cdd0b7.webp"
+  },
+  {
+    "id": "mm-5903",
+    "title": "ベスト！モーニング娘。20th Anniversary",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2019-03-20",
+    "tracks": [
+      "I surrender 愛されど愛",
+      "恋してみたくて",
+      "みかん",
+      "リゾナント ブルー",
+      "ペッパー警部",
+      "泣いちゃうかも",
+      "しょうがない 夢追い人",
+      "なんちゃって恋愛",
+      "気まぐれプリンセス",
+      "女が目立って なぜイケナイ",
+      "青春コレクション",
+      "女と男のララバイゲーム",
+      "まじですかスカ！",
+      "Only you",
+      "この地球の平和を本気で願ってるんだよ！",
+      "ピョコピョコ ウルトラ",
+      "恋愛ハンター",
+      "One･Two･Three",
+      "ワクテカ Take a chance",
+      "Help me!!",
+      "ブレインストーミング",
+      "わがまま 気のまま 愛のジョーク",
+      "What is LOVE?",
+      "時空を超え 宇宙を超え",
+      "TIKI BUN",
+      "青春小僧が泣いている",
+      "Oh my wish!",
+      "冷たい風と片思い",
+      "泡沫サタデーナイト！",
+      "セクシーキャットの演説",
+      "ジェラシー ジェラシー",
+      "邪魔しないで Here We Go！",
+      "Are you Happy?",
+      "フラリ銀座",
+      "彼と一緒にお店がしたい！",
+      "The 摩天楼ショー",
+      "君さえ居れば何も要らない",
+      "愛の軍団",
+      "笑顔の君は太陽さ",
+      "君の代わりは居やしない",
+      "Password is 0",
+      "シャバダバ ドゥ～",
+      "見返り美人",
+      "夕暮れは雨上がり",
+      "イマココカラ",
+      "スカッとMy Heart",
+      "今すぐ飛び込む勇気",
+      "ENDLESS SKY",
+      "One and Only",
+      "The Vision",
+      "Tokyoという片隅",
+      "ムキダシで向き合って",
+      "そうじゃない",
+      "BRAND NEW MORNING",
+      "モーニングみそ汁",
+      "弩級のゴーサイン",
+      "若いんだし！",
+      "A gonna",
+      "自由な国だから",
+      "Y字路の途中",
+      "私のなんにもわかっちゃない(モーニング娘。&#x27;15 Ver.)",
+      "冷たい風と片思い(TYPE B)",
+      "憧れのStress-free(モーニング娘。&#x27;18 Ver.)",
+      "自由な国だから(TV EDIT)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/5903/"
+    },
+    "cover": "https://helloproject.com/upload/images/e6c23d85b77ad6efa4da663b00cd0d6a80c49c75.webp"
+  },
+  {
+    "id": "mm-5974",
+    "title": "セカンド モーニング",
+    "type": "album",
+    "typeLabel": "アナログアルバム",
+    "releaseDate": "2019-04-01",
+    "tracks": [
+      "NIGHT OF TOKYO CITY",
+      "真夏の光線(Vacation Mix)",
+      "Memory 青春の光",
+      "好きで×5",
+      "ふるさと",
+      "抱いてHOLD ON ME!(N.Y.Mix)",
+      "パパに似ている彼",
+      "せんこう花火",
+      "恋の始発列車(Album Version)",
+      "乙女の心理学",
+      "Never Forget(Large Vocal Mix)",
+      "ダディドゥデドダディ！"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/5974/"
+    },
+    "cover": "https://helloproject.com/upload/images/e162ed7565626dba0f7cfcc2e960aceb5570cfa1.webp"
+  },
+  {
+    "id": "mm-5975",
+    "title": "4th「いきまっしょい!」",
+    "type": "album",
+    "typeLabel": "アナログアルバム",
+    "releaseDate": "2019-04-01",
+    "tracks": [
+      "ザ☆ピ～ス！(Complete Version）",
+      "いいことある記念の瞬間",
+      "Mr.Moonlight～愛のビッグバンド～(Long Version)",
+      "初めてのロックコンサート",
+      "男友達",
+      "そうだ！We&#x27;re ALIVE",
+      "でっかい宇宙に愛がある(Album Version)",
+      "いきまっしょい！",
+      "電車の二人",
+      "本気で熱いテーマソング",
+      "好きな先輩",
+      "恋愛レボリュ－ション21(13人 Version)",
+      "なんにも言わずに I LOVE YOU"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/5975/"
+    },
+    "cover": "https://helloproject.com/upload/images/a61309a2bf4a1804a74bcb79b7e6329598a20ad5.webp"
+  },
+  {
+    "id": "mm-6056",
+    "title": "人生Blues/青春Night",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2019-06-12",
+    "tracks": [
+      "人生Blues",
+      "青春Night"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/6056/"
+    },
+    "cover": "https://helloproject.com/upload/images/fbf7340b5258a5c20291c03ee205b58b8efe8306.webp"
+  },
+  {
+    "id": "mm-6209",
+    "title": "KOKORO＆KARADA/LOVEペディア/人間関係No way way",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2020-01-22",
+    "tracks": [
+      "KOKORO＆KARADA",
+      "LOVEペディア",
+      "人間関係No way way"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/6209/"
+    },
+    "cover": "https://helloproject.com/upload/images/efc41555a1ec7ac46be116854fb19a06d6b55872.webp"
+  },
+  {
+    "id": "mm-6396",
+    "title": "純情エビデンス/ギューされたいだけなのに",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2020-12-16",
+    "tracks": [
+      "純情エビデンス",
+      "ギューされたいだけなのに"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/6396/"
+    },
+    "cover": "https://helloproject.com/upload/images/edaf1fce594a4bff6dd4b4610dad0334470653aa.webp"
+  },
+  {
+    "id": "mm-6463",
+    "title": "16th～That's J-POP～",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2021-03-31",
+    "tracks": [
+      "愛してナンが悪い！？",
+      "ギューされたいだけなのに",
+      "信じるしか！",
+      "TIME IS MONEY!",
+      "泣き虫My Dream",
+      "二人はアベコベ",
+      "純情エビデンス",
+      "このまま！",
+      "KOKORO&KARADA",
+      "人生Blues",
+      "Hey! Unfair Baby",
+      "恋愛Destiny～本音を論じたい～",
+      "LOVEペディア",
+      "人間関係No way way",
+      "青春Night"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/6463/"
+    },
+    "cover": "https://helloproject.com/upload/images/66a639d9dbc42d25fdae1b873617e6d88767a039.webp"
+  },
+  {
+    "id": "mm-6631",
+    "title": "Teenage Solution/よしよししてほしいの/ビートの惑星",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2021-12-08",
+    "tracks": [
+      "Teenage Solution",
+      "よしよししてほしいの",
+      "ビートの惑星",
+      "女子かしまし物語(モーニング娘。&#x27;21 Ver.)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/6631/"
+    },
+    "cover": "https://helloproject.com/upload/images/fa479bec0e2c65412eeb393002e17c80c1169792.webp"
+  },
+  {
+    "id": "mm-6663",
+    "title": "女子かしまし物語 (モーニング娘。'21 Ver.)",
+    "type": "digital",
+    "typeLabel": "配信",
+    "releaseDate": "2021-12-14",
+    "tracks": [
+      "女子かしまし物語(モーニング娘。&#x27;21 Ver.)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/6663/"
+    },
+    "cover": "https://helloproject.com/upload/images/094822b7481a14e10e597a36e4932acbabdbc676.webp"
+  },
+  {
+    "id": "mm-6698",
+    "title": "I WISH",
+    "type": "digital",
+    "typeLabel": "配信",
+    "releaseDate": "2022-03-18",
+    "tracks": [
+      "I WISH"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/6698/"
+    },
+    "cover": "https://helloproject.com/upload/images/957d9f9bf8eccbf5a9f7c1ade4f0a8b16eb80be4.webp"
+  },
+  {
+    "id": "mm-6728",
+    "title": "Chu Chu Chu 僕らの未来/大・人生 Never Been Better!",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2022-06-08",
+    "tracks": [
+      "Chu Chu Chu 僕らの未来",
+      "大・人生 Never Been Better!",
+      "I WISH"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/6728/"
+    },
+    "cover": "https://helloproject.com/upload/images/8e1e0dc9a007da2422246368b335c333feb10ff1.webp"
+  },
+  {
+    "id": "mm-6865",
+    "title": "Swing Swing Paradise / Happy birthday to Me!",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2022-12-21",
+    "tracks": [
+      "Swing Swing Paradise",
+      "Happy birthday to Me!",
+      "Swing Swing Paradise(Special Edit)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/6865/"
+    },
+    "cover": "https://helloproject.com/upload/images/00e8a290242f72299dc09e06abb1a93a67ccbe90.webp"
+  },
+  {
+    "id": "mm-7025",
+    "title": "モーニング娘。ベストセレクション ～The 25周年～",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2023-08-30",
+    "tracks": [
+      "HEAVY GATE",
+      "なんざんしょ そうざんしょ",
+      "Swing Swing Paradise",
+      "Happy birthday to Me!",
+      "Chu Chu Chu 僕らの未来",
+      "大・人生 Never Been Better!",
+      "Teenage Solution",
+      "よしよししてほしいの",
+      "ビートの惑星",
+      "One・Two・Three(23 Ver.)",
+      "わがまま 気のまま 愛のジョーク(23 Ver.)",
+      "What is LOVE？(23 Ver.)",
+      "悲しくなるようなRainy day",
+      "LOVEマシーン(updated 23 Ver.)",
+      "恋愛レボリュ－ション21(updated 23 Ver.)",
+      "そうだ！We&#x27;re ALIVE(updated 23 Ver.)",
+      "ハッピーサマーウェディング(23 Ver.)",
+      "ザ☆ピ〜ス！(23 Ver.)",
+      "ラストキッス(23 Ver.)",
+      "ちょこっとLOVE(23 Ver.)",
+      "青春Night(23 Ver.)",
+      "ジェラシー ジェラシー(23 Ver.)",
+      "気まぐれプリンセス(23 Ver.)",
+      "みかん(23 Ver.)",
+      "浪漫 ～MY DEAR BOY～(23 Ver.)",
+      "ここにいるぜぇ！(23 Ver.)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/7025/"
+    },
+    "cover": "https://helloproject.com/upload/images/0fdef7593c61d9612936984425502565610c3613.webp"
+  },
+  {
+    "id": "mm-7069",
+    "title": "すっごいFEVER！/Wake-up Call～目覚めるとき～/Neverending Shine",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2023-10-25",
+    "tracks": [
+      "すっごいFEVER！",
+      "Wake-up Call～目覚めるとき～",
+      "Neverending Shine"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/7069/"
+    },
+    "cover": "https://helloproject.com/upload/images/6ea74c04c0397197e988927bb135e10ac838a9af.webp"
+  },
+  {
+    "id": "mm-7257",
+    "title": "モーニング娘。'23 コンサートツアー秋「Neverending Shine Show ～聖域～」譜久村聖 卒業スペシャル",
+    "type": "digital",
+    "typeLabel": "配信",
+    "releaseDate": "2024-05-15",
+    "tracks": [
+      "Wake-up Call～目覚めるとき～(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "HEAVY GATE(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "セクシーキャットの演説(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "気まぐれプリンセス(23 Ver.)(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "What is LOVE？(23 Ver.)(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "恋愛Destiny〜本音を論じたい〜(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "Only you(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "時空を超え 宇宙を超え(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "愛しく苦しいこの夜に(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "元気ピカッピカッ！(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "なんざんしょ そうざんしょ(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "グルグルJUMP(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "好きな先輩(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "悲しくなるようなRainy day(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "秋麗(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "Moonlight night 〜月夜の晩だよ〜(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "メドレー未来の太陽⇒ワクテカ Take a chance(updated)⇒Say Yeah!-もっとミラクルナイト-⇒What&#x27;s Up？愛はどうなのよ〜⇒いきまっしょい！⇒OK YEAH!⇒Happy大作戦(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "すっごいFEVER！(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "わがまま 気のまま 愛のジョーク(23 Ver.)(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "Go Girl 〜恋のヴィクトリー〜(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "涙ッチ(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "Neverending Shine(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "One・Two・Three(23 Ver.)(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "まじですかスカ！(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "I WISH(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)",
+      "みかん(コンサートツアー2023秋「Neverending Shine Show ～聖域～」)"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/7257/"
+    },
+    "cover": "https://helloproject.com/upload/images/1ca3da3b3db34bfc647d1851efb520128a6559f9.webp"
+  },
+  {
+    "id": "mm-7263",
+    "title": "なんだかセンチメンタルな時の歌/最KIYOU",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2024-08-14",
+    "tracks": [
+      "なんだかセンチメンタルな時の歌",
+      "最KIYOU"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/7263/"
+    },
+    "cover": "https://helloproject.com/upload/images/36b4a330f9f92f041996c5443f00b2569f85b0e3.webp"
+  },
+  {
+    "id": "mm-7333",
+    "title": "Professionals-17th",
+    "type": "album",
+    "typeLabel": "CDアルバム",
+    "releaseDate": "2024-11-27",
+    "tracks": [
+      "勇敢なダンス",
+      "おっちょこちょいなファンタジアロマンス",
+      "「恋人」",
+      "ムカ好き！",
+      "すっごいFEVER！",
+      "内緒だよ",
+      "なんだかセンチメンタルな時の歌",
+      "会えてよかった",
+      "Neverending Shine",
+      "幸せ指数 発表されたい",
+      "Wake-up Call～目覚めるとき～",
+      "最KIYOU",
+      "大空に向かって"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/7333/"
+    },
+    "cover": "https://helloproject.com/upload/images/431bee53f6c72a42e9d8c6a3aa6f4b638d6f65b9.webp"
+  },
+  {
+    "id": "mm-7467",
+    "title": "気になるその気の歌/明るく良い子",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2025-07-02",
+    "tracks": [
+      "気になるその気の歌",
+      "明るく良い子"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/7467/"
+    },
+    "cover": "https://helloproject.com/upload/images/c07f8d5da6f303476f9c952c1a8415366b8c3a49.webp"
+  },
+  {
+    "id": "mm-7545",
+    "title": "てか HAPPYのHAPPY！/私のラミンタッチオーネ（Lamentazione）",
+    "type": "single",
+    "typeLabel": "CDシングル",
+    "releaseDate": "2025-12-03",
+    "tracks": [
+      "てか HAPPYのHAPPY！",
+      "私のラミンタッチオーネ（Lamentazione）"
+    ],
+    "lineup": [],
+    "links": {
+      "official": "https://helloproject.com/release/7545/"
+    },
+    "cover": "https://helloproject.com/upload/images/864abb6c768242d432a70f4633ba2b1062d974c4.webp"
+  }
+]

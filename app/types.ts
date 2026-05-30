@@ -39,3 +39,11 @@ export type Member = {
   graduationVenue?: string;
   note?: string;
 };
+
+export type Group = {
+  slug: string;
+  name: string;
+  shortName: string;
+  artistKeyword: string;
+  officialUrl?: string;
+};

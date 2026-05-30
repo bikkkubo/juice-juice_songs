@@ -1,10 +1,22 @@
 import Link from "next/link";
 
-export default function SiteFooter() {
+type Props = {
+  groupName?: string;
+  groupHref?: string;
+  officialUrl?: string;
+  lyricsUrl?: string;
+};
+
+export default function SiteFooter({
+  groupName = "Juice=Juice",
+  groupHref = "/juice-juice/",
+  officialUrl = "https://helloproject.com/juicejuice/",
+  lyricsUrl = "https://www.uta-net.com/search/?Aselect=3&Keyword=Juice%3DJuice",
+}: Props) {
   return (
     <footer className="mt-20 space-y-2 border-t border-border pt-6 text-center text-[11px] text-ink-weak">
       <p>
-        このサイトは非公式のファンサイトです。ハロー！プロジェクト、Juice=Juice、
+        このサイトは非公式のファンサイトです。ハロー！プロジェクト、{groupName}、
         アップフロントグループ各社とは関係ありません。
       </p>
       <p>
@@ -30,7 +42,7 @@ export default function SiteFooter() {
         歌詞はJASRAC許諾済の{" "}
         <a
           className="text-accent underline-offset-2 hover:underline"
-          href="https://www.uta-net.com/search/?Aselect=3&Keyword=Juice%3DJuice"
+          href={lyricsUrl}
           target="_blank"
           rel="noreferrer"
         >
@@ -41,15 +53,15 @@ export default function SiteFooter() {
       <p>
         <a
           className="text-accent underline-offset-2 hover:underline"
-          href="https://helloproject.com/juicejuice/"
+          href={officialUrl}
           target="_blank"
           rel="noreferrer"
         >
           公式サイト ↗
         </a>
         <span className="px-2">/</span>
-        <Link href="/" className="text-accent underline-offset-2 hover:underline">
-          トップに戻る
+        <Link href={groupHref} className="text-accent underline-offset-2 hover:underline">
+          {groupName}トップに戻る
         </Link>
       </p>
     </footer>

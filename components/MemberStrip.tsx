@@ -13,9 +13,15 @@ type Props = {
   members: Member[];
   activeMember: string | null;
   onSelect: (name: string | null) => void;
+  groupSlug?: string;
 };
 
-export default function MemberStrip({ members, activeMember, onSelect }: Props) {
+export default function MemberStrip({
+  members,
+  activeMember,
+  onSelect,
+  groupSlug = "juice-juice",
+}: Props) {
   const current = members.filter((m) => m.left === null);
   const past = members.filter((m) => m.left !== null);
 
@@ -29,6 +35,7 @@ export default function MemberStrip({ members, activeMember, onSelect }: Props) 
             variant="current"
             isActive={activeMember === m.name}
             onSelect={onSelect}
+            groupSlug={groupSlug}
           />
         ))}
       </Group>
@@ -41,6 +48,7 @@ export default function MemberStrip({ members, activeMember, onSelect }: Props) 
             variant="past"
             isActive={activeMember === m.name}
             onSelect={onSelect}
+            groupSlug={groupSlug}
           />
         ))}
       </Group>
@@ -53,11 +61,13 @@ function MemberPill({
   variant,
   isActive,
   onSelect,
+  groupSlug,
 }: {
   member: Member;
   variant: "current" | "past";
   isActive: boolean;
   onSelect: (name: string | null) => void;
+  groupSlug: string;
 }) {
   const color = memberColor(member.color);
   const isCurrent = variant === "current";
@@ -94,7 +104,7 @@ function MemberPill({
         )}
       </button>
       <Link
-        href={`/members/${encodeURIComponent(member.name)}`}
+        href={`/${groupSlug}/members/${encodeURIComponent(member.name)}`}
         aria-label={`${member.name}の詳細ページ`}
         className="flex items-center border-l border-border px-2 text-[11px] text-ink-weak transition hover:bg-accent hover:text-white"
         onClick={(e) => e.stopPropagation()}

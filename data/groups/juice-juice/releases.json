@@ -1,0 +1,915 @@
+[
+  {
+    "id": "i1",
+    "title": "私が言う前に抱きしめなきゃね",
+    "type": "indie",
+    "typeLabel": "インディーズ1stシングル",
+    "releaseDate": "2013-04-03",
+    "tracks": [
+      "私が言う前に抱きしめなきゃね"
+    ],
+    "lineup": [
+      "宮崎由加",
+      "金澤朋子",
+      "高木紗友希",
+      "大塚愛菜",
+      "宮本佳林",
+      "植村あかり"
+    ],
+    "note": "インディーズデビューシングル / オリコン週間25位 (インディーズチャート3位)",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/68/b7/17/68b71714-68c0-0b85-d4c6-52464af82ccd/TGCS7552.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "i2",
+    "title": "五月雨美女がさ乱れる",
+    "type": "indie",
+    "typeLabel": "インディーズ2ndシングル",
+    "releaseDate": "2013-05-08",
+    "tracks": [
+      "五月雨美女がさ乱れる"
+    ],
+    "lineup": [
+      "宮崎由加",
+      "金澤朋子",
+      "高木紗友希",
+      "大塚愛菜",
+      "宮本佳林",
+      "植村あかり"
+    ],
+    "note": "限定販売 / 6月12日に一般販売開始",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music2/v4/ec/ca/7a/ecca7af8-724e-c3d0-283c-218499e5f557/UFCW-1065.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "i3",
+    "title": "天まで登れ!",
+    "type": "indie",
+    "typeLabel": "インディーズ3rdシングル",
+    "releaseDate": "2013-06-12",
+    "tracks": [
+      "天まで登れ!"
+    ],
+    "lineup": [
+      "宮崎由加",
+      "金澤朋子",
+      "高木紗友希",
+      "大塚愛菜",
+      "宮本佳林",
+      "植村あかり"
+    ],
+    "note": "「ハロプロ研修生 feat. Juice=Juice」名義 / 限定販売",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/77/92/1d/77921daa-a5d2-ecd9-6747-e9b0b78f0c19/TGCS7615.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "s1",
+    "title": "ロマンスの途中 / 私が言う前に抱きしめなきゃね(MEMORIAL EDIT) / 五月雨美女がさ乱れる(MEMORIAL EDIT)",
+    "type": "single",
+    "typeLabel": "メジャー1stシングル",
+    "releaseDate": "2013-09-11",
+    "tracks": [
+      "ロマンスの途中",
+      "私が言う前に抱きしめなきゃね(MEMORIAL EDIT)",
+      "五月雨美女がさ乱れる(MEMORIAL EDIT)"
+    ],
+    "lineup": [
+      "宮崎由加",
+      "金澤朋子",
+      "高木紗友希",
+      "宮本佳林",
+      "植村あかり"
+    ],
+    "note": "メジャーデビュー / オリコン週間2位 / 第55回日本レコード大賞 最優秀新人賞受賞",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/4e/9d/06/4e9d06a9-c3ea-e772-6f94-bd1a7ddf6ac1/HKCN-50320.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "s2",
+    "title": "イジワルしないで 抱きしめてよ / 初めてを経験中",
+    "type": "single",
+    "typeLabel": "メジャー2ndシングル",
+    "releaseDate": "2013-12-04",
+    "tracks": [
+      "イジワルしないで 抱きしめてよ",
+      "初めてを経験中"
+    ],
+    "lineup": [
+      "宮崎由加",
+      "金澤朋子",
+      "高木紗友希",
+      "宮本佳林",
+      "植村あかり"
+    ],
+    "note": "オリコン週間4位",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/1e/28/c0/1e28c05d-c411-aac3-b1e6-5c7124a6825b/HKCN-50332.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "s3",
+    "title": "裸の裸の裸のKISS / アレコレしたい!",
+    "type": "single",
+    "typeLabel": "メジャー3rdシングル",
+    "releaseDate": "2014-03-19",
+    "tracks": [
+      "裸の裸の裸のKISS",
+      "アレコレしたい!"
+    ],
+    "lineup": [
+      "宮崎由加",
+      "金澤朋子",
+      "高木紗友希",
+      "宮本佳林",
+      "植村あかり"
+    ],
+    "note": "オリコン週間3位",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music/v4/28/d2/e4/28d2e499-b1dc-780c-cb84-691d6c37806a/HKCN-50349.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "s4",
+    "title": "ブラックバタフライ / 風に吹かれて",
+    "type": "single",
+    "typeLabel": "メジャー4thシングル",
+    "releaseDate": "2014-07-30",
+    "tracks": [
+      "ブラックバタフライ",
+      "風に吹かれて"
+    ],
+    "lineup": [
+      "宮崎由加",
+      "金澤朋子",
+      "高木紗友希",
+      "宮本佳林",
+      "植村あかり"
+    ],
+    "note": "オリコン週間4位",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music5/v4/27/b8/3a/27b83a74-fe42-971d-5f8d-da7d77581c92/j.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "s5",
+    "title": "背伸び / 伊達じゃないよ うちの人生は",
+    "type": "single",
+    "typeLabel": "メジャー5thシングル",
+    "releaseDate": "2014-10-01",
+    "tracks": [
+      "背伸び",
+      "伊達じゃないよ うちの人生は"
+    ],
+    "lineup": [
+      "宮崎由加",
+      "金澤朋子",
+      "高木紗友希",
+      "宮本佳林",
+      "植村あかり"
+    ],
+    "note": "オリコン週間4位",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music4/v4/2f/ab/39/2fab39e5-cfdc-a7fe-53e5-5445e541119d/iHKCN-50395.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "s6",
+    "title": "Wonderful World / Ça va ? Ça va ?",
+    "type": "single",
+    "typeLabel": "メジャー6thシングル",
+    "releaseDate": "2015-04-08",
+    "tracks": [
+      "Wonderful World",
+      "Ça va ? Ça va ?"
+    ],
+    "lineup": [
+      "宮崎由加",
+      "金澤朋子",
+      "高木紗友希",
+      "宮本佳林",
+      "植村あかり"
+    ],
+    "note": "初のオリコン週間シングルランキング1位",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music3/v4/19/33/81/1933810d-9dca-a4e9-3b14-1cc0668919af/IHKCN-50415.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "a1",
+    "title": "First Squeeze!",
+    "type": "album",
+    "typeLabel": "1stオリジナルアルバム",
+    "releaseDate": "2015-07-15",
+    "tracks": [
+      "Wonderful World",
+      "Ça va ? Ça va ?",
+      "Magic of Love (J=J 2015 Ver.)",
+      "ロマンスの途中",
+      "私が言う前に抱きしめなきゃね(MEMORIAL EDIT)",
+      "五月雨美女がさ乱れる(MEMORIAL EDIT)",
+      "イジワルしないで 抱きしめてよ",
+      "初めてを経験中",
+      "裸の裸の裸のKISS",
+      "アレコレしたい!",
+      "ブラックバタフライ",
+      "風に吹かれて",
+      "背伸び",
+      "伊達じゃないよ うちの人生は",
+      "プライベートな空気",
+      "アレ?ナンデ?ダイカイギ!"
+    ],
+    "lineup": [
+      "宮崎由加",
+      "金澤朋子",
+      "高木紗友希",
+      "宮本佳林",
+      "植村あかり"
+    ],
+    "note": "2枚組 (通常盤のみ3枚組) / オリコン週間5位",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fc/96/14/fc9614a7-1f0e-0224-3558-a06d9ea90b63/HKCN-50423.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "d1",
+    "title": "大人の事情",
+    "type": "digital",
+    "typeLabel": "配信限定1st (NEXT YOU名義)",
+    "releaseDate": "2016-03-02",
+    "tracks": [
+      "大人の事情"
+    ],
+    "lineup": [
+      "宮崎由加",
+      "金澤朋子",
+      "高木紗友希",
+      "宮本佳林",
+      "植村あかり"
+    ],
+    "note": "「Next You」名義での配信限定リリース"
+  },
+  {
+    "id": "s7",
+    "title": "Next is you! / カラダだけが大人になったんじゃない",
+    "type": "single",
+    "typeLabel": "メジャー7thシングル",
+    "releaseDate": "2016-02-03",
+    "tracks": [
+      "Next is you!",
+      "カラダだけが大人になったんじゃない"
+    ],
+    "lineup": [
+      "宮崎由加",
+      "金澤朋子",
+      "高木紗友希",
+      "宮本佳林",
+      "植村あかり"
+    ],
+    "note": "「Next is you!」は NEXT YOU 名義 / オリコン週間3位",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music49/v4/dd/29/bb/dd29bb0f-c0a9-c32e-d9f9-8d72eb691c5b/iHKCN-50479.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "s8",
+    "title": "Dream Road〜心が躍り出してる〜 / KEEP ON 上昇志向!! / 明日やろうはバカやろう",
+    "type": "single",
+    "typeLabel": "メジャー8thシングル",
+    "releaseDate": "2016-10-26",
+    "tracks": [
+      "Dream Road〜心が躍り出してる〜",
+      "KEEP ON 上昇志向!!",
+      "明日やろうはバカやろう"
+    ],
+    "lineup": [
+      "宮崎由加",
+      "金澤朋子",
+      "高木紗友希",
+      "宮本佳林",
+      "植村あかり"
+    ],
+    "note": "オリコン週間5位",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music62/v4/24/3b/6c/243b6c06-0a2e-c4c1-a217-df620c4189c7/iHKCN-50498.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "s9",
+    "title": "地団駄ダンス / Feel! 感じるよ",
+    "type": "single",
+    "typeLabel": "メジャー9thシングル",
+    "releaseDate": "2017-04-26",
+    "tracks": [
+      "地団駄ダンス",
+      "Feel! 感じるよ"
+    ],
+    "lineup": [
+      "宮崎由加",
+      "金澤朋子",
+      "高木紗友希",
+      "宮本佳林",
+      "植村あかり"
+    ],
+    "note": "オリコン週間3位",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music111/v4/71/71/bd/7171bd6d-02a5-d073-e049-22875f117f73/3000HKCN-50516.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "d2",
+    "title": "Goal〜明日はあっちだよ〜",
+    "type": "digital",
+    "typeLabel": "配信限定2nd",
+    "releaseDate": "2017-05-19",
+    "tracks": [
+      "Goal〜明日はあっちだよ〜"
+    ],
+    "lineup": [
+      "宮崎由加",
+      "金澤朋子",
+      "高木紗友希",
+      "宮本佳林",
+      "植村あかり",
+      "段原瑠々",
+      "梁川奈々美"
+    ],
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music127/v4/f4/5d/9b/f45d9bca-83e5-0ed2-f602-fa96a153f4bc/iUFDL-1334.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "d3",
+    "title": "如雨露",
+    "type": "digital",
+    "typeLabel": "配信限定3rd",
+    "releaseDate": "2017-06-16",
+    "tracks": [
+      "如雨露"
+    ],
+    "lineup": [
+      "宮崎由加",
+      "金澤朋子",
+      "高木紗友希",
+      "宮本佳林",
+      "植村あかり",
+      "段原瑠々",
+      "梁川奈々美"
+    ],
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music127/v4/b4/cc/23/b4cc2378-26ff-9c8a-6b31-84ed4e02691d/i3000UFDL-1344.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "d4",
+    "title": "Fiesta! Fiesta!",
+    "type": "digital",
+    "typeLabel": "配信1stシングル",
+    "releaseDate": "2017-08-23",
+    "tracks": [
+      "Fiesta! Fiesta!"
+    ],
+    "lineup": [
+      "宮崎由加",
+      "金澤朋子",
+      "高木紗友希",
+      "宮本佳林",
+      "植村あかり",
+      "段原瑠々",
+      "梁川奈々美"
+    ],
+    "note": "8月2日より iTunes 先行配信",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/46/01/3d/46013da2-64bc-1d5d-b058-e4dacd99393d/dj.jcertwvl.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "s10",
+    "title": "SEXY SEXY / 泣いていいよ / Vivid Midnight",
+    "type": "single",
+    "typeLabel": "メジャー10thシングル",
+    "releaseDate": "2018-04-18",
+    "tracks": [
+      "SEXY SEXY",
+      "泣いていいよ",
+      "Vivid Midnight"
+    ],
+    "lineup": [
+      "宮崎由加",
+      "金澤朋子",
+      "高木紗友希",
+      "宮本佳林",
+      "植村あかり",
+      "段原瑠々",
+      "梁川奈々美"
+    ],
+    "note": "段原瑠々・梁川奈々美 加入後初シングル / オリコン週間3位",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/46/36/62/4636629e-3b1f-7d43-ea38-34dac73915b1/HKCN-50550i.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "a2",
+    "title": "Juice=Juice#2 -¡Una más!-",
+    "type": "album",
+    "typeLabel": "2ndオリジナルアルバム",
+    "releaseDate": "2018-08-01",
+    "tracks": [
+      "「ひとそれ」",
+      "Wonderful World 2018",
+      "SEXY SEXY",
+      "泣いていいよ",
+      "Vivid Midnight",
+      "ノクチルカ -浮遊する光の渦-",
+      "風に吹かれて (J=J 2018 Ver.)",
+      "Date ja nai yo Uchi no Jinsei wa",
+      "23時の春雨",
+      "禁断少女",
+      "Borderline (J=J 2018 Ver.)",
+      "微炭酸"
+    ],
+    "lineup": [
+      "宮崎由加",
+      "金澤朋子",
+      "高木紗友希",
+      "宮本佳林",
+      "植村あかり",
+      "段原瑠々",
+      "梁川奈々美",
+      "稲場愛香"
+    ],
+    "note": "2枚組 / 稲場愛香 加入後初アルバム / オリコン週間4位",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music128/v4/5c/f6/4c/5cf64c02-2f61-60a8-fb16-75b0682a213a/HKCN-50567.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "s11",
+    "title": "微炭酸 / ポツリと / Good bye & Good luck!",
+    "type": "single",
+    "typeLabel": "メジャー11thシングル",
+    "releaseDate": "2019-02-13",
+    "tracks": [
+      "微炭酸",
+      "ポツリと",
+      "Good bye & Good luck!"
+    ],
+    "lineup": [
+      "宮崎由加",
+      "金澤朋子",
+      "高木紗友希",
+      "宮本佳林",
+      "植村あかり",
+      "段原瑠々",
+      "稲場愛香"
+    ],
+    "note": "梁川奈々美 卒業後初 / 初のゴールドディスク認定",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/76/13/22/761322df-0391-2034-f74e-7bc4078de641/HKCN-50588.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "s12",
+    "title": "「ひとりで生きられそう」って それってねえ、褒めているの? / 25歳永遠説",
+    "type": "single",
+    "typeLabel": "メジャー12thシングル",
+    "releaseDate": "2019-06-05",
+    "tracks": [
+      "「ひとりで生きられそう」って それってねえ、褒めているの?",
+      "25歳永遠説"
+    ],
+    "lineup": [
+      "宮崎由加",
+      "金澤朋子",
+      "高木紗友希",
+      "宮本佳林",
+      "植村あかり",
+      "段原瑠々",
+      "稲場愛香"
+    ],
+    "note": "宮崎由加 卒業シングル",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/b1/85/ef/b185ef83-da0c-3967-02f8-0ca88f423f91/dj.emwwrjwh.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "s13",
+    "title": "ポップミュージック / 好きって言ってよ",
+    "type": "single",
+    "typeLabel": "メジャー13thシングル",
+    "releaseDate": "2020-04-01",
+    "tracks": [
+      "ポップミュージック",
+      "好きって言ってよ",
+      "Va-Va-Voom"
+    ],
+    "lineup": [
+      "金澤朋子",
+      "高木紗友希",
+      "宮本佳林",
+      "植村あかり",
+      "段原瑠々",
+      "稲場愛香",
+      "工藤由愛",
+      "松永里愛",
+      "井上玲音"
+    ],
+    "note": "工藤由愛・松永里愛 加入後初 / 井上玲音 加入と同日リリース",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/a0/f1/6c/a0f16c08-3250-ffbd-ceaf-908e8997b8c6/iHKCN-50636.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "s14",
+    "title": "DOWN TOWN / がんばれないよ",
+    "type": "single",
+    "typeLabel": "メジャー14thシングル",
+    "releaseDate": "2021-04-28",
+    "tracks": [
+      "DOWN TOWN",
+      "がんばれないよ"
+    ],
+    "lineup": [
+      "金澤朋子",
+      "植村あかり",
+      "段原瑠々",
+      "稲場愛香",
+      "工藤由愛",
+      "松永里愛",
+      "井上玲音"
+    ],
+    "note": "宮本佳林 卒業 / 高木紗友希 活動終了後初シングル / 当初3月24日発売予定が延期",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music114/v4/f9/88/bc/f988bc9e-f172-faff-8707-bb80b3018253/UFDL-1473.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "s15",
+    "title": "プラスティック・ラブ / Familia / Future Smile",
+    "type": "single",
+    "typeLabel": "メジャー15thシングル",
+    "releaseDate": "2021-12-22",
+    "tracks": [
+      "プラスティック・ラブ",
+      "Familia",
+      "Future Smile"
+    ],
+    "lineup": [
+      "金澤朋子",
+      "植村あかり",
+      "段原瑠々",
+      "稲場愛香",
+      "工藤由愛",
+      "松永里愛",
+      "井上玲音",
+      "有澤一華",
+      "入江里咲",
+      "江端妃咲"
+    ],
+    "note": "金澤朋子 卒業シングル / 有澤一華・入江里咲・江端妃咲 加入後初シングル",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/1c/44/51/1c445185-d9f9-07e2-eead-1bc01735158b/iHKCN-50686.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "a3",
+    "title": "terzo",
+    "type": "album",
+    "typeLabel": "3rdオリジナルアルバム",
+    "releaseDate": "2022-04-20",
+    "tracks": [
+      "プラトニック・プラネット",
+      "ノクチルカ",
+      "プラスティック・ラブ",
+      "Familia",
+      "Future Smile",
+      "DOWN TOWN",
+      "がんばれないよ",
+      "ポップミュージック",
+      "好きって言ってよ",
+      "Va-Va-Voom",
+      "Borderline"
+    ],
+    "lineup": [
+      "植村あかり",
+      "段原瑠々",
+      "稲場愛香",
+      "工藤由愛",
+      "松永里愛",
+      "井上玲音",
+      "有澤一華",
+      "入江里咲",
+      "江端妃咲"
+    ],
+    "note": "2枚組 / 初のオリコン週間アルバムランキング1位 / 稲場愛香 卒業前最後のアルバム",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/17/bf/fa/17bffa39-5537-9c7e-5043-e45924ecc642/HKCN-50718.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "s16",
+    "title": "全部賭けてGO!! / イニミニマニモ〜恋のライバル宣言〜",
+    "type": "single",
+    "typeLabel": "メジャー16thシングル",
+    "releaseDate": "2022-11-23",
+    "tracks": [
+      "全部賭けてGO!!",
+      "イニミニマニモ〜恋のライバル宣言〜"
+    ],
+    "lineup": [
+      "植村あかり",
+      "段原瑠々",
+      "工藤由愛",
+      "松永里愛",
+      "井上玲音",
+      "有澤一華",
+      "入江里咲",
+      "江端妃咲",
+      "石山咲良",
+      "遠藤彩加里"
+    ],
+    "note": "稲場愛香 卒業後初 / 石山咲良・遠藤彩加里 加入後初シングル",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/95/ce/4e/95ce4ebf-cc91-c8c9-5d70-1ee97a5f3781/HKCN-50748_jk.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "s17",
+    "title": "プライド・ブライト / FUNKY FLUSHIN'",
+    "type": "single",
+    "typeLabel": "メジャー17thシングル",
+    "releaseDate": "2023-07-12",
+    "tracks": [
+      "プライド・ブライト",
+      "FUNKY FLUSHIN'"
+    ],
+    "lineup": [
+      "植村あかり",
+      "段原瑠々",
+      "工藤由愛",
+      "松永里愛",
+      "井上玲音",
+      "有澤一華",
+      "入江里咲",
+      "江端妃咲",
+      "石山咲良",
+      "遠藤彩加里",
+      "川嶋美楓"
+    ],
+    "note": "川嶋美楓 加入後初シングル / オリコン週間2位",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music116/v4/23/95/92/239592ad-be5c-b8ad-d51f-f35cd87c44a8/HKCN-50772_A.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "a4",
+    "title": "Juicetory",
+    "type": "album",
+    "typeLabel": "1stベストアルバム",
+    "releaseDate": "2023-10-11",
+    "tracks": [
+      "ボン・ヴォヤージュ 〜想いの軌跡〜",
+      "ロマンスの途中 (Juicetory Ver.)",
+      "プラスティック・ラブ (Juicetory Ver.)",
+      "Wonderful World (Juicetory Ver.)",
+      "Va-Va-Voom (Juicetory Ver.)",
+      "ひとそれ (Juicetory Ver.)",
+      "微炭酸 (Juicetory Ver.)",
+      "ポップミュージック (Juicetory Ver.)",
+      "DOWN TOWN (Juicetory Ver.)",
+      "がんばれないよ (Juicetory Ver.)",
+      "Familia (Juicetory Ver.)",
+      "Future Smile (Juicetory Ver.)",
+      "プライド・ブライト (Juicetory Ver.)",
+      "FUNKY FLUSHIN' (Juicetory Ver.)"
+    ],
+    "lineup": [
+      "植村あかり",
+      "段原瑠々",
+      "工藤由愛",
+      "松永里愛",
+      "井上玲音",
+      "有澤一華",
+      "入江里咲",
+      "江端妃咲",
+      "石山咲良",
+      "遠藤彩加里",
+      "川嶋美楓"
+    ],
+    "note": "結成10周年記念 / 現体制によるセルフリメイク+新曲「ボン・ヴォヤージュ」収録 / オリコン週間4位",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music126/v4/a0/8b/b8/a08bb807-761a-a569-099a-96215d24b3ba/HKCN-50776.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "s18",
+    "title": "トウキョウ・ブラー / ナイモノラブ / おあいこ",
+    "type": "single",
+    "typeLabel": "メジャー18thシングル",
+    "releaseDate": "2024-05-15",
+    "tracks": [
+      "トウキョウ・ブラー",
+      "ナイモノラブ",
+      "おあいこ"
+    ],
+    "lineup": [
+      "植村あかり",
+      "段原瑠々",
+      "工藤由愛",
+      "松永里愛",
+      "井上玲音",
+      "有澤一華",
+      "入江里咲",
+      "江端妃咲",
+      "石山咲良",
+      "遠藤彩加里",
+      "川嶋美楓"
+    ],
+    "note": "植村あかり 卒業前 最後のシングル / オリコン週間2位",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/39/b9/a2/39b9a2eb-7e97-2f38-a609-dd1af3e20ff4/UFDL-1534.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "s19",
+    "title": "初恋の亡霊 / 今夜はHearty Party",
+    "type": "single",
+    "typeLabel": "メジャー19thシングル",
+    "releaseDate": "2025-02-26",
+    "tracks": [
+      "初恋の亡霊",
+      "今夜はHearty Party"
+    ],
+    "lineup": [
+      "段原瑠々",
+      "工藤由愛",
+      "松永里愛",
+      "井上玲音",
+      "有澤一華",
+      "入江里咲",
+      "江端妃咲",
+      "石山咲良",
+      "遠藤彩加里",
+      "川嶋美楓"
+    ],
+    "note": "植村あかり 卒業後初 / 段原瑠々4代目リーダー&井上玲音4代目サブリーダー体制初 / 「今夜はHearty Party」は竹内まりや楽曲のカバー",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/fe/10/7b/fe107b1f-3b7a-c272-0a62-fe9c90f9b8b1/HKCN-50832.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "s20",
+    "title": "四の五の言わず颯(さっ)と別れてあげた / 盛れ! ミ・アモーレ",
+    "type": "single",
+    "typeLabel": "メジャー20thシングル",
+    "releaseDate": "2025-10-08",
+    "tracks": [
+      "四の五の言わず颯(さっ)と別れてあげた",
+      "盛れ! ミ・アモーレ"
+    ],
+    "lineup": [
+      "段原瑠々",
+      "工藤由愛",
+      "松永里愛",
+      "井上玲音",
+      "有澤一華",
+      "入江里咲",
+      "江端妃咲",
+      "石山咲良",
+      "遠藤彩加里",
+      "川嶋美楓",
+      "林仁愛"
+    ],
+    "note": "林仁愛 加入後初シングル / オリコン週間2位 / 「盛れ! ミ・アモーレ」がヒット",
+    "cover": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/a9/29/38/a9293834-aa4a-c09a-3f6c-8077270fd53d/HKCN-50858.jpg/600x600bb.jpg"
+  },
+  {
+    "id": "u2026-live",
+    "title": "GIRLS BE AMBITIOUS! 2026 / BLOODY BULLET / 甘えんな",
+    "type": "unreleased",
+    "typeLabel": "未音源化",
+    "releaseDate": "2026-01-01",
+    "tracks": [
+      "GIRLS BE AMBITIOUS! 2026",
+      "BLOODY BULLET",
+      "甘えんな"
+    ],
+    "lineup": [
+      "段原瑠々",
+      "工藤由愛",
+      "松永里愛",
+      "井上玲音",
+      "有澤一華",
+      "入江里咲",
+      "江端妃咲",
+      "石山咲良",
+      "遠藤彩加里",
+      "川嶋美楓",
+      "林仁愛"
+    ],
+    "note": "未音源化 / ライブ映像に合わせたコール表示・編集用ページ"
+  },
+  {
+    "id": "live-2025-1010-special",
+    "title": "スペシャルライブ2025 ～10月10日はJuice=Juiceの日～ ライブ音源",
+    "type": "unreleased",
+    "typeLabel": "ライブ音源",
+    "releaseDate": "2025-10-10",
+    "tracks": [
+      "四の五の言わず颯と別れてあげた",
+      "ひとりで生きられそうって それってねえ、褒めているの？",
+      "イジワルしないで 抱きしめてよ",
+      "素直に甘えて",
+      "微炭酸",
+      "ノクチルカ",
+      "雨の中の口笛",
+      "愛・愛・傘",
+      "TOKYOグライダー",
+      "伊達じゃないよ うちの人生は",
+      "プライド・ブライト",
+      "Va-Va-Voom",
+      "盛れ！ミ・アモーレ",
+      "この世界は捨てたもんじゃない",
+      "Goal〜明日はあっちだよ〜"
+    ],
+    "lineup": [
+      "段原瑠々",
+      "工藤由愛",
+      "松永里愛",
+      "井上玲音",
+      "有澤一華",
+      "入江里咲",
+      "江端妃咲",
+      "石山咲良",
+      "遠藤彩加里",
+      "川嶋美楓",
+      "林仁愛"
+    ],
+    "links": {
+      "youtube": "https://music.youtube.com/playlist?list=OLAK5uy_kyCqrDNJoYCDEqGeM3G4bSMBbV6JN8HrI"
+    },
+    "note": "YouTube Musicのライブ音源プレイリストから登録 / コール表示・編集用ページ"
+  },
+  {
+    "id": "setlist-triangrooove2-special-2024",
+    "title": "TRIANGROOOVE2 Special セトリ用登録",
+    "type": "unreleased",
+    "typeLabel": "ライブ用登録",
+    "releaseDate": "2024-11-19",
+    "tracks": [
+      "POPPIN’ LOVE",
+      "ライバル",
+      "あばれてっか?! ハヴアグッタイ",
+      "This is 運命",
+      "情熱エクスタシー",
+      "Never Never Surrender",
+      "STAGE〜アガッてみな〜",
+      "GIRLS BE AMBITIOUS!"
+    ],
+    "lineup": [
+      "段原瑠々",
+      "工藤由愛",
+      "松永里愛",
+      "井上玲音",
+      "有澤一華",
+      "入江里咲",
+      "江端妃咲",
+      "石山咲良",
+      "遠藤彩加里",
+      "川嶋美楓"
+    ],
+    "links": {
+      "official": "https://orekoko.site/231/"
+    },
+    "note": "ライブセトリから登録 / コール表示・編集用ページ"
+  },
+  {
+    "id": "setlist-crimson-azure-special-2025",
+    "title": "Crimson×Azure Special セトリ用登録",
+    "type": "unreleased",
+    "typeLabel": "ライブ用登録",
+    "releaseDate": "2025-06-23",
+    "tracks": [
+      "Mon Amour",
+      "選ばれし私達",
+      "CHOICE & CHANCE",
+      "生まれたてのBaby Love",
+      "G.O.A.T."
+    ],
+    "lineup": [
+      "段原瑠々",
+      "工藤由愛",
+      "松永里愛",
+      "井上玲音",
+      "有澤一華",
+      "入江里咲",
+      "江端妃咲",
+      "石山咲良",
+      "遠藤彩加里",
+      "川嶋美楓"
+    ],
+    "links": {
+      "official": "https://orekoko.site/860/"
+    },
+    "note": "ライブセトリから登録 / コール表示・編集用ページ"
+  },
+  {
+    "id": "setlist-queen-of-hearts-2025",
+    "title": "Queen of Hearts セトリ用登録",
+    "type": "unreleased",
+    "typeLabel": "ライブ用登録",
+    "releaseDate": "2025-09-17",
+    "tracks": [
+      "KEEP ON 上昇志向!!"
+    ],
+    "lineup": [
+      "段原瑠々",
+      "工藤由愛",
+      "松永里愛",
+      "井上玲音",
+      "有澤一華",
+      "入江里咲",
+      "江端妃咲",
+      "石山咲良",
+      "遠藤彩加里",
+      "川嶋美楓",
+      "林仁愛"
+    ],
+    "links": {
+      "official": "https://orekoko.site/1150/"
+    },
+    "note": "ライブセトリから登録 / コール表示・編集用ページ"
+  },
+  {
+    "id": "setlist-up-to-11-2026",
+    "title": "UP TO 11 セトリ用登録",
+    "type": "unreleased",
+    "typeLabel": "ライブ用登録",
+    "releaseDate": "2026-04-18",
+    "tracks": [
+      "未来へ、さあ走り出せ!"
+    ],
+    "lineup": [
+      "段原瑠々",
+      "工藤由愛",
+      "松永里愛",
+      "井上玲音",
+      "有澤一華",
+      "入江里咲",
+      "江端妃咲",
+      "石山咲良",
+      "遠藤彩加里",
+      "川嶋美楓",
+      "林仁愛"
+    ],
+    "links": {
+      "official": "https://note.com/tsunechan0707/n/ne198dcf909c1"
+    },
+    "note": "ライブセトリから登録 / コール表示・編集用ページ"
+  }
+]

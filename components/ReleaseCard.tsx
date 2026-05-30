@@ -24,16 +24,23 @@ const typeBg: Record<Release["type"], string> = {
 type Props = {
   release: Release;
   activeMember?: string | null;
+  groupSlug?: string;
+  artistKeyword?: string;
 };
 
-export default function ReleaseCard({ release, activeMember = null }: Props) {
+export default function ReleaseCard({
+  release,
+  activeMember = null,
+  groupSlug = "juice-juice",
+  artistKeyword = "Juice=Juice",
+}: Props) {
   const matches = !activeMember || release.lineup.includes(activeMember);
   const dim = activeMember && !matches;
 
   const links = release.links ?? {};
-  const youtube = links.youtube ?? youtubeUrl(release.title);
-  const apple = links.apple ?? appleMusicUrl(release.title);
-  const spotify = links.spotify ?? spotifyUrl(release.title);
+  const youtube = links.youtube ?? youtubeUrl(release.title, artistKeyword);
+  const apple = links.apple ?? appleMusicUrl(release.title, artistKeyword);
+  const spotify = links.spotify ?? spotifyUrl(release.title, artistKeyword);
 
   return (
     <article
@@ -98,7 +105,7 @@ export default function ReleaseCard({ release, activeMember = null }: Props) {
           </p>
           <ol className="space-y-1.5 text-sm text-ink/85">
             {release.tracks.map((t, i) => {
-              const songHref = songPath(canonicalizeTitle(t));
+              const songHref = songPath(canonicalizeTitle(t, groupSlug), groupSlug);
 
               return (
                 <li
@@ -123,7 +130,7 @@ export default function ReleaseCard({ release, activeMember = null }: Props) {
                       コール
                     </Link>
                     <a
-                      href={lyricsSearchUrl(t)}
+                      href={lyricsSearchUrl(t, artistKeyword)}
                       target="_blank"
                       rel="noreferrer"
                       className="text-ink-weak underline-offset-2 hover:text-accent hover:underline"

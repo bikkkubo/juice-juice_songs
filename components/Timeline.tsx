@@ -6,9 +6,16 @@ const yearOf = (date: string) => date.slice(0, 4);
 type Props = {
   releases: Release[];
   activeMember?: string | null;
+  groupSlug?: string;
+  artistKeyword?: string;
 };
 
-export default function Timeline({ releases, activeMember = null }: Props) {
+export default function Timeline({
+  releases,
+  activeMember = null,
+  groupSlug = "juice-juice",
+  artistKeyword = "Juice=Juice",
+}: Props) {
   const grouped = new Map<string, Release[]>();
   releases.forEach((r) => {
     const y = yearOf(r.releaseDate);
@@ -47,7 +54,12 @@ export default function Timeline({ releases, activeMember = null }: Props) {
                         isMatch ? "border-accent" : "border-border"
                       }`}
                     />
-                    <ReleaseCard release={r} activeMember={activeMember} />
+                    <ReleaseCard
+                      release={r}
+                      activeMember={activeMember}
+                      groupSlug={groupSlug}
+                      artistKeyword={artistKeyword}
+                    />
                   </li>
                 );
               })}
