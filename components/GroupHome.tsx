@@ -4,8 +4,8 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import type { Member, Release } from "@/app/types";
 import { canonicalizeTitle, songPath } from "@/app/songs";
+import { hasLiveVideoSource } from "@/app/liveVideoTitles";
 import {
-  DEFAULT_GROUP_SLUG,
   getGroup,
   getGroupDataset,
   groupPath,
@@ -23,6 +23,10 @@ type ApprovedSong = {
   title: string;
   callCount: number;
   videoId: string | null;
+};
+
+type VideoOnlySong = {
+  title: string;
 };
 
 type Props = {
@@ -59,6 +63,19 @@ export default function GroupHome({ groupSlug }: Props) {
       .sort((a, b) => a.localeCompare(b, "ja"));
   }, [allReleases, groupSlug]);
 
+  const allSongSet = useMemo(() => new Set(allSongs), [allSongs]);
+  const approvedTitleSet = useMemo(
+    () => new Set((approvedSongs ?? []).map((song) => song.title)),
+    [approvedSongs]
+  );
+  const videoOnlySongs = useMemo<VideoOnlySong[]>(
+    () =>
+      allSongs
+        .filter((title) => hasLiveVideoSource(title) && !approvedTitleSet.has(title))
+        .map((title) => ({ title })),
+    [allSongs, approvedTitleSet]
+  );
+
   const canEdit = auth?.canEdit ?? false;
   const setlists = getLiveSetlistsByLatest(groupSlug);
 
@@ -76,19 +93,16 @@ export default function GroupHome({ groupSlug }: Props) {
         if (!cancelled) setAuth({ canEdit: false });
       });
 
-    if (groupSlug !== DEFAULT_GROUP_SLUG) {
-      setApprovedSongs([]);
-      return () => {
-        cancelled = true;
-      };
-    }
-
     fetch("/api/approved-call-songs")
       .then(async (response): Promise<{ songs?: ApprovedSong[] } | null> =>
         response.ok ? ((await response.json()) as { songs?: ApprovedSong[] }) : null
       )
       .then((data) => {
-        if (!cancelled) setApprovedSongs(data?.songs ?? []);
+        if (!cancelled) {
+          setApprovedSongs(
+            (data?.songs ?? []).filter((song) => allSongSet.has(song.title))
+          );
+        }
       })
       .catch(() => {
         if (!cancelled) setApprovedSongs([]);
@@ -97,7 +111,7 @@ export default function GroupHome({ groupSlug }: Props) {
     return () => {
       cancelled = true;
     };
-  }, [groupSlug]);
+  }, [allSongSet]);
 
   return (
     <>
@@ -139,6 +153,46 @@ export default function GroupHome({ groupSlug }: Props) {
             <div className="grid gap-3 sm:grid-cols-2">
               {approvedSongs.map((song) => (
                 <PracticeSongRow
+                  key={song.title}
+                  song={song}
+                  canEdit={canEdit}
+                  groupSlug={groupSlug}
+                />
+              ))}
+            </div>
+          )}
+        </section>
+
+        <section id="video-only-songs" className="mb-12 scroll-mt-20">
+          <div className="mb-4 flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <p className="mb-2 text-[10px] font-semibold tracking-[0.25em] text-ink-weak">
+                VIDEO READY
+              </p>
+              <h2 className="text-xl font-bold leading-tight text-ink">
+                映像はあるがコールが登録されていない曲
+              </h2>
+              <p className="mt-1 max-w-2xl text-xs leading-relaxed text-ink-weak">
+                ライブ映像や音源URLは登録済みで、まだ公開用のコールが登録されていない曲です。
+              </p>
+            </div>
+            <span className="font-mono text-[11px] text-ink-weak">
+              {approvedSongs === null ? "loading" : `${videoOnlySongs.length} songs`}
+            </span>
+          </div>
+
+          {approvedSongs === null ? (
+            <p className="rounded-lg border border-border bg-white px-4 py-6 text-center text-sm text-ink-weak">
+              映像登録済みの曲を確認しています
+            </p>
+          ) : videoOnlySongs.length === 0 ? (
+            <p className="rounded-lg border border-dashed border-border bg-white px-4 py-6 text-center text-sm text-ink-weak">
+              映像だけ登録されている曲はありません
+            </p>
+          ) : (
+            <div className="grid gap-2 sm:grid-cols-2">
+              {videoOnlySongs.map((song) => (
+                <VideoOnlySongRow
                   key={song.title}
                   song={song}
                   canEdit={canEdit}
@@ -318,6 +372,48 @@ function PracticeSongRow({
             </Link>
           )}
         </div>
+      </div>
+    </div>
+  );
+}
+
+function VideoOnlySongRow({
+  song,
+  canEdit,
+  groupSlug,
+}: {
+  song: VideoOnlySong;
+  canEdit: boolean;
+  groupSlug: string;
+}) {
+  const href = songPath(song.title, groupSlug);
+
+  return (
+    <div className="flex items-center justify-between gap-3 rounded-xl border border-border bg-white px-4 py-3">
+      <div className="min-w-0">
+        <Link
+          href={href}
+          className="break-words text-sm font-bold leading-snug text-ink underline-offset-2 hover:text-accent hover:underline"
+        >
+          {song.title}
+        </Link>
+        <p className="mt-1 text-[11px] text-ink-weak">映像あり / コール未登録</p>
+      </div>
+      <div className="flex shrink-0 gap-1.5">
+        <Link
+          href={href}
+          className="inline-flex min-h-8 items-center rounded-md border border-border bg-white px-2.5 py-1.5 text-xs font-semibold text-ink transition hover:border-accent hover:text-accent"
+        >
+          確認
+        </Link>
+        {canEdit && (
+          <Link
+            href={`${href}/calls/edit`}
+            className="inline-flex min-h-8 items-center rounded-md bg-ink px-2.5 py-1.5 text-xs font-semibold text-white transition hover:bg-ink/90"
+          >
+            編集
+          </Link>
+        )}
       </div>
     </div>
   );
