@@ -3,12 +3,17 @@ import type { Group } from "./types";
 
 export const ROOT_SITE_NAME = "ハロプロコール練習サイト";
 
-const ogImage = (slug: string, alt: string) => ({
-  url: `/og/${slug}.png`,
+const ogImage = (path: string, alt: string) => ({
+  url: path,
   width: 1200,
   height: 630,
   alt,
 });
+
+export const groupOgImagePath = (group: Group): string => `/og/${group.slug}.jpg`;
+
+export const songOgImagePath = (group: Group, songSlug: string): string =>
+  `/og/${group.slug}/${songSlug}.jpg`;
 
 export const groupSiteName = (group: Group): string =>
   `${group.name}コール練習サイト`;
@@ -21,7 +26,7 @@ export const rootOpenGraph = {
   type: "website" as const,
   url: "/",
   siteName: ROOT_SITE_NAME,
-  images: [ogImage("hello-project", ROOT_SITE_NAME)],
+  images: [ogImage("/og/hello-project.jpg", ROOT_SITE_NAME)],
 };
 
 export const groupMetadata = ({
@@ -31,6 +36,7 @@ export const groupMetadata = ({
   path,
   type = "website",
   robots,
+  imagePath,
 }: {
   group: Group;
   title?: string;
@@ -38,10 +44,11 @@ export const groupMetadata = ({
   path: string;
   type?: "website" | "music.song";
   robots?: Metadata["robots"];
+  imagePath?: string;
 }): Metadata => {
   const siteName = groupSiteName(group);
   const fullTitle = title ? `${title} - ${siteName}` : siteName;
-  const image = ogImage(group.slug, siteName);
+  const image = ogImage(imagePath ?? groupOgImagePath(group), siteName);
 
   return {
     title: fullTitle,

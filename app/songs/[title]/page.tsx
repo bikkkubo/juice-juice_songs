@@ -35,6 +35,7 @@ export async function generateMetadata({
   const path = songPath(song.canonical);
   const siteName = "Juice=Juiceコール練習サイト";
   const description = `${song.canonical} (Juice=Juice) の収録リリース・ライブ映像・コール練習情報`;
+  const image = `/og/juice-juice/${songSlug(song.canonical)}.jpg`;
   return {
     title: `${song.canonical} - ${siteName}`,
     description,
@@ -50,7 +51,7 @@ export async function generateMetadata({
       type: "music.song",
       images: [
         {
-          url: "/og/juice-juice.png",
+          url: image,
           width: 1200,
           height: 630,
           alt: siteName,
@@ -61,7 +62,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: `${song.canonical} - ${siteName}`,
       description,
-      images: ["/og/juice-juice.png"],
+      images: [image],
     },
   };
 }

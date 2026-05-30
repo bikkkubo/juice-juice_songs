@@ -16,7 +16,7 @@ import {
   groupPath,
   memberPath,
 } from "@/app/groups";
-import { groupMetadata } from "@/app/metadata";
+import { groupMetadata, songOgImagePath } from "@/app/metadata";
 import { memberColor } from "@/app/colors";
 import { lyricsSearchUrl } from "@/app/lyrics";
 import { appleMusicUrl, spotifyUrl, youtubeUrl } from "@/app/streaming";
@@ -52,6 +52,7 @@ export async function generateMetadata({
     description: `${song.canonical} (${group.name}) の収録リリース・ライブ映像・コール練習情報`,
     path,
     type: "music.song",
+    imagePath: songOgImagePath(group, songSlug(song.canonical)),
   });
 }
 
