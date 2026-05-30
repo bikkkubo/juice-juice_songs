@@ -3,7 +3,7 @@
 import { useEffect, useId, useMemo, useRef, useState } from "react";
 import {
   GENERAL_TEMPLATES,
-  MEMBER_TEMPLATES,
+  getMemberTemplates,
   type CallTemplate,
 } from "@/app/callTemplates";
 
@@ -520,6 +520,12 @@ const LIVE_VIDEO_BY_SONG: Record<string, LiveVideoConfig> = {
     sourceDescription:
       "YouTubeの00:00〜04:18にあるハロ！ステ Live Editに合わせてコールを表示します。",
     watchUrl: "https://www.youtube.com/watch?v=AQl96dvqssY",
+  },
+  [normalizeSongKey("ポジティブプログラム")]: {
+    videoId: "43-FNwzj2zA",
+    sourceDescription:
+      "2025年12月18日にZepp Haneda(TOKYO)で行われた「LIVE BEYOOOOONDS 3rd」のライブ映像に合わせてコールを表示します。",
+    watchUrl: "https://www.youtube.com/watch?v=43-FNwzj2zA",
   },
 };
 
@@ -1219,10 +1225,10 @@ function SyncedCallPlayer({
       },
       {
         label: "メンバー名",
-        phrases: MEMBER_TEMPLATES.map((template) => template.phrase),
+        phrases: getMemberTemplates(groupSlug).map((template) => template.phrase),
       },
     ],
-    []
+    [groupSlug]
   );
 
   useEffect(() => {

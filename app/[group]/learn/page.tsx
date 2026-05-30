@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { GENERAL_TEMPLATES, MEMBER_TEMPLATES } from "@/app/callTemplates";
+import { GENERAL_TEMPLATES, getMemberTemplates } from "@/app/callTemplates";
 import type { Metadata } from "next";
 import { getAllSongs, songPath } from "@/app/songs";
 import type { Member } from "@/app/types";
@@ -54,6 +54,7 @@ export default async function LearnPage({
   if (!group || !dataset) notFound();
 
   const members = dataset.members as Member[];
+  const memberTemplates = getMemberTemplates(groupSlug);
   const firstSongs =
     groupSlug === DEFAULT_GROUP_SLUG
       ? juiceFirstSongs
@@ -111,7 +112,7 @@ export default async function LearnPage({
             <CallGroup
               title="メンバー名"
               description="歌割りや見せ場に合わせて呼ぶメンバー名コールです。"
-              phrases={MEMBER_TEMPLATES.map((template) => template.phrase)}
+              phrases={memberTemplates.map((template) => template.phrase)}
             />
           </div>
         </section>

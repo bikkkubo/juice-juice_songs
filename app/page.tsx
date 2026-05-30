@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getGroupDataset, getGroups, groupPath } from "@/app/groups";
+import { getAllSongs } from "@/app/songs";
 import PracticeNotice from "@/components/PracticeNotice";
 
 export default function HomePage() {
@@ -25,6 +26,7 @@ export default function HomePage() {
           {groups.map((group) => {
             const dataset = getGroupDataset(group.slug);
             const releaseCount = dataset?.releases.length ?? 0;
+            const songCount = getAllSongs(group.slug).length;
             const memberCount = dataset?.members.length ?? 0;
 
             return (
@@ -37,7 +39,7 @@ export default function HomePage() {
                   {group.name}
                 </h2>
                 <p className="mt-2 font-mono text-[11px] text-ink-weak">
-                  {releaseCount} releases / {memberCount} members
+                  {releaseCount} releases / {songCount} songs / {memberCount} members
                 </p>
                 <p className="mt-4 text-xs font-semibold text-accent">
                   ページを見る

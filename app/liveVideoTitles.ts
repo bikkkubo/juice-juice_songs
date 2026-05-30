@@ -48,6 +48,7 @@ const LIVE_VIDEO_TITLES = new Set([
   "わかってるっつーの！",
   "女の愛想は武器じゃない",
   "想定内！",
+  "ポジティブプログラム",
 ]);
 
 export const hasLiveVideoSource = (title: string): boolean =>

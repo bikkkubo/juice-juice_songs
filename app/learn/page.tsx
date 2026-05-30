@@ -1,6 +1,6 @@
 import Link from "next/link";
 import membersData from "@/data/members.json";
-import { GENERAL_TEMPLATES, MEMBER_TEMPLATES } from "@/app/callTemplates";
+import { GENERAL_TEMPLATES, getMemberTemplates } from "@/app/callTemplates";
 import { getAllSongs, songPath } from "@/app/songs";
 import type { Member } from "@/app/types";
 import Header from "@/components/Header";
@@ -14,6 +14,7 @@ const firstSongs = [
 
 export default function LearnPage() {
   const members = membersData as Member[];
+  const memberTemplates = getMemberTemplates("juice-juice");
 
   return (
     <>
@@ -59,7 +60,7 @@ export default function LearnPage() {
             <CallGroup
               title="メンバー名"
               description="歌割りや見せ場に合わせて呼ぶメンバー名コールです。"
-              phrases={MEMBER_TEMPLATES.map((template) => template.phrase)}
+              phrases={memberTemplates.map((template) => template.phrase)}
             />
           </div>
         </section>

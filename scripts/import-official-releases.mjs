@@ -57,13 +57,13 @@ const stripTags = (value) => htmlDecode(value.replace(/<[^>]*>/g, ""));
 const cleanTrackTitle = (title) =>
   title
     .replace(/【Additional Track】/g, "")
-    .replace(/\s*\((?:Instrumental|オリジナル・カラオケ|カラオケ)\)\s*$/iu, "")
-    .replace(/\s*（(?:Instrumental|オリジナル・カラオケ|カラオケ)）\s*$/iu, "")
+    .replace(/\s*\((?:Instrumental|オリジナル・カラオケ|カラオケ|[^)]*off vocal)\)\s*$/iu, "")
+    .replace(/\s*（(?:Instrumental|オリジナル・カラオケ|カラオケ|[^）]*off vocal)）\s*$/iu, "")
     .trim();
 
 const looksLikeSong = (title) => {
   if (!title) return false;
-  return !/(?:Instrumental|オリジナル・カラオケ|カラオケ|Music Video|Dance\s*Shot|Dance Performance|メイキング|Making|Close-up|Blu-ray|DVD|特典映像|ライブ映像|コメント|ジャケット撮影|インタビュー|OPENING|MC|SPOT|Trailer|Teaser)/i.test(
+  return !/(?:Instrumental|オリジナル・カラオケ|カラオケ|off vocal|Music Video|Dance\s*Shot|Dance Performance|メイキング|Making|Close-up|Blu-ray|DVD|特典映像|ライブ映像|コメント|ジャケット撮影|インタビュー|OPENING|MC|SPOT|Trailer|Teaser)/i.test(
     title
   );
 };

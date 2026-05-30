@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useId, useMemo, useRef, useState } from "react";
-import { GENERAL_TEMPLATES, MEMBER_TEMPLATES } from "@/app/callTemplates";
+import { GENERAL_TEMPLATES, getMemberTemplates } from "@/app/callTemplates";
 import {
   EMPTY_TIMED_CALLS,
   buildYouTubeEmbedSrc,
@@ -102,10 +102,10 @@ export default function CallTimingEditor({
       },
       {
         label: "メンバー名",
-        phrases: unique(MEMBER_TEMPLATES.map((template) => template.phrase)),
+        phrases: unique(getMemberTemplates(groupSlug).map((template) => template.phrase)),
       },
     ];
-  }, [songTitle]);
+  }, [groupSlug, songTitle]);
 
   const sortedCalls = useMemo(
     () => timedCalls.slice().sort((a, b) => a.time - b.time),

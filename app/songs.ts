@@ -35,10 +35,11 @@ export const canonicalizeTitle = (
   const aliases = getGroupDataset(groupSlug)?.aliases ?? {};
   let s = normalizePunct(title.trim());
   if (s === "GIRLS BE AMBITIOUS! 2026") return s;
-  // Strip all parenthetical groups (version markers, furigana, etc.)
-  s = s.replace(/[(（][^)）]*[)）]/g, "");
-  // Strip dashed subtitle " -xxx-"
-  s = s.replace(/\s+-[^-]+-$/u, "");
+  const isRemix = /remix/i.test(s);
+  // Strip all parenthetical groups (version markers, furigana, etc.), except remix titles.
+  if (!isRemix) s = s.replace(/[(（][^)）]*[)）]/g, "");
+  // Strip dashed subtitle " -xxx-", except remix titles.
+  if (!isRemix) s = s.replace(/\s+-[^-]+-$/u, "");
   // Strip year suffix like " 2018"
   s = s.replace(/\s+\d{4}$/u, "");
   s = s.replace(/\s+/g, " ").trim();
