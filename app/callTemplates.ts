@@ -110,7 +110,7 @@ export const GROUP_MEMBER_CALLS: Record<string, string[]> = {
     "みよちゃん",
     "ほのか",
     "うーたん",
-    "未定",
+    "はなちゃん",
   ],
 };
 
