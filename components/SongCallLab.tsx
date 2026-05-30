@@ -1204,6 +1204,8 @@ function SyncedCallPlayer({
   const [newPhrase, setNewPhrase] = useState("");
   const [newTime, setNewTime] = useState("");
   const [browserOrigin, setBrowserOrigin] = useState<string | null>(null);
+  const [pageUrl, setPageUrl] = useState("");
+  const [copyStatus, setCopyStatus] = useState<"idle" | "copied" | "failed">("idle");
   const [playerStatus, setPlayerStatus] = useState<"loading" | "ready" | "manual">(
     "loading"
   );
@@ -1216,6 +1218,14 @@ function SyncedCallPlayer({
       })
     : null;
   const watchUrl = sourceWatchUrl ?? `https://www.youtube.com/watch?v=${videoId}`;
+  const shareText = `${songTitle}のコール練習`;
+  const shareUrl = pageUrl || watchUrl;
+  const xShareUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(
+    shareText
+  )}&url=${encodeURIComponent(shareUrl)}`;
+  const lineShareUrl = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(
+    shareUrl
+  )}`;
   const canEdit = auth?.canEdit ?? false;
   const commonPhraseGroups = useMemo(
     () => [
@@ -1233,7 +1243,19 @@ function SyncedCallPlayer({
 
   useEffect(() => {
     setBrowserOrigin(window.location.origin);
+    setPageUrl(window.location.href);
   }, []);
+
+  const copyShareUrl = async () => {
+    try {
+      await navigator.clipboard.writeText(shareUrl);
+      setCopyStatus("copied");
+      window.setTimeout(() => setCopyStatus("idle"), 1800);
+    } catch {
+      setCopyStatus("failed");
+      window.setTimeout(() => setCopyStatus("idle"), 1800);
+    }
+  };
 
   useEffect(() => {
     let cancelled = false;
@@ -1571,6 +1593,36 @@ function SyncedCallPlayer({
           </span>
         )}
       </p>
+
+      <div className="mt-3 flex flex-wrap items-center gap-2">
+        <a
+          href={xShareUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="rounded-full bg-ink px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-ink/90"
+        >
+          Xでシェア
+        </a>
+        <a
+          href={lineShareUrl}
+          target="_blank"
+          rel="noreferrer"
+          className="rounded-full bg-[#06c755] px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-[#05b54d]"
+        >
+          LINEで送る
+        </a>
+        <button
+          type="button"
+          onClick={copyShareUrl}
+          className="rounded-full border border-border bg-surface px-3 py-1.5 text-xs font-semibold text-ink-weak transition hover:border-accent hover:text-accent"
+        >
+          {copyStatus === "copied"
+            ? "コピーしました"
+            : copyStatus === "failed"
+              ? "コピー失敗"
+              : "URLコピー"}
+        </button>
+      </div>
 
       <div className="mt-3 rounded-xl border border-accent/30 bg-accent/5 p-4 text-center">
         <p className="font-mono text-[10px] tracking-[0.22em] text-ink-weak">
