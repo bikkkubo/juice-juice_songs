@@ -12,11 +12,29 @@ ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "public" / "og" / "background.png"
 OUTPUT = ROOT / "public" / "og"
 SIZE = (1200, 630)
-FONT = "/System/Library/Fonts/AppleSDGothicNeo.ttc"
+
+
+def find_font() -> str:
+    for pattern in (
+        "ヒラギノ角ゴシック W7.ttc",
+        "ヒラギノ角ゴシック W6.ttc",
+        "YuGothic-Bold.otf",
+    ):
+        matches = list(Path("/System/Library").rglob(pattern))
+        if matches:
+            return str(matches[0])
+    return "/System/Library/Fonts/AppleSDGothicNeo.ttc"
+
+
+FONT = find_font()
 
 GROUP_BACKGROUNDS = {
+    "juice-juice": ROOT / "public" / "og" / "background-juice-juice.png",
     "angerme": ROOT / "public" / "og" / "background-angerme.png",
+    "morning-musume": ROOT / "public" / "og" / "background-morning-musume.png",
     "ocha-norma": ROOT / "public" / "og" / "background-ocha-norma.png",
+    "tsubaki-factory": ROOT / "public" / "og" / "background-tsubaki-factory.png",
+    "rosy-chronicle": ROOT / "public" / "og" / "background-rosy-chronicle.png",
 }
 
 SONG_SLUG_OVERRIDES = {
