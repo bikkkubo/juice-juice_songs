@@ -3,11 +3,12 @@ import type { Group } from "./types";
 
 export const ROOT_SITE_NAME = "ハロプロコール練習サイト";
 
-const ogImage = {
-  url: "/api/og-image",
+const ogImage = (slug: string, alt: string) => ({
+  url: `/og/${slug}.png`,
   width: 1200,
   height: 630,
-};
+  alt,
+});
 
 export const groupSiteName = (group: Group): string =>
   `${group.name}コール練習サイト`;
@@ -20,7 +21,7 @@ export const rootOpenGraph = {
   type: "website" as const,
   url: "/",
   siteName: ROOT_SITE_NAME,
-  images: [{ ...ogImage, alt: ROOT_SITE_NAME }],
+  images: [ogImage("hello-project", ROOT_SITE_NAME)],
 };
 
 export const groupMetadata = ({
@@ -40,6 +41,7 @@ export const groupMetadata = ({
 }): Metadata => {
   const siteName = groupSiteName(group);
   const fullTitle = title ? `${title} - ${siteName}` : siteName;
+  const image = ogImage(group.slug, siteName);
 
   return {
     title: fullTitle,
@@ -54,13 +56,13 @@ export const groupMetadata = ({
       siteName,
       locale: "ja_JP",
       type,
-      images: [{ ...ogImage, alt: siteName }],
+      images: [image],
     },
     twitter: {
       card: "summary_large_image",
       title: fullTitle,
       description,
-      images: [ogImage.url],
+      images: [image.url],
     },
     ...(robots ? { robots } : {}),
   };

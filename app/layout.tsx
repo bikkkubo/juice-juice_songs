@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     title: ROOT_SITE_NAME,
     description:
       "ライブ映像や音源に合わせてハロー！プロジェクト楽曲のコールを練習できます。",
-    images: ["/api/og-image"],
+    images: ["/og/hello-project.png"],
   },
 };
 

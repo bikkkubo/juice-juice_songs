@@ -50,7 +50,7 @@ export async function generateMetadata({
       type: "music.song",
       images: [
         {
-          url: "/api/og-image",
+          url: "/og/juice-juice.png",
           width: 1200,
           height: 630,
           alt: siteName,
@@ -61,7 +61,7 @@ export async function generateMetadata({
       card: "summary_large_image",
       title: `${song.canonical} - ${siteName}`,
       description,
-      images: ["/api/og-image"],
+      images: ["/og/juice-juice.png"],
     },
   };
 }
