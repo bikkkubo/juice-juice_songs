@@ -14,6 +14,11 @@ OUTPUT = ROOT / "public" / "og"
 SIZE = (1200, 630)
 FONT = "/System/Library/Fonts/AppleSDGothicNeo.ttc"
 
+GROUP_BACKGROUNDS = {
+    "angerme": ROOT / "public" / "og" / "background-angerme.png",
+    "ocha-norma": ROOT / "public" / "og" / "background-ocha-norma.png",
+}
+
 SONG_SLUG_OVERRIDES = {
     "盛れ!ミ・アモーレ": "more-mi-amore",
     "四の五の言わず颯と別れてあげた": "shinogono-iwazu-satto-wakarete-ageta",
@@ -152,8 +157,14 @@ def wrap_text(draw: ImageDraw.ImageDraw, text: str, font: ImageFont.FreeTypeFont
     return lines[:2]
 
 
-def draw_image(group_name: str, primary: str, output: Path, subtitle: str | None = "コール練習") -> None:
-    image = cover_crop(Image.open(SOURCE))
+def draw_image(
+    group_name: str,
+    primary: str,
+    output: Path,
+    subtitle: str | None = "コール練習",
+    source: Path = SOURCE,
+) -> None:
+    image = cover_crop(Image.open(source))
     overlay = Image.new("RGBA", SIZE, (0, 0, 0, 0))
     odraw = ImageDraw.Draw(overlay)
     for y in range(SIZE[1]):
@@ -185,7 +196,8 @@ def main() -> None:
     for group in groups:
         slug = group["slug"]
         group_name = group["name"]
-        draw_image(group_name, "コール練習サイト", OUTPUT / f"{slug}.jpg", subtitle=None)
+        source = GROUP_BACKGROUNDS.get(slug, SOURCE)
+        draw_image(group_name, "コール練習サイト", OUTPUT / f"{slug}.jpg", subtitle=None, source=source)
 
         releases_path = ROOT / "data" / "groups" / slug / "releases.json"
         aliases_path = ROOT / "data" / "groups" / slug / "aliases.json"
@@ -198,7 +210,7 @@ def main() -> None:
                 if canonical:
                     songs.setdefault(canonical, song_slug(canonical))
         for canonical, slug_value in songs.items():
-            draw_image(group_name, canonical, OUTPUT / slug / f"{slug_value}.jpg")
+            draw_image(group_name, canonical, OUTPUT / slug / f"{slug_value}.jpg", source=source)
 
 
 if __name__ == "__main__":
