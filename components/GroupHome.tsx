@@ -27,7 +27,6 @@ type ApprovedSong = {
 
 type VideoOnlySong = {
   title: string;
-  sourceUrl?: string;
   performanceName?: string;
 };
 
@@ -126,7 +125,6 @@ export default function GroupHome({ groupSlug }: Props) {
             title,
             ...(reviewedVideo
               ? {
-                  sourceUrl: reviewedVideo.url,
                   performanceName: reviewedVideo.performanceName,
                 }
               : {}),
@@ -479,16 +477,6 @@ function VideoOnlySongRow({
         </p>
       </div>
       <div className="flex shrink-0 flex-wrap justify-end gap-1.5">
-        {song.sourceUrl && (
-          <a
-            href={song.sourceUrl}
-            target="_blank"
-            rel="noreferrer"
-            className="inline-flex min-h-8 items-center rounded-md border border-border bg-white px-2.5 py-1.5 text-xs font-semibold text-ink transition hover:border-accent hover:text-accent"
-          >
-            映像
-          </a>
-        )}
         <Link
           href={href}
           className="inline-flex min-h-8 items-center rounded-md border border-border bg-white px-2.5 py-1.5 text-xs font-semibold text-ink transition hover:border-accent hover:text-accent"
