@@ -27,6 +27,8 @@ type ApprovedSong = {
 
 type VideoOnlySong = {
   title: string;
+  sourceUrl?: string;
+  performanceName?: string;
 };
 
 type ReviewedLiveVideoSubmission = {
@@ -41,6 +43,13 @@ type Props = {
   groupSlug: string;
 };
 
+const normalizeLiveName = (value: string) =>
+  value
+    .replace(/～/g, "〜")
+    .replace(/[~〜]/g, "")
+    .replace(/\s+/g, "")
+    .toLowerCase();
+
 export default function GroupHome({ groupSlug }: Props) {
   const [auth, setAuth] = useState<AuthState | null>(null);
   const [approvedSongs, setApprovedSongs] = useState<ApprovedSong[] | null>(null);
@@ -53,6 +62,7 @@ export default function GroupHome({ groupSlug }: Props) {
   const artistKeyword = group?.artistKeyword ?? groupName;
   const releases = (dataset?.releases ?? []) as Release[];
   const members = (dataset?.members ?? []) as Member[];
+  const setlists = useMemo(() => getLiveSetlistsByLatest(groupSlug), [groupSlug]);
 
   const allReleases = useMemo(
     () =>
@@ -79,16 +89,53 @@ export default function GroupHome({ groupSlug }: Props) {
     () => new Set((approvedSongs ?? []).map((song) => song.title)),
     [approvedSongs]
   );
+  const reviewedVideoByTitle = useMemo(() => {
+    const map = new Map<string, ReviewedLiveVideoSubmission>();
+    for (const video of reviewedLiveVideos) {
+      const performanceName = normalizeLiveName(video.performanceName);
+      const matchedSetlist = setlists.find((setlist) => {
+        const setlistTitle = normalizeLiveName(setlist.title);
+        return (
+          setlistTitle === performanceName ||
+          setlistTitle.includes(performanceName) ||
+          performanceName.includes(setlistTitle)
+        );
+      });
+      if (!matchedSetlist) continue;
+
+      for (const track of matchedSetlist.tracks) {
+        if (track.kind === "note") continue;
+        const title = canonicalizeTitle(track.title, groupSlug);
+        if (!title || !allSongSet.has(title) || map.has(title)) continue;
+        map.set(title, video);
+      }
+    }
+    return map;
+  }, [allSongSet, groupSlug, reviewedLiveVideos, setlists]);
   const videoOnlySongs = useMemo<VideoOnlySong[]>(
     () =>
       allSongs
-        .filter((title) => hasLiveVideoSource(title) && !approvedTitleSet.has(title))
-        .map((title) => ({ title })),
-    [allSongs, approvedTitleSet]
+        .filter(
+          (title) =>
+            (hasLiveVideoSource(title) || reviewedVideoByTitle.has(title)) &&
+            !approvedTitleSet.has(title)
+        )
+        .map((title) => {
+          const reviewedVideo = reviewedVideoByTitle.get(title);
+          return {
+            title,
+            ...(reviewedVideo
+              ? {
+                  sourceUrl: reviewedVideo.url,
+                  performanceName: reviewedVideo.performanceName,
+                }
+              : {}),
+          };
+        }),
+    [allSongs, approvedTitleSet, reviewedVideoByTitle]
   );
 
   const canEdit = auth?.canEdit ?? false;
-  const setlists = getLiveSetlistsByLatest(groupSlug);
 
   useEffect(() => {
     let cancelled = false;
@@ -231,27 +278,6 @@ export default function GroupHome({ groupSlug }: Props) {
             </div>
           )}
         </section>
-
-        {reviewedLiveVideos.length > 0 && (
-          <section id="reviewed-live-videos" className="mb-12 scroll-mt-20">
-            <div className="mb-4">
-              <p className="mb-2 text-[10px] font-semibold tracking-[0.25em] text-ink-weak">
-                REVIEWED LIVE VIDEO
-              </p>
-              <h2 className="text-xl font-bold leading-tight text-ink">
-                確認済みライブ映像URL
-              </h2>
-              <p className="mt-1 max-w-2xl text-xs leading-relaxed text-ink-weak">
-                申請URLのうち、管理者が確認したライブ映像です。曲ごとのコール登録前の確認に使えます。
-              </p>
-            </div>
-            <div className="grid gap-2">
-              {reviewedLiveVideos.map((video) => (
-                <ReviewedLiveVideoRow key={video.id} video={video} />
-              ))}
-            </div>
-          </section>
-        )}
 
         <section className="mb-14 rounded-2xl border border-border bg-white p-5">
           <div className="flex flex-wrap items-start justify-between gap-4">
@@ -447,9 +473,22 @@ function VideoOnlySongRow({
         >
           {song.title}
         </Link>
-        <p className="mt-1 text-[11px] text-ink-weak">映像あり / コール未登録</p>
+        <p className="mt-1 text-[11px] text-ink-weak">
+          映像あり / コール未登録
+          {song.performanceName ? ` / ${song.performanceName}` : ""}
+        </p>
       </div>
-      <div className="flex shrink-0 gap-1.5">
+      <div className="flex shrink-0 flex-wrap justify-end gap-1.5">
+        {song.sourceUrl && (
+          <a
+            href={song.sourceUrl}
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex min-h-8 items-center rounded-md border border-border bg-white px-2.5 py-1.5 text-xs font-semibold text-ink transition hover:border-accent hover:text-accent"
+          >
+            映像
+          </a>
+        )}
         <Link
           href={href}
           className="inline-flex min-h-8 items-center rounded-md border border-border bg-white px-2.5 py-1.5 text-xs font-semibold text-ink transition hover:border-accent hover:text-accent"
@@ -464,38 +503,6 @@ function VideoOnlySongRow({
             編集
           </Link>
         )}
-      </div>
-    </div>
-  );
-}
-
-function ReviewedLiveVideoRow({ video }: { video: ReviewedLiveVideoSubmission }) {
-  return (
-    <div className="rounded-xl border border-border bg-white px-4 py-3">
-      <div className="flex flex-wrap items-start justify-between gap-3">
-        <div className="min-w-0">
-          <p className="break-words text-sm font-bold leading-snug text-ink">
-            {video.performanceName}
-          </p>
-          {video.startPosition && (
-            <p className="mt-1 font-mono text-[11px] text-ink-weak">
-              start {video.startPosition}
-            </p>
-          )}
-          {video.reviewedAt && (
-            <p className="mt-1 font-mono text-[11px] text-ink-weak">
-              reviewed {video.reviewedAt}
-            </p>
-          )}
-        </div>
-        <a
-          href={video.url}
-          target="_blank"
-          rel="noreferrer"
-          className="inline-flex min-h-8 shrink-0 items-center rounded-md bg-ink px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-ink/90"
-        >
-          映像を開く ↗
-        </a>
       </div>
     </div>
   );
