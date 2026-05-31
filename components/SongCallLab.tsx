@@ -405,9 +405,10 @@ const LIVE_VIDEO_BY_SONG: Record<string, LiveVideoConfig> = {
       "YouTubeのライブ映像に合わせてコールを表示します。アンジュルム『次々続々』LIVE 2025.6.18 at 横浜アリーナ。",
   },
   [normalizeSongKey("マナーモード")]: {
-    videoId: "cyw0mfsqZgk",
+    videoId: "1FYBzGRQOq8",
     sourceDescription:
-      "YouTubeのライブ映像に合わせてコールを表示します。アンジュルム ライブツアー 2025秋 Keep Your Smile！版。",
+      "YouTubeのライブ映像に合わせてコールを表示します。",
+    watchUrl: "https://www.youtube.com/watch?v=1FYBzGRQOq8",
   },
   [normalizeSongKey("Celebrate! Celebrate!")]: {
     videoId: "bH9CiWgzVLo",
