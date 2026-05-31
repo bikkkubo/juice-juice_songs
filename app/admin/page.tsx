@@ -398,7 +398,7 @@ export default function AdminPage() {
                   LIVE VIDEO URL SUBMISSIONS
                 </h2>
                 <p className="mt-1 text-xs leading-relaxed text-ink-weak">
-                  トップバーの「映像URL申請」から送信されたURLです。adminのみ確認できます。
+                  トップバーの「映像URL申請」から送信されたURLです。確認済みにすると、各グループページの確認済みライブ映像URLに表示されます。
                 </p>
               </div>
               <span className="font-mono text-[11px] text-ink-weak">

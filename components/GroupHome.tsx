@@ -29,6 +29,14 @@ type VideoOnlySong = {
   title: string;
 };
 
+type ReviewedLiveVideoSubmission = {
+  id: string;
+  url: string;
+  performanceName: string;
+  startPosition: string;
+  reviewedAt: string | null;
+};
+
 type Props = {
   groupSlug: string;
 };
@@ -36,6 +44,9 @@ type Props = {
 export default function GroupHome({ groupSlug }: Props) {
   const [auth, setAuth] = useState<AuthState | null>(null);
   const [approvedSongs, setApprovedSongs] = useState<ApprovedSong[] | null>(null);
+  const [reviewedLiveVideos, setReviewedLiveVideos] = useState<
+    ReviewedLiveVideoSubmission[]
+  >([]);
   const group = getGroup(groupSlug);
   const dataset = getGroupDataset(groupSlug);
   const groupName = group?.name ?? "グループ";
@@ -108,10 +119,28 @@ export default function GroupHome({ groupSlug }: Props) {
         if (!cancelled) setApprovedSongs([]);
       });
 
+    fetch(`/api/reviewed-live-video-submissions?groupSlug=${encodeURIComponent(groupSlug)}`)
+      .then(
+        async (
+          response
+        ): Promise<{ submissions?: ReviewedLiveVideoSubmission[] } | null> =>
+          response.ok
+            ? ((await response.json()) as {
+                submissions?: ReviewedLiveVideoSubmission[];
+              })
+            : null
+      )
+      .then((data) => {
+        if (!cancelled) setReviewedLiveVideos(data?.submissions ?? []);
+      })
+      .catch(() => {
+        if (!cancelled) setReviewedLiveVideos([]);
+      });
+
     return () => {
       cancelled = true;
     };
-  }, [allSongSet]);
+  }, [allSongSet, groupSlug]);
 
   return (
     <>
@@ -202,6 +231,27 @@ export default function GroupHome({ groupSlug }: Props) {
             </div>
           )}
         </section>
+
+        {reviewedLiveVideos.length > 0 && (
+          <section id="reviewed-live-videos" className="mb-12 scroll-mt-20">
+            <div className="mb-4">
+              <p className="mb-2 text-[10px] font-semibold tracking-[0.25em] text-ink-weak">
+                REVIEWED LIVE VIDEO
+              </p>
+              <h2 className="text-xl font-bold leading-tight text-ink">
+                確認済みライブ映像URL
+              </h2>
+              <p className="mt-1 max-w-2xl text-xs leading-relaxed text-ink-weak">
+                申請URLのうち、管理者が確認したライブ映像です。曲ごとのコール登録前の確認に使えます。
+              </p>
+            </div>
+            <div className="grid gap-2">
+              {reviewedLiveVideos.map((video) => (
+                <ReviewedLiveVideoRow key={video.id} video={video} />
+              ))}
+            </div>
+          </section>
+        )}
 
         <section className="mb-14 rounded-2xl border border-border bg-white p-5">
           <div className="flex flex-wrap items-start justify-between gap-4">
@@ -414,6 +464,38 @@ function VideoOnlySongRow({
             編集
           </Link>
         )}
+      </div>
+    </div>
+  );
+}
+
+function ReviewedLiveVideoRow({ video }: { video: ReviewedLiveVideoSubmission }) {
+  return (
+    <div className="rounded-xl border border-border bg-white px-4 py-3">
+      <div className="flex flex-wrap items-start justify-between gap-3">
+        <div className="min-w-0">
+          <p className="break-words text-sm font-bold leading-snug text-ink">
+            {video.performanceName}
+          </p>
+          {video.startPosition && (
+            <p className="mt-1 font-mono text-[11px] text-ink-weak">
+              start {video.startPosition}
+            </p>
+          )}
+          {video.reviewedAt && (
+            <p className="mt-1 font-mono text-[11px] text-ink-weak">
+              reviewed {video.reviewedAt}
+            </p>
+          )}
+        </div>
+        <a
+          href={video.url}
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex min-h-8 shrink-0 items-center rounded-md bg-ink px-3 py-1.5 text-xs font-semibold text-white transition hover:bg-ink/90"
+        >
+          映像を開く ↗
+        </a>
       </div>
     </div>
   );
