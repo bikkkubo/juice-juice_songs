@@ -1,10 +1,22 @@
 import Link from "next/link";
 import { getGroupDataset, getGroups, groupPath } from "@/app/groups";
-import { getAllSongs } from "@/app/songs";
+import { hasLiveVideoSource } from "@/app/liveVideoTitles";
+import { canonicalizeTitle, getAllSongs, songPath } from "@/app/songs";
 import PracticeNotice from "@/components/PracticeNotice";
 
 export default function HomePage() {
   const groups = getGroups();
+  const groupsWithCallLinks = groups
+    .map((group) => {
+      const songs = getAllSongs(group.slug)
+        .map((song) => canonicalizeTitle(song.canonical, group.slug))
+        .filter((title) => hasLiveVideoSource(title))
+        .filter((title, index, titles) => titles.indexOf(title) === index)
+        .sort((a, b) => a.localeCompare(b, "ja"));
+
+      return { group, songs };
+    })
+    .filter(({ songs }) => songs.length > 0);
 
   return (
     <>
@@ -48,6 +60,57 @@ export default function HomePage() {
             );
           })}
         </div>
+
+        <section className="mt-14">
+          <div className="mb-5 flex flex-wrap items-end justify-between gap-3">
+            <div>
+              <p className="mb-2 text-[10px] font-semibold tracking-[0.25em] text-accent">
+                CALL LINKS
+              </p>
+              <h2 className="text-2xl font-bold leading-tight text-ink">
+                コール練習リンク一覧
+              </h2>
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-ink-weak">
+                映像や音源に合わせて確認できる曲ページへのリンクです。
+              </p>
+            </div>
+            <span className="font-mono text-[11px] text-ink-weak">
+              {groupsWithCallLinks.reduce((sum, item) => sum + item.songs.length, 0)} songs
+            </span>
+          </div>
+
+          <div className="grid gap-4">
+            {groupsWithCallLinks.map(({ group, songs }) => (
+              <section
+                key={group.slug}
+                className="rounded-2xl border border-border bg-white p-5"
+              >
+                <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+                  <h3 className="text-lg font-bold leading-tight text-ink">
+                    {group.name}
+                  </h3>
+                  <Link
+                    href={groupPath(group.slug)}
+                    className="text-xs font-semibold text-accent underline-offset-2 hover:underline"
+                  >
+                    グループページへ
+                  </Link>
+                </div>
+                <div className="grid gap-2 sm:grid-cols-2">
+                  {songs.map((title) => (
+                    <Link
+                      key={`${group.slug}-${title}`}
+                      href={songPath(title, group.slug)}
+                      className="rounded-lg border border-border bg-surface px-3 py-2 text-sm font-semibold leading-snug text-ink transition hover:border-accent hover:bg-accent/5 hover:text-accent"
+                    >
+                      {title}
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            ))}
+          </div>
+        </section>
       </main>
     </>
   );
