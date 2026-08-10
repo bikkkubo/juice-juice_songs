@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="社内検討用の解約・リテンションUIインタラクティブデモ">
+  <title>EXIT DESIGN LAB — 解約体験設計レビュー</title>
+  <style>
+    :root {
+      --ink: #17201c;
+      --paper: #f3f0e7;
+      --card: #fffdf6;
+      --acid: #d8ff3e;
+      --orange: #ff5a36;
+      --blue: #1847d7;
+      --muted: #6d746e;
+      --line: #1f2924;
+      --shadow: 8px 8px 0 #17201c;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(rgba(23,32,28,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(23,32,28,.045) 1px, transparent 1px),
+        var(--paper);
+      background-size: 28px 28px;
+      font-family: "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
+      line-height: 1.7;
+    }
+
+    button, input { font: inherit; }
+    button { color: inherit; }
+    a { color: inherit; }
+    .serif { font-family: "Yu Mincho", "Hiragino Mincho ProN", serif; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 30;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      min-height: 64px;
+      padding: 10px clamp(18px, 4vw, 64px);
+      color: white;
+      background: var(--ink);
+      border-bottom: 4px solid var(--acid);
+    }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 900; letter-spacing: .06em; }
+    .brand-mark { width: 28px; height: 28px; background: var(--acid); border-radius: 50% 50% 8% 50%; transform: rotate(45deg); }
+    .topnav { display: flex; gap: 8px; }
+    .topnav a { padding: 7px 12px; color: #dfe5e1; text-decoration: none; font-size: 13px; border-radius: 999px; }
+    .topnav a:hover { color: var(--ink); background: var(--acid); }
+
+    main { overflow: hidden; }
+    .hero {
+      position: relative;
+      min-height: 620px;
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      align-items: center;
+      gap: clamp(30px, 7vw, 110px);
+      padding: clamp(72px, 10vw, 132px) clamp(20px, 7vw, 112px);
+      border-bottom: 3px solid var(--line);
+    }
+    .hero::after {
+      content: "INTERNAL REVIEW / 2026";
+      position: absolute;
+      right: -68px;
+      top: 146px;
+      padding: 8px 78px;
+      color: white;
+      background: var(--orange);
+      border: 2px solid var(--ink);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: .12em;
+      transform: rotate(45deg);
+    }
+    .eyebrow { display: inline-flex; align-items: center; gap: 9px; font-size: 12px; font-weight: 900; letter-spacing: .14em; text-transform: uppercase; }
+    .eyebrow::before { content: ""; width: 34px; height: 8px; background: var(--orange); }
+    h1 { max-width: 820px; margin: 22px 0 25px; font-size: clamp(48px, 8.2vw, 116px); line-height: .92; letter-spacing: -.07em; }
+    h1 em { display: block; color: var(--blue); font-style: normal; }
+    .hero-copy { max-width: 630px; margin: 0; font-size: clamp(16px, 1.6vw, 21px); font-weight: 700; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 34px; }
+    .btn {
+      min-height: 48px;
+      padding: 11px 19px;
+      border: 2px solid var(--ink);
+      border-radius: 3px;
+      background: var(--card);
+      font-weight: 900;
+      cursor: pointer;
+      box-shadow: 4px 4px 0 var(--ink);
+      transition: transform .15s, box-shadow .15s;
+    }
+    .btn:hover { transform: translate(2px,2px); box-shadow: 2px 2px 0 var(--ink); }
+    .btn-primary { background: var(--acid); }
+    .btn-dark { color: white; background: var(--ink); box-shadow: 4px 4px 0 var(--acid); }
+    .btn-link { border: 0; background: transparent; box-shadow: none; text-decoration: underline; text-underline-offset: 5px; }
+
+    .score-card { position: relative; padding: 34px; background: var(--card); border: 3px solid var(--ink); box-shadow: var(--shadow); transform: rotate(2deg); }
+    .score-card::before { content: "DECISION"; position: absolute; top: -16px; left: 24px; padding: 5px 12px; color: white; background: var(--blue); font-size: 11px; font-weight: 900; letter-spacing: .1em; transform: rotate(-4deg); }
+    .score-num { font-size: clamp(72px, 10vw, 132px); font-weight: 900; line-height: .9; letter-spacing: -.08em; }
+    .score-num span { font-size: 22px; color: var(--muted); letter-spacing: 0; }
+    .score-card h2 { margin: 20px 0 7px; font-size: 21px; }
+    .score-card p { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .section { padding: clamp(72px, 10vw, 132px) clamp(20px, 7vw, 112px); border-bottom: 3px solid var(--line); }
+    .section-head { display: grid; grid-template-columns: minmax(240px,.72fr) 1.28fr; gap: 50px; align-items: end; margin-bottom: 54px; }
+    .section-index { color: var(--orange); font-weight: 900; letter-spacing: .12em; }
+    .section h2 { margin: 5px 0 0; font-size: clamp(38px, 5.5vw, 74px); line-height: 1; letter-spacing: -.055em; }
+    .lead { max-width: 670px; margin: 0; font-size: 17px; font-weight: 700; }
+
+    .lab-layout { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(300px,.9fr); gap: 30px; align-items: start; }
+    .phone-shell { position: relative; max-width: 520px; margin: auto; padding: 14px; background: #111814; border: 3px solid var(--ink); border-radius: 34px; box-shadow: 14px 14px 0 rgba(23,32,28,.18); }
+    .phone-shell::before { content: ""; display: block; width: 90px; height: 18px; margin: -2px auto 10px; background: #050806; border-radius: 0 0 14px 14px; }
+    .screen { min-height: 650px; padding: 25px; background: #fbfaf5; border-radius: 18px; overflow: hidden; }
+    .screen-top { display: flex; justify-content: space-between; align-items: center; padding-bottom: 18px; border-bottom: 1px solid #d7d8d1; font-size: 12px; font-weight: 900; }
+    .stepper { display: flex; gap: 5px; margin: 22px 0 28px; }
+    .stepper i { flex: 1; height: 5px; background: #d7d8d1; border-radius: 9px; transition: background .3s; }
+    .stepper i.active { background: var(--blue); }
+    .screen h3 { margin: 0 0 10px; font-size: 27px; line-height: 1.2; letter-spacing: -.035em; }
+    .screen .sub { min-height: 48px; margin: 0 0 20px; color: #67706a; font-size: 14px; }
+    .reason-list { display: grid; gap: 9px; }
+    .reason { display: flex; align-items: center; gap: 10px; width: 100%; padding: 14px; text-align: left; background: white; border: 1.5px solid #bbc0bc; border-radius: 8px; cursor: pointer; }
+    .reason:hover, .reason.selected { border-color: var(--blue); background: #edf1ff; }
+    .radio { width: 18px; height: 18px; border: 2px solid currentColor; border-radius: 50%; }
+    .reason.selected .radio { box-shadow: inset 0 0 0 4px #edf1ff; background: var(--blue); }
+    .offer { padding: 20px; background: #eef6cb; border: 2px solid var(--ink); border-radius: 10px; }
+    .offer-tag { display: inline-block; padding: 3px 8px; color: white; background: var(--blue); font-size: 10px; font-weight: 900; }
+    .offer strong { display: block; margin: 12px 0 4px; font-size: 21px; }
+    .offer p { margin: 0; font-size: 13px; }
+    .loss-list { padding: 0; list-style: none; }
+    .loss-list li { display: flex; gap: 10px; padding: 10px 0; border-bottom: 1px solid #dedfd9; font-size: 13px; }
+    .loss-list li::before { content: "—"; color: var(--orange); font-weight: 900; }
+    .screen-actions { display: grid; gap: 10px; margin-top: 22px; }
+    .screen-actions .btn { width: 100%; box-shadow: none; }
+    .fine { color: #727a74; font-size: 11px; text-align: center; }
+    .done-mark { display: grid; place-items: center; width: 76px; height: 76px; margin: 42px auto 24px; color: white; background: var(--blue); border-radius: 50%; font-size: 38px; }
+    .done { text-align: center; }
+
+    .control-panel { padding: 26px; background: var(--ink); color: white; border: 3px solid var(--ink); box-shadow: 9px 9px 0 var(--orange); }
+    .control-panel h3 { margin: 0 0 6px; font-size: 25px; }
+    .control-panel > p { margin: 0 0 22px; color: #aeb8b2; font-size: 13px; }
+    .mode-toggle { display: grid; grid-template-columns: 1fr 1fr; padding: 4px; background: #303b35; border-radius: 8px; }
+    .mode-toggle button { padding: 10px; color: #cad1cd; background: transparent; border: 0; border-radius: 6px; font-weight: 900; cursor: pointer; }
+    .mode-toggle button.active { color: var(--ink); background: var(--acid); }
+    .meter { margin: 25px 0; }
+    .meter-head { display: flex; justify-content: space-between; margin-bottom: 8px; font-size: 12px; font-weight: 900; }
+    .meter-bar { height: 11px; background: #3e4943; border: 1px solid #69736d; }
+    .meter-bar i { display: block; width: 22%; height: 100%; background: var(--acid); transition: width .35s, background .35s; }
+    .annotation { margin-top: 16px; padding: 15px; color: var(--ink); background: #f8f5ea; border-left: 6px solid var(--acid); }
+    .annotation b { display: block; margin-bottom: 4px; }
+    .annotation p { margin: 0; font-size: 12px; }
+    .control-list { padding: 0; margin: 22px 0 0; list-style: none; }
+    .control-list li { padding: 11px 0; border-top: 1px solid #39453f; color: #cbd2ce; font-size: 12px; }
+    .control-list span { float: right; color: var(--acid); font-weight: 900; }
+
+    .comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .pattern { position: relative; padding: 28px; background: var(--card); border: 3px solid var(--ink); }
+    .pattern.good { box-shadow: 9px 9px 0 var(--acid); }
+    .pattern.bad { box-shadow: 9px 9px 0 var(--orange); }
+    .stamp { position: absolute; right: 18px; top: 18px; padding: 4px 10px; border: 2px solid currentColor; font-size: 11px; font-weight: 900; transform: rotate(4deg); }
+    .bad .stamp { color: #b92810; }
+    .pattern h3 { margin: 0 0 24px; font-size: 26px; }
+    .mini-ui { padding: 20px; background: #ecebe5; border: 1px solid #bfc3bd; }
+    .mini-ui h4 { margin: 0 0 15px; }
+    .mini-ui button { width: 100%; margin-top: 8px; padding: 11px; border: 1.5px solid var(--ink); background: white; font-weight: 800; }
+    .mini-ui .recommended { background: var(--acid); }
+    .mini-ui .hidden-choice { color: #9a9d99; background: transparent; border: 0; font-size: 11px; }
+    .pattern ul { padding-left: 18px; margin: 22px 0 0; }
+    .pattern li { margin: 7px 0; font-size: 14px; }
+
+    .matrix { width: 100%; border-collapse: collapse; background: var(--card); border: 3px solid var(--ink); }
+    .matrix th, .matrix td { padding: 18px 16px; text-align: left; border-bottom: 1px solid #afb5b0; }
+    .matrix th { color: white; background: var(--ink); font-size: 12px; letter-spacing: .06em; }
+    .matrix td { font-size: 14px; }
+    .matrix tr:last-child td { border-bottom: 0; }
+    .chip { display: inline-block; min-width: 68px; padding: 4px 8px; text-align: center; border: 1.5px solid currentColor; border-radius: 999px; font-size: 11px; font-weight: 900; }
+    .chip.safe { color: #246421; background: #e8f6c7; }
+    .chip.review { color: #8a5700; background: #fff0bd; }
+    .chip.stop { color: #a72612; background: #ffe0d7; }
+
+    .checks { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; }
+    .check-card { padding: 23px; background: var(--card); border: 2px solid var(--ink); cursor: pointer; transition: background .2s, transform .2s; }
+    .check-card:hover { transform: translateY(-4px); }
+    .check-card.done { background: #eaf5bd; }
+    .check-top { display: flex; justify-content: space-between; gap: 15px; }
+    .check-box { flex: 0 0 auto; display: grid; place-items: center; width: 27px; height: 27px; border: 2px solid var(--ink); }
+    .check-card.done .check-box { color: white; background: var(--ink); }
+    .check-card h3 { margin: 0; font-size: 17px; }
+    .check-card p { margin: 13px 0 0; color: var(--muted); font-size: 12px; }
+    .progress-wrap { display: flex; align-items: center; gap: 18px; margin-top: 24px; }
+    .progress-track { flex: 1; height: 15px; border: 2px solid var(--ink); background: white; }
+    .progress-fill { width: 0; height: 100%; background: var(--blue); transition: width .25s; }
+    .progress-text { min-width: 88px; font-weight: 900; }
+
+    .sources { color: #dfe6e1; background: var(--ink); }
+    .sources h2 { color: white; }
+    .sources-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 12px; }
+    .source-link { display: flex; justify-content: space-between; gap: 20px; padding: 19px; color: white; text-decoration: none; border: 1px solid #56615b; }
+    .source-link:hover { color: var(--ink); background: var(--acid); border-color: var(--acid); }
+    .source-link small { opacity: .7; }
+    footer { padding: 30px clamp(20px,7vw,112px); color: #aab2ad; background: var(--ink); border-top: 1px solid #3d4942; font-size: 11px; }
+
+    .toast { position: fixed; left: 50%; bottom: 28px; z-index: 50; padding: 13px 18px; color: white; background: var(--blue); border: 2px solid white; box-shadow: 5px 5px 0 var(--ink); font-weight: 800; transform: translate(-50%,120px); transition: transform .3s; }
+    .toast.show { transform: translate(-50%,0); }
+
+    @media (max-width: 900px) {
+      .topnav { display: none; }
+      .hero, .section-head, .lab-layout { grid-template-columns: 1fr; }
+      .hero { padding-top: 78px; }
+      .score-card { max-width: 520px; transform: none; }
+      .comparison, .checks { grid-template-columns: 1fr; }
+      .matrix-wrap { overflow-x: auto; }
+      .matrix { min-width: 720px; }
+      .sources-grid { grid-template-columns: 1fr; }
+    }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><span class="brand-mark"></span> EXIT DESIGN LAB</div>
+    <nav class="topnav" aria-label="ページ内ナビゲーション">
+      <a href="#lab">体験デモ</a><a href="#compare">比較</a><a href="#matrix">施策一覧</a><a href="#check">審査</a><a href="#sources">根拠</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Subscription retention review</div>
+        <h1 class="serif">止めるより、<em>戻りたくなる。</em></h1>
+        <p class="hero-copy">解約妨害ではなく、納得感のある選択肢で継続率を高める。社内レビューのためのインタラクティブUIサンプルです。</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#lab">デモを操作する ↓</a>
+          <a class="btn" href="#matrix">施策の安全性を見る</a>
+        </div>
+      </div>
+      <aside class="score-card" aria-label="推奨設計スコア">
+        <div class="score-num">92<span>/100</span></div>
+        <h2>推奨：選択支援型リテンション</h2>
+        <p>解約導線を隠さず、理由に応じた代替案を1回だけ提示。短期的な解約率だけでなく、信頼・復帰率・問い合わせ率も評価します。</p>
+      </aside>
+    </section>
+
+    <section class="section" id="lab">
+      <div class="section-head">
+        <div><div class="section-index">01 / EXPERIENCE</div><h2 class="serif">触って比較する</h2></div>
+        <p class="lead">右の切替で「推奨フロー」と「危険なフロー」を体験できます。危険モードは教材としての再現であり、実装推奨ではありません。</p>
+      </div>
+      <div class="lab-layout">
+        <div class="phone-shell">
+          <div class="screen" id="demoScreen" aria-live="polite"></div>
+        </div>
+        <aside class="control-panel">
+          <h3>レビューコンソール</h3>
+          <p>設計モードを切り替えると、画面とリスク評価が変化します。</p>
+          <div class="mode-toggle" role="group" aria-label="デモモード">
+            <button class="active" data-mode="good">✓ 推奨設計</button>
+            <button data-mode="bad">⚠ 危険設計</button>
+          </div>
+          <div class="meter">
+            <div class="meter-head"><span>法務・信頼リスク</span><strong id="riskLabel">低い</strong></div>
+            <div class="meter-bar"><i id="riskBar"></i></div>
+          </div>
+          <div class="annotation">
+            <b id="annotationTitle">選択肢を奪わない</b>
+            <p id="annotationText">解約と代替案を同じ画面・同等の視認性で提示します。理由回答は任意です。</p>
+          </div>
+          <ul class="control-list">
+            <li>解約完了までの目安 <span id="clickCount">3クリック</span></li>
+            <li>オファー提示回数 <span id="offerCount">1回</span></li>
+            <li>理由回答 <span id="reasonRule">任意</span></li>
+            <li>推奨判定 <span id="decision">GO</span></li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="compare">
+      <div class="section-head">
+        <div><div class="section-index">02 / CONTRAST</div><h2 class="serif">同じ目的、違う設計</h2></div>
+        <p class="lead">オファーを出すこと自体ではなく、拒否できるか、情報が対称か、何度繰り返すかが境界になります。</p>
+      </div>
+      <div class="comparison">
+        <article class="pattern good">
+          <span class="stamp">RECOMMENDED</span><h3>選択支援型</h3>
+          <div class="mini-ui"><h4>3か月休止しますか？</h4><p>再開日：2026年11月10日<br>休止中の請求：0円</p><button class="recommended">3か月休止する</button><button>このまま解約する</button></div>
+          <ul><li>条件・再開日・料金をその場で表示</li><li>拒否して解約できる</li><li>ユーザーの理由に合う提案は1つ</li></ul>
+        </article>
+        <article class="pattern bad">
+          <span class="stamp">STOP / REDESIGN</span><h3>妨害・消耗型</h3>
+          <div class="mini-ui"><h4>本当によろしいですか？</h4><p>これまでの大切なデータを失う可能性があります。</p><button class="recommended">お得なプランを続ける</button><button>別の割引を見る</button><button class="hidden-choice">解約手続きを続ける</button></div>
+          <ul><li>損失を曖昧に誇張する</li><li>解約だけ視認性を落とす</li><li>拒否後も別オファーを繰り返す</li></ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="matrix">
+      <div class="section-head">
+        <div><div class="section-index">03 / TACTICS</div><h2 class="serif">施策リスク表</h2></div>
+        <p class="lead">「合法そう」ではなく、消費者が自由かつ十分な情報で判断できるかを基準に審査します。</p>
+      </div>
+      <div class="matrix-wrap">
+        <table class="matrix">
+          <thead><tr><th>施策</th><th>判定</th><th>許容条件</th><th>主なKPI</th></tr></thead>
+          <tbody>
+            <tr><td>解約理由を1問</td><td><span class="chip safe">推奨</span></td><td>任意・スキップ可・自由記述を必須にしない</td><td>理由別解約率</td></tr>
+            <tr><td>休止／ダウングレード</td><td><span class="chip safe">推奨</span></td><td>再開日、再開後料金、機能差を明示</td><td>救済率・90日継続率</td></tr>
+            <tr><td>期間限定の割引</td><td><span class="chip review">要審査</span></td><td>終了日・通常料金を同じ画面に表示、提示は1回</td><td>受諾率・割引後継続率</td></tr>
+            <tr><td>失う機能・データの案内</td><td><span class="chip review">要審査</span></td><td>具体的事実だけ。保存期間とエクスポート手段を表示</td><td>問い合わせ率</td></tr>
+            <tr><td>Web契約／電話解約限定</td><td><span class="chip stop">非推奨</span></td><td>原則採用しない。合理的な必然性があっても法務確認</td><td>苦情・チャージバック</td></tr>
+            <tr><td>解約導線を薄く／小さく表示</td><td><span class="chip stop">禁止候補</span></td><td>視認性を対称に再設計</td><td>—</td></tr>
+            <tr><td>拒否後にオファーを反復</td><td><span class="chip stop">禁止候補</span></td><td>1回で終了し、意思を記憶する</td><td>—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="check">
+      <div class="section-head">
+        <div><div class="section-index">04 / GATE</div><h2 class="serif">出荷前チェック</h2></div>
+        <p class="lead">カードをクリックして確認済みにしてください。全項目を満たすまでは、本番リリース候補にしない運用を想定しています。</p>
+      </div>
+      <div class="checks" id="checkGrid"></div>
+      <div class="progress-wrap"><div class="progress-track"><div class="progress-fill" id="progressFill"></div></div><div class="progress-text" id="progressText">0 / 6</div></div>
+    </section>
+
+    <section class="section sources" id="sources">
+      <div class="section-head">
+        <div><div class="section-index">05 / EVIDENCE</div><h2 class="serif">判断の根拠</h2></div>
+        <p class="lead">Adobe型の設計は模倣対象ではなく、規制・訴訟リスクを知るためのケーススタディとして扱います。</p>
+      </div>
+      <div class="sources-grid">
+        <a class="source-link" href="https://www.justice.gov/opa/pr/adobe-agrees-150-million-settlement-and-injunction-resolve-alleged-violations-restore-online" target="_blank" rel="noreferrer"><span>米司法省：Adobe和解発表</span><small>2026 ↗</small></a>
+        <a class="source-link" href="https://www.caa.go.jp/policies/policy/consumer_transaction/specified_commercial_transactions/assets/consumer_transaction_cms101_2401119_03.pdf" target="_blank" rel="noreferrer"><span>消費者庁：最終確認画面ガイドライン</span><small>PDF ↗</small></a>
+        <a class="source-link" href="https://www.caa.go.jp/policies/policy/consumer_system/consumer_contract_act/annotations/assets/consumer_system_cms203_230915_05.pdf" target="_blank" rel="noreferrer"><span>消費者庁：消費者契約法 第3条解説</span><small>PDF ↗</small></a>
+        <a class="source-link" href="https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX%3A32022R2065" target="_blank" rel="noreferrer"><span>EU Digital Services Act</span><small>Article 25 ↗</small></a>
+      </div>
+    </section>
+  </main>
+
+  <footer>社内検討用プロトタイプ — 法的助言ではありません。実装前に対象地域・契約形態・決済手段ごとの法務確認を行ってください。</footer>
+  <div class="toast" id="toast" role="status"></div>
+
+  <script>
+    const state = { mode: 'good', step: 1, reason: '', completed: false };
+    const screen = document.getElementById('demoScreen');
+    const toast = document.getElementById('toast');
+
+    const header = () => `<div class="screen-top"><span>xChart PRO</span><span>プラン管理</span></div><div class="stepper">${[1,2,3,4].map(n => `<i class="${n <= state.step ? 'active' : ''}"></i>`).join('')}</div>`;
+    const action = (label, fn, cls='btn') => `<button class="${cls}" onclick="${fn}">${label}</button>`;
+
+    function renderGood() {
+      if (state.completed) return header() + `<div class="done"><div class="done-mark">✓</div><h3>解約予約が完了しました</h3><p class="sub">PROプランは2026年9月9日に終了します。それまではすべての機能をご利用いただけます。</p><div class="offer"><strong>データは保持されます</strong><p>同じアカウントで再契約すると、保存済みのウォッチリストや設定を再び利用できます。</p></div><div class="screen-actions">${action('プラン管理へ戻る','resetDemo()','btn btn-primary')}</div></div>`;
+      if (state.step === 1) return header() + `<h3>解約をお考えですか？</h3><p class="sub">差し支えなければ理由を教えてください。回答せず進むこともできます。</p><div class="reason-list">${['料金が高い','今は利用していない','必要な機能がない','その他'].map(r => `<button class="reason ${state.reason===r?'selected':''}" onclick="selectReason('${r}')"><span class="radio"></span>${r}</button>`).join('')}</div><div class="screen-actions">${action('次へ','nextStep()','btn btn-primary')}${action('回答せず解約へ','nextStep()','btn btn-link')}</div>`;
+      if (state.step === 2) return header() + `<h3>${state.reason === '料金が高い' ? '料金を抑える方法があります' : 'いったん休止できます'}</h3><p class="sub">ご希望に合わない場合は、このまま解約へ進めます。</p><div class="offer"><span class="offer-tag">1回だけのご提案</span><strong>${state.reason === '料金が高い' ? 'ライトプラン 月額980円' : '3か月休止・請求0円'}</strong><p>${state.reason === '料金が高い' ? '現在より月額1,000円お得。高度なAI分析のみ対象外です。' : '2026年11月10日に自動再開します。再開前にメールでお知らせします。'}</p></div><div class="screen-actions">${action(state.reason === '料金が高い' ? 'ライトへ変更' : '3か月休止する',"acceptOffer()",'btn btn-primary')}${action('このまま解約する','nextStep()','btn')}</div>`;
+      return header() + `<h3>解約内容の確認</h3><p class="sub">確定前に、終了日と影響をご確認ください。</p><div class="offer"><strong>最終請求：0円</strong><p>プラン終了日：2026年9月9日<br>追加の解約料：ありません</p></div><ul class="loss-list"><li>9月10日以降、PRO分析機能は利用できません</li><li>保存データはアカウントが存在する限り保持されます</li><li>いつでも同じアカウントで再契約できます</li></ul><div class="screen-actions">${action('解約を確定する','completeDemo()','btn btn-dark')}${action('戻る','prevStep()','btn btn-link')}</div>`;
+    }
+
+    function renderBad() {
+      if (state.completed) return header() + `<div class="done"><div class="done-mark" style="background:#a72612">!</div><h3>まだ完了していません</h3><p class="sub">登録メールに確認リンクを送りました。24時間以内にリンクを開かない場合、契約は継続されます。</p><div class="screen-actions">${action('メールを再送する','badLoop()','btn btn-primary')}${action('最初からやり直す','resetDemo()','btn btn-link')}</div></div>`;
+      if (state.step === 1) return header() + `<h3>解約理由を詳しく入力</h3><p class="sub">サービス改善のため、20文字以上の入力が必要です。</p><textarea style="width:100%;min-height:150px;padding:12px;border:2px solid #17201c" placeholder="解約理由（必須）"></textarea><div class="screen-actions">${action('入力して次へ','nextStep()','btn btn-primary')}${action('前の画面へ戻る','resetDemo()','btn btn-link')}</div><p class="fine">※この画面は危険パターンの教材です。</p>`;
+      if (state.step === 2) return header() + `<h3>年間50,000円も損します</h3><p class="sub">今だけの特別価格を失うと、二度と同じ条件では契約できない可能性があります。</p><div class="offer" style="background:#ffe0d7"><span class="offer-tag">本日限定</span><strong>50% OFFで継続</strong><p>割引終了日と終了後の料金は利用規約をご覧ください。</p></div><div class="screen-actions">${action('割引を適用する','acceptOffer()','btn btn-primary')}${action('別の提案を見る','nextStep()','btn')}${action('解約を続ける','nextStep()','btn btn-link')}</div>`;
+      if (state.step === 3) return header() + `<h3>すべて失ってもよいですか？</h3><p class="sub">ウォッチリスト、分析履歴、AIの学習結果が利用できなくなる可能性があります。</p><ul class="loss-list"><li>保存済み銘柄 42件</li><li>分析レポート 18件</li><li>カスタム通知 7件</li></ul><div class="screen-actions">${action('データを守って継続','acceptOffer()','btn btn-primary')}${action('それでも手続きを続ける','nextStep()','btn btn-link')}</div>`;
+      return header() + `<h3>本人確認が必要です</h3><p class="sub">不正防止のため、カスタマーサポートへの電話後にメール確認を行ってください。</p><div class="offer"><strong>受付：平日 10:00〜16:00</strong><p>混雑時はつながりにくい場合があります。Web上では解約できません。</p></div><div class="screen-actions">${action('電話確認済みとして進む','completeDemo()','btn btn-dark')}${action('プランを継続する','acceptOffer()','btn btn-primary')}</div>`;
+    }
+
+    function render() { screen.innerHTML = state.mode === 'good' ? renderGood() : renderBad(); }
+    function nextStep() { state.step = Math.min(4, state.step + 1); render(); }
+    function prevStep() { state.step = Math.max(1, state.step - 1); render(); }
+    function selectReason(reason) { state.reason = reason; render(); }
+    function completeDemo() { state.completed = true; render(); showToast(state.mode === 'good' ? '✓ 明確な完了状態です' : '⚠ 解約完了をさらに遅延させています'); }
+    function acceptOffer() { showToast(state.mode === 'good' ? '代替案を選択しました（デモ）' : '⚠ 強調表示に判断が誘導されました'); }
+    function badLoop() { showToast('⚠ 再送・期限切れループは苦情リスクを高めます'); }
+    function resetDemo() { state.step = 1; state.reason = ''; state.completed = false; render(); }
+    function showToast(message) { toast.textContent = message; toast.classList.add('show'); setTimeout(() => toast.classList.remove('show'), 2200); }
+
+    document.querySelectorAll('.mode-toggle button').forEach(button => button.addEventListener('click', () => {
+      state.mode = button.dataset.mode; resetDemo();
+      document.querySelectorAll('.mode-toggle button').forEach(b => b.classList.toggle('active', b === button));
+      const bad = state.mode === 'bad';
+      document.getElementById('riskBar').style.width = bad ? '94%' : '22%';
+      document.getElementById('riskBar').style.background = bad ? 'var(--orange)' : 'var(--acid)';
+      document.getElementById('riskLabel').textContent = bad ? '極めて高い' : '低い';
+      document.getElementById('annotationTitle').textContent = bad ? '教材：妨害型ダークパターン' : '選択肢を奪わない';
+      document.getElementById('annotationText').textContent = bad ? '必須アンケート、反復オファー、曖昧な損失警告、電話限定を組み合わせています。実装しないでください。' : '解約と代替案を同じ画面・同等の視認性で提示します。理由回答は任意です。';
+      document.getElementById('clickCount').textContent = bad ? '7クリック以上' : '3クリック';
+      document.getElementById('offerCount').textContent = bad ? '複数回' : '1回';
+      document.getElementById('reasonRule').textContent = bad ? '必須' : '任意';
+      document.getElementById('decision').textContent = bad ? 'STOP' : 'GO';
+    }));
+
+    const checks = [
+      ['導線の対称性','申込時と比べ、解約だけ著しく複雑・長時間になっていない。'],
+      ['費用の事前明示','解約料、最終請求、終了日を確定操作より前に表示している。'],
+      ['オファーは1回','拒否した意思を尊重し、別提案を続けて出さない。'],
+      ['データ説明は事実だけ','保持期間・失う機能・エクスポート方法を具体的に説明する。'],
+      ['完了状態が明確','完了日時、終了日、受付番号を画面とメールで確認できる。'],
+      ['計測が健全','解約不能率ではなく、復帰率・苦情・チャージバックも見る。']
+    ];
+    const checkGrid = document.getElementById('checkGrid');
+    checkGrid.innerHTML = checks.map((c,i) => `<article class="check-card" tabindex="0" role="checkbox" aria-checked="false" data-check="${i}"><div class="check-top"><h3>${c[0]}</h3><span class="check-box"></span></div><p>${c[1]}</p></article>`).join('');
+    function updateProgress() { const n = document.querySelectorAll('.check-card.done').length; document.getElementById('progressFill').style.width = `${n/checks.length*100}%`; document.getElementById('progressText').textContent = `${n} / ${checks.length}`; if(n===checks.length) showToast('✓ 出荷前チェックが完了しました'); }
+    document.querySelectorAll('.check-card').forEach(card => {
+      const toggle = () => { card.classList.toggle('done'); const done = card.classList.contains('done'); card.setAttribute('aria-checked', done); card.querySelector('.check-box').textContent = done ? '✓' : ''; updateProgress(); };
+      card.addEventListener('click', toggle); card.addEventListener('keydown', e => { if(e.key==='Enter'||e.key===' '){ e.preventDefault(); toggle(); }});
+    });
+    render();
+  </script>
+</body>
+</html>
