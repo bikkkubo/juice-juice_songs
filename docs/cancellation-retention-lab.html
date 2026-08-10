@@ -177,6 +177,32 @@
     .pattern ul { padding-left: 18px; margin: 22px 0 0; }
     .pattern li { margin: 7px 0; font-size: 14px; }
 
+    .case-file { position: relative; padding: clamp(28px,5vw,58px); color: white; background: var(--blue); border: 3px solid var(--ink); box-shadow: 12px 12px 0 var(--orange); }
+    .case-file::before { content: "CASE 5:24-cv-03630"; position: absolute; right: 24px; top: 20px; padding: 5px 10px; color: var(--ink); background: var(--acid); border: 2px solid var(--ink); font-size: 10px; font-weight: 900; letter-spacing: .09em; transform: rotate(2deg); }
+    .case-kicker { margin: 0 0 8px; color: var(--acid); font-size: 12px; font-weight: 900; letter-spacing: .14em; }
+    .case-file > h3 { max-width: 850px; margin: 0 0 16px; font-size: clamp(32px,5vw,60px); line-height: 1.03; letter-spacing: -.045em; }
+    .case-summary { max-width: 850px; margin: 0; color: #dce5ff; font-size: 15px; }
+    .allegation-note { margin: 24px 0 0; padding: 12px 15px; color: var(--ink); background: #fff5c5; border-left: 7px solid var(--orange); font-size: 12px; font-weight: 700; }
+    .adobe-flow { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; margin-top: 38px; border: 2px solid white; }
+    .adobe-step { position: relative; min-height: 238px; padding: 24px 20px; border-right: 1px solid rgba(255,255,255,.45); }
+    .adobe-step:last-child { border-right: 0; }
+    .adobe-step b { display: block; margin-bottom: 16px; color: var(--acid); font-size: 38px; line-height: 1; }
+    .adobe-step h4 { margin: 0 0 8px; font-size: 17px; }
+    .adobe-step p { margin: 0; color: #dce5ff; font-size: 12px; }
+    .adobe-step:not(:last-child)::after { content: "→"; position: absolute; z-index: 2; right: -18px; top: 50%; display: grid; place-items: center; width: 34px; height: 34px; color: var(--ink); background: var(--acid); border: 2px solid var(--ink); border-radius: 50%; font-weight: 900; transform: translateY(-50%); }
+    .why-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 16px; margin-top: 34px; }
+    .why-card { padding: 23px; color: var(--ink); background: var(--card); border: 2px solid var(--ink); }
+    .why-card .why-num { color: var(--orange); font-size: 12px; font-weight: 900; letter-spacing: .12em; }
+    .why-card h4 { margin: 9px 0; font-size: 19px; }
+    .why-card p { margin: 0; color: var(--muted); font-size: 12px; }
+    .settlement-strip { display: grid; grid-template-columns: .75fr 1.25fr; gap: 0; margin-top: 26px; color: var(--ink); background: var(--acid); border: 3px solid var(--ink); }
+    .settlement-money { display: grid; place-items: center; padding: 27px; text-align: center; border-right: 3px solid var(--ink); }
+    .settlement-money strong { display: block; font-size: clamp(45px,7vw,82px); line-height: .9; letter-spacing: -.07em; }
+    .settlement-money small { margin-top: 9px; font-weight: 900; }
+    .settlement-terms { padding: 25px; background: var(--card); }
+    .settlement-terms h4 { margin: 0 0 10px; font-size: 20px; }
+    .settlement-terms ul { margin: 0; padding-left: 19px; font-size: 13px; }
+
     .matrix { width: 100%; border-collapse: collapse; background: var(--card); border: 3px solid var(--ink); }
     .matrix th, .matrix td { padding: 18px 16px; text-align: left; border-bottom: 1px solid #afb5b0; }
     .matrix th { color: white; background: var(--ink); font-size: 12px; letter-spacing: .06em; }
@@ -218,6 +244,11 @@
       .hero { padding-top: 78px; }
       .score-card { max-width: 520px; transform: none; }
       .comparison, .checks { grid-template-columns: 1fr; }
+      .adobe-flow, .why-grid, .settlement-strip { grid-template-columns: 1fr; }
+      .adobe-step { min-height: auto; border-right: 0; border-bottom: 1px solid rgba(255,255,255,.45); }
+      .adobe-step:last-child { border-bottom: 0; }
+      .adobe-step:not(:last-child)::after { right: 50%; top: auto; bottom: -18px; transform: translateX(50%) rotate(90deg); }
+      .settlement-money { border-right: 0; border-bottom: 3px solid var(--ink); }
       .matrix-wrap { overflow-x: auto; }
       .matrix { min-width: 720px; }
       .sources-grid { grid-template-columns: 1fr; }
@@ -229,7 +260,7 @@
   <header class="topbar">
     <div class="brand"><span class="brand-mark"></span> EXIT DESIGN LAB</div>
     <nav class="topnav" aria-label="ページ内ナビゲーション">
-      <a href="#lab">体験デモ</a><a href="#compare">比較</a><a href="#matrix">施策一覧</a><a href="#check">審査</a><a href="#sources">根拠</a>
+      <a href="#lab">体験デモ</a><a href="#compare">比較</a><a href="#adobe">Adobe事例</a><a href="#matrix">施策一覧</a><a href="#check">審査</a><a href="#sources">根拠</a>
     </nav>
   </header>
 
@@ -304,9 +335,39 @@
       </div>
     </section>
 
+    <section class="section" id="adobe">
+      <div class="section-head">
+        <div><div class="section-index">03 / CASE STUDY</div><h2 class="serif">Adobeは何をしたのか</h2></div>
+        <p class="lead">米政府が2024年に提起した訴訟と、2026年3月に公表された和解案をもとに、問題となった一連の体験を分解します。</p>
+      </div>
+      <article class="case-file">
+        <p class="case-kicker">UNITED STATES v. ADOBE INC.</p>
+        <h3 class="serif">「月額」に見える入口と、<br>解約時に現れる出口コスト。</h3>
+        <p class="case-summary">政府は、Adobeが「年間契約・月払い」プランを月額料金中心に訴求し、早期解約料を十分目立たせず、解約段階では不要な手順・遅延・オファー・警告を重ねたと主張しました。</p>
+        <div class="allegation-note">表現上の注意：以下の「実施内容」は米司法省・FTCの訴状における政府側の主張を要約したものです。Adobeによる全主張の認否を示すものではありません。</div>
+        <div class="adobe-flow" aria-label="Adobeで問題とされた契約から解約までの流れ">
+          <section class="adobe-step"><b>01</b><h4>年間プランを前面表示</h4><p>「年間契約・月払い」が選択されやすい構成で、月ごとの価格を目立たせたとされます。</p></section>
+          <section class="adobe-step"><b>02</b><h4>解約料を目立たせない</h4><p>初年度途中では残りの支払額の50%相当となる早期解約料を、小さい表示やホバーの奥に置いたと政府は主張しました。</p></section>
+          <section class="adobe-step"><b>03</b><h4>解約時に初めて実感</h4><p>利用者が解約しようとした段階で、数百ドルに達し得る解約料を認識するケースがあったとされます。</p></section>
+          <section class="adobe-step"><b>04</b><h4>手順・警告・提案を重ねる</h4><p>複数画面、不要なステップ、遅延、求めていないオファー、機能喪失の警告などで解約を困難にしたとされます。</p></section>
+        </div>
+      </article>
+
+      <div class="why-grid">
+        <article class="why-card"><span class="why-num">WHY 01</span><h4>重要条件の非対称</h4><p>申込時には月額を強調し、利用者に不利益な契約期間・解約料を同じ強さで伝えないと、十分な理解と同意が成立していないと評価され得ます。</p></article>
+        <article class="why-card"><span class="why-num">WHY 02</span><h4>入口より出口が難しい</h4><p>オンラインで簡単に契約できる一方、解約には多くの画面やサポート対応を要求すると、「簡単な解約手段」を求める消費者保護規制との衝突が生じます。</p></article>
+        <article class="why-card"><span class="why-num">WHY 03</span><h4>意思決定を消耗させる</h4><p>拒否後も警告やオファーを反復すると、情報提供ではなく、疲労や不安を使って利用者の意思を変えさせるダークパターンとみなされやすくなります。</p></article>
+      </div>
+
+      <div class="settlement-strip">
+        <div class="settlement-money"><div><strong>$150M</strong><small>2026年3月の和解案総額</small></div></div>
+        <div class="settlement-terms"><h4>和解案で求められた主な是正</h4><ul><li>民事制裁金7,500万ドルと、顧客向け無料サービス7,500万ドル相当</li><li>契約前に早期解約料と計算方法を明確に表示</li><li>7日を超える無料体験が解約料付き有料契約へ移行する場合の事前通知</li><li>オンライン・電話など、加入経路に応じた容易な解約方法の提供</li></ul></div>
+      </div>
+    </section>
+
     <section class="section" id="matrix">
       <div class="section-head">
-        <div><div class="section-index">03 / TACTICS</div><h2 class="serif">施策リスク表</h2></div>
+        <div><div class="section-index">04 / TACTICS</div><h2 class="serif">施策リスク表</h2></div>
         <p class="lead">「合法そう」ではなく、消費者が自由かつ十分な情報で判断できるかを基準に審査します。</p>
       </div>
       <div class="matrix-wrap">
@@ -327,7 +388,7 @@
 
     <section class="section" id="check">
       <div class="section-head">
-        <div><div class="section-index">04 / GATE</div><h2 class="serif">出荷前チェック</h2></div>
+        <div><div class="section-index">05 / GATE</div><h2 class="serif">出荷前チェック</h2></div>
         <p class="lead">カードをクリックして確認済みにしてください。全項目を満たすまでは、本番リリース候補にしない運用を想定しています。</p>
       </div>
       <div class="checks" id="checkGrid"></div>
@@ -336,7 +397,7 @@
 
     <section class="section sources" id="sources">
       <div class="section-head">
-        <div><div class="section-index">05 / EVIDENCE</div><h2 class="serif">判断の根拠</h2></div>
+        <div><div class="section-index">06 / EVIDENCE</div><h2 class="serif">判断の根拠</h2></div>
         <p class="lead">Adobe型の設計は模倣対象ではなく、規制・訴訟リスクを知るためのケーススタディとして扱います。</p>
       </div>
       <div class="sources-grid">
